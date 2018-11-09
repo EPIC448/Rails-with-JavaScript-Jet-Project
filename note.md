@@ -1,0 +1,1 @@
+  # make sure to include in form of the creation of flight if inspection is true check box... So the user can check if the person pass inpections or not.
