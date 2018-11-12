@@ -6,16 +6,17 @@ class UsersController < ApplicationController
   end
 
  def create
+  binding.pry
   @user = User.new(user_params)
 
   if @user.save
-
     session[:user_id] = @user.id  #attempt to log them in.
     redirect_to user_path(@user) #this is a get request GET "/"
    else
 
     render 'users/new' #show them the form.
    end
+  end
 
    def show
 
@@ -27,6 +28,7 @@ class UsersController < ApplicationController
    # list out in the user / show template
     end
   end
+  
 
 
 
@@ -38,4 +40,4 @@ class UsersController < ApplicationController
   end 
 
 
-end
+end # class end

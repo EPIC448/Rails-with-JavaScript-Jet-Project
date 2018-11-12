@@ -1,90 +1,17 @@
-Started GET "/" for 127.0.0.1 at 2018-11-09 16:17:14 -0500
-Processing by Rails::WelcomeController#index as HTML
-  Rendering /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
-  Rendered /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (38.9ms)
-Completed 200 OK in 233ms (Views: 169.3ms | ActiveRecord: 0.0ms)
-
-
-  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-Migrating to CreateUsers (20181109230451)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
 Migrating to CreateUsers (20181109230451)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_cash" integer, "owner_departure" integer, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20181109230451_create_users.rb:3
-  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_cash" integer, "owner_departure" integer, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ db/migrate/20181109230451_create_users.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230451"]]
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-Migrating to CreateFlights (20181109230815)
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-Migrating to CreateFlights (20181109230815)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-Migrating to CreateFlights (20181109230815)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  ↳ db/migrate/20181109230815_create_flights.rb:3
-  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "flights" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "inspection" boolean DEFAULT 0, "fuel_cost" integer, "destination" varchar, "flight_departure" integer, "flight_sit" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ db/migrate/20181109230815_create_flights.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230815"]]
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-Migrating to CreateFlightRides (20181109230939)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "flight_rides" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "flight_id" integer, "flight_class" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ db/migrate/20181109230939_create_flight_rides.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230939"]]
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-09 23:28:40.197875"], ["updated_at", "2018-11-09 23:28:40.197875"]]
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-Migrating to CreateUsers (20181109230451)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "user_cash" integer, "owner_departure" integer, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
-  ↳ db/migrate/20181109230451_create_users.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230451"]]
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230451"]]
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
@@ -93,348 +20,39 @@ Migrating to CreateFlights (20181109230815)
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "flights" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "inspection" boolean DEFAULT 0, "fuel_cost" integer, "destination" varchar, "flight_departure" integer, "flight_sit" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20181109230815_create_flights.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230815"]]
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230815"]]
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
 Migrating to CreateFlightRides (20181109230939)
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.7ms)[0m  [1m[36mbegin transaction[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "flight_rides" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "flight_id" integer, "flight_class" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "flight_rides" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "flight_id" integer, "flight_class" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20181109230939_create_flight_rides.rb:3
-  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230939"]]
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181109230939"]]
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-09 23:41:21.366356"], ["updated_at", "2018-11-09 23:41:21.366356"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-12 22:22:21.001951"], ["updated_at", "2018-11-12 22:22:21.001951"]]
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "user_cash", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "pete"], ["user_cash", 10], ["created_at", "2018-11-09 23:46:44.033398"], ["updated_at", "2018-11-09 23:46:44.033398"]]
-  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mFlight Create (0.4ms)[0m  [1m[32mINSERT INTO "flights" ("fuel_cost", "destination", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["fuel_cost", 100], ["destination", "Peter island"], ["created_at", "2018-11-09 23:48:08.809849"], ["updated_at", "2018-11-09 23:48:08.809849"]]
-  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
-  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
-  [1m[36mFlightRide Create (0.8ms)[0m  [1m[32mINSERT INTO "flight_rides" ("user_id", "flight_class", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["flight_class", "Economy"], ["created_at", "2018-11-09 23:50:28.702928"], ["updated_at", "2018-11-09 23:50:28.702928"]]
-  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:42:33 -0500
-  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/users" for 127.0.0.1 at 2018-11-12 17:23:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  
-ActionController::RoutingError (uninitialized constant UsersController):
-  
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.6) lib/rack/etag.rb:25:in `call'
-rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.6) lib/rack/head.rb:12:in `call'
-actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/method_override.rb:22:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.1) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:43:30 -0500
-  
-ActionController::RoutingError (uninitialized constant UsersController):
-  
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.6) lib/rack/etag.rb:25:in `call'
-rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.6) lib/rack/head.rb:12:in `call'
-actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/method_override.rb:22:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.1) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:45:20 -0500
-  
-ActionController::RoutingError (uninitialized constant UsersController):
-  
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.6) lib/rack/etag.rb:25:in `call'
-rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.6) lib/rack/head.rb:12:in `call'
-actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/method_override.rb:22:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.1) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:46:34 -0500
-  
-ActionController::RoutingError (uninitialized constant UsersController):
-  
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `block in load_missing_constant'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:53:in `rescue in load_missing_constant'
-bootsnap (1.3.1) lib/bootsnap/load_path_cache/core_ext/active_support.rb:43:in `load_missing_constant'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `const_get'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `each'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `inject'
-activesupport (5.2.1) lib/active_support/inflector/methods.rb:281:in `constantize'
-actionpack (5.2.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
-actionpack (5.2.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
-actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
-actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
-rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
-rack (2.0.6) lib/rack/etag.rb:25:in `call'
-rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
-rack (2.0.6) lib/rack/head.rb:12:in `call'
-actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
-rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
-rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
-activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
-activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
-actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
-web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
-web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
-railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
-activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
-railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
-sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
-rack (2.0.6) lib/rack/method_override.rb:22:in `call'
-rack (2.0.6) lib/rack/runtime.rb:22:in `call'
-activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
-actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
-rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
-railties (5.2.1) lib/rails/engine.rb:524:in `call'
-puma (3.12.0) lib/puma/configuration.rb:225:in `call'
-puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
-puma (3.12.0) lib/puma/server.rb:472:in `process_client'
-puma (3.12.0) lib/puma/server.rb:332:in `block in run'
-puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:51:11 -0500
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-  
-SyntaxError (/Users/omoogun/Desktop/Flaitron_Dev/rails-class/Jet-Rails-Project-/app/controllers/application_controller.rb:26: syntax error, unexpected '='
-        @current_user ||== User.find(session[:user_id])...
-                          ^):
-  
-app/controllers/application_controller.rb:26: syntax error, unexpected '='
-app/controllers/users_controller.rb:1:in `<main>'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:52:00 -0500
-  
-ActionController::RoutingError (undefined method `forgery' for ApplicationController:Class):
-  
-app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
-app/controllers/application_controller.rb:1:in `<main>'
-app/controllers/users_controller.rb:1:in `<main>'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:53:04 -0500
-Processing by UsersController#new as HTML
-Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e27oEQCjtZh0FE/Z53Cf+TjzWJ4hm92P0qBy2PdEqAQn6/Z3IyK2hvfLTuRVQ2yHj7QltN1lS6d5XxYmKZ6IaA==", "user"=>{"name"=>"john", "user_cash"=>"200", "owner_departure"=>"9am", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 34183ms (ActiveRecord: 0.7ms)
 
 
   
-LoadError (cannot load such file -- bcrypt):
+NoMethodError (undefined method `password_digest=' for #<User:0x007fb48fd250f0>
+Did you mean?  password=):
   
-app/models/user.rb:2:in `<class:User>'
-app/models/user.rb:1:in `<main>'
-app/controllers/users_controller.rb:5:in `new'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:54:22 -0500
-Processing by UsersController#new as HTML
-Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
-
-
-  
-LoadError (cannot load such file -- bcrypt):
-  
-app/models/user.rb:2:in `<class:User>'
-app/models/user.rb:1:in `<main>'
-app/controllers/users_controller.rb:5:in `new'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:54:43 -0500
-  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
-Processing by UsersController#new as HTML
-  Rendering users/new.html.erb within layouts/application
-  Rendered users/new.html.erb within layouts/application (112.7ms)
-Completed 500 Internal Server Error in 202ms (ActiveRecord: 0.8ms)
-
-
-  
-ActionView::Template::Error (undefined method `users_path' for #<#<Class:0x007fb48cfb2000>:0x007fb48cfbb510>
-Did you mean?  users_new_path):
-     6:   <header class="header">
-     7:     <h1>Sign Up</h1>
-     8:     ## this route to the users controller
-     9:     <%= form_for(@user) do |f| %>
-    10:        <%= f.label :name %>:
-    11:        <%= f.text_field :name %><br />
-    12: 
-  
-app/views/users/new.html.erb:9:in `_app_views_users_new_html_erb___3002594116170349940_70206718056320'
-Started GET "/" for 127.0.0.1 at 2018-11-12 16:59:20 -0500
-Processing by UsersController#new as HTML
-  Rendering users/new.html.erb within layouts/application
-  Rendered users/new.html.erb within layouts/application (258.5ms)
-Completed 200 OK in 1264ms (Views: 1251.3ms | ActiveRecord: 0.6ms)
-
-
+app/controllers/users_controller.rb:10:in `create'
