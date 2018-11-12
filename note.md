@@ -5,6 +5,7 @@
     => Build out all the controllers with the conresponding views. 
     Include in they actions as well.
     => Build out the login, signout, authentications with the proper routes & actions. 
+     
     => add the authentications in the  controllers
  
     Nested routs. of this...
