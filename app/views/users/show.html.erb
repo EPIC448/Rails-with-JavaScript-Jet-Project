@@ -1,0 +1,21 @@
+ <p> This is the users show page, List result or tickets after the went on the ride</p>
+<header class="header">
+    
+          User: <%= @user.name %><br>
+
+          Cash: <%= @user.user_cash %><br>
+
+          Departure: <%= @user.owner_departure %><br>
+
+
+        <% if flash[:notice] %>
+         <div class="notice"><%= flash[:notice] %></div>
+        <% end %>
+
+     <%=link_to "Log Out", logout_path, :method => :delete %>
+
+  <br>
+      <h2><%= link_to "Flights", flights_path %></h2>
+  </header>
+
+  

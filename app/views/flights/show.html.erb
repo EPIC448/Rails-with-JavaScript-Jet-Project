@@ -1,0 +1,27 @@
+ <h2> indicates all the flight aviable</h2>
+  
+  <p> Flight Information</p>
+
+ <p>Inspection</p>
+ <h3><%= @flight.inspection %> </h3> <br>
+  <p>fuel_cost</p>
+  <h3>Show <%= @flight.fuel_cost %></h3> <br>
+   <p>destination</p>
+  <h3><%= @flight.destination %> </h3> <br>
+   <p>flight_departure</p>
+   <h3><%= @flight.departure %> </h3> <br>
+    <p>flight_sit</p>
+    <h3><%= @flight.sit %> </h3> <br>
+     <p>attraction_tickets</p>
+     <h3><%= @flight.tickets %> </h3> <br>
+
+    <form method= "post" action= "/flight_ride/new" >
+     <%= hidden_field_tag :user_id, current_user.id %>
+
+    <%= hidden_field_tag :attraction_id, @attraction.id %>
+   
+    <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
+
+    <input type = "submit", value = "Go on Flight Ride" >
+   
+    </form>

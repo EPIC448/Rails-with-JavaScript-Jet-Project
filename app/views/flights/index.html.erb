@@ -1,0 +1,36 @@
+ <P> show all the flights.</P>
+
+   <h1> This is the Flight index page, Lists all the Flight.. </h1>
+
+  <% @flights.each do |flight| %>
+
+
+
+   <%# if current_user%> 
+       <h3> <%#= link_to "Show  #{attraction.name}", attraction_path(attraction)%></h3>
+     <%#else%>
+         <h3> <%#= link_to "Go on #{attraction.name}", attraction_path(attraction)%></h3>
+  <%# end %>  
+
+     <p> flight inspection </p>
+     <h3> <%= flight.inspection%></h3>
+
+     <p> flight fuel_cost</p>
+     <h3> <%= flight.fuel_cost%></h3>
+
+     <p> flight destination</p>
+     <h3> <%= flight.destination%></h3>
+
+     <p> flight flight_departure</p>
+     <h3> <%= flight.flight_departure%></h3>
+
+     <p> flight flight_sit</p>
+     <h3> <%= flight.flight_sit%></h3>
+
+<% end %>
+<br>
+<br>
+
+   
+        <h3><%= link_to "New flight", new_flight_path %></h3>
+   
