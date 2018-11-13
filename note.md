@@ -5,13 +5,13 @@
 
    # then we go an build the => Create the authentication flow for current_user
 
-    => Build out all the controllers with the conresponding views.  [user new sign up page, user conctroller actions]
+    <!-- =#> #Build out all the controllers with the conresponding views.  [user new sign up page, user conctroller actions]
     
     Include in they actions as well.
-    => Build out the login, signout, authentications with the proper routes & actions. 
+    #=> Build out the login, signout, authentications with the proper routes & actions. 
      
     => add the authentications in the  controllers
- 
+  -->
     Nested routs. of this...
 
      Flight

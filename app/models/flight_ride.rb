@@ -11,7 +11,6 @@ class FlightRide < ApplicationRecord
     def take_flight
 
       #issue is our self.flight... is not making it inhere.
- binding.pry
 
                     if  self.user.user_cash > self.flight.fuel_cost && self.flight.inspection == "true" && self.user.owner_departure < self.flight.flight_departure  #= need to be true
                 
@@ -27,7 +26,7 @@ class FlightRide < ApplicationRecord
                         # user height is greater then attraction & user ticket is less than attraction tickets
                         "Sorry. You missed your appionted flight for your trip #{self.user.name}."
                     else
-                        "Sorry for the inconvenience, This flight did not pass inspection #{self.user.name}. You are not tall enough to ride the #{self.attraction.name}."
+                        "Sorry for the inconvenience, This flight did not pass inspection #{self.user.name}. You don't have enough for this flight #{self.user.name}."
                     end
         
             
