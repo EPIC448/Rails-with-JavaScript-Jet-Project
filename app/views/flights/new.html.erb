@@ -1,2 +1,32 @@
 <h1>Flights#new</h1> # creates a new flight
-<p>Find me in app/views/flights/new.html.erb</p>
+<p>Find me in app/views/flights/new.html.erb</p> # creates a new flight
+
+<section class="jet">
+  <header class="header">
+    <h1>Create a New Flight</h1>
+    ## this route to the users controller
+
+    <%= form_for(@flight) do |f| %>
+       <%= f.label :inspection %>:
+       <%= f.check_box :inspection %>  <br />
+
+       <%= f.label :fuel_cost %>:
+        <%= f.text_field :fuel_cost %><br />
+
+        <%= f.label :destination %>:
+        <%= f.text_field :destination %><br />
+
+        <%= f.label :flight_departure %>:
+        <%= f.text_field :flight_departure %><br />
+
+          <%= f.label :flight_sit %>:
+        <%= f.text_field :flight_sit %><br />
+    
+        <br>
+        <%= f.submit%>
+        <% end %>
+      </form>
+
+  </header>
+  
+</section>

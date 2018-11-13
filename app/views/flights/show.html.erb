@@ -9,16 +9,16 @@
    <p>destination</p>
   <h3><%= @flight.destination %> </h3> <br>
    <p>flight_departure</p>
-   <h3><%= @flight.departure %> </h3> <br>
+   <h3><%= @flight.flight_departure %> </h3> <br>
     <p>flight_sit</p>
-    <h3><%= @flight.sit %> </h3> <br>
-     <p>attraction_tickets</p>
-     <h3><%= @flight.tickets %> </h3> <br>
+    <h3><%= @flight.flight_sit %> </h3> <br>
+     
+  
 
     <form method= "post" action= "/flight_ride/new" >
      <%= hidden_field_tag :user_id, current_user.id %>
 
-    <%= hidden_field_tag :attraction_id, @attraction.id %>
+    <%= hidden_field_tag :attraction_id, @flight.id %>
    
     <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
 

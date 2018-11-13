@@ -21,12 +21,17 @@ class FlightsController < ApplicationController
     @flight = Flight.create(flight_params)
      
     if @flight.save
-      session[:flight_id] = @flight.id  
-       redirect_to flight(@flight)
+      session[:flight_id] = @flight.id 
+      #  redirect_to flight(@flight)
+       render 'flights/show'
     else
       render 'flights/new'
     end
 
+    def edit
+      @flight = Flight.find(params[:id])
+    end
+   
 
    end
 

@@ -10,8 +10,8 @@ class FlightRide < ApplicationRecord
 
     def take_flight
 
-        #accounts for the user not having enough ticket & user not tall enough
-         # most alter all of the below
+      #issue is our self.flight... is not making it inhere.
+ binding.pry
 
                     if  self.user.user_cash > self.flight.fuel_cost && self.flight.inspection == "true" && self.user.owner_departure < self.flight.flight_departure  #= need to be true
                 
