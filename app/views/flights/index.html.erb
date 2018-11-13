@@ -4,13 +4,9 @@
 
   <% @flights.each do |flight| %>
 
-
- # I want my user to be able to click on the flight and take them to the flight details
-   <%# if current_user%> 
-       <h3> <%#= link_to "Show  #{attraction.name}", attraction_path(attraction)%></h3>
-     <%#else%>
-         <h3> <%#= link_to "Go on #{attraction.name}", attraction_path(attraction)%></h3>
-  <%# end %>  
+  <br/>
+   
+     <h3> <%= link_to "Go on #{flight.id}", flight_path(flight)%></h3> <br />
 
      <p> flight inspection </p>
      <h3> <%= flight.inspection%></h3>
