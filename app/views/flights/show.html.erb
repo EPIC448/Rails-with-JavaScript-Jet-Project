@@ -13,7 +13,7 @@
     <p>flight_sit</p>
     <h3><%= @flight.flight_sit %> </h3> <br>
      
-  
+  <P> THIS IS THE USER SHOW PAGE</P>
 
     <form method= "post" action= "/flight_ride/new" >
      <%= hidden_field_tag :user_id, current_user.id %>
@@ -21,7 +21,7 @@
     <%= hidden_field_tag :flight_id, @flight.id %>
    
     <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
-
+<%binding.pry%>
     <input type = "submit", value = "Go on Flight Ride" >
    
     </form>

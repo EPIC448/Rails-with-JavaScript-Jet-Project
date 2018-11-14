@@ -13,6 +13,7 @@
         <% end %>
 
      <%=link_to "Log Out", logout_path, :method => :delete %>
+        <%= hidden_field_tag :user_id, current_user.id %>
 
   <br>
       <h2><%= link_to "See all Flights", flights_path %></h2>

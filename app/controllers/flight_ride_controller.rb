@@ -3,7 +3,7 @@ class FlightRideController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def new
-   
+   binding.pry
    @flight_ride = FlightRide.create(:user_id => params[:user_id], :flight_id => params[:flight_id])
    # we want to add the take a ride logic here.
    flash[:notice] = @flight_ride.take_flight
@@ -11,6 +11,7 @@ class FlightRideController < ApplicationController
   end
 
    def create
+
 
    end
 

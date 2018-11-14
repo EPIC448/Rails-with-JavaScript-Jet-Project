@@ -1,5 +1,7 @@
 class FlightsController < ApplicationController
   def index
+binding.pry
+    # @user = User.new
     @flights = Flight.new
     @flights = Flight.all
   end

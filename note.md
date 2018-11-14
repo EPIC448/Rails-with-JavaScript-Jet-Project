@@ -30,7 +30,7 @@
 
  =>  Flight_rides==> 
 
-     - 	Flight_class – string (economy, first-class) Default     to Economy, [Add as check box for First class else,         default to coach]   
+     - 	Flight_Ride class – string (economy, first-class) Default     to Economy, [Add as check box for First class else,         default to coach]   
        -And the Views that goes with flight_rides it and it controllers......
 
   => Need to You Implemnt Nested Resources..(code the flight_rides controller)
@@ -41,7 +41,7 @@
   => amniot authenitcation
 
   => test associations in console
-  => comfirm understanding of scope
+  => Read up on understanding of scope(It in your coursess)
   => navigation bar / links to other parts of project (options... Look up in google)
 
 
