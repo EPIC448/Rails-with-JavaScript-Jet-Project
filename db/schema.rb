@@ -33,8 +33,6 @@ ActiveRecord::Schema.define(version: 2018_11_09_230939) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.integer "user_cash"
-    t.integer "owner_departure"  # check to see if o want to keep this or note. or
-        # user departure
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
