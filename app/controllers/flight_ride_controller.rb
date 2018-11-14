@@ -6,7 +6,7 @@ class FlightRideController < ApplicationController
    
    @flight_ride = FlightRide.create(:user_id => params[:user_id], :flight_id => params[:flight_id])
    # we want to add the take a ride logic here.
-   flash[:notice] = @flight_ride.take_flight 
+   flash[:notice] = @flight_ride.take_flight(owner_departure)
    redirect_to user_path(@flight_ride.user) # this should feed into user id with an updated ticekts and stuff.
   end
   

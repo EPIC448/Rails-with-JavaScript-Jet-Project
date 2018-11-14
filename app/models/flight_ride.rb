@@ -8,7 +8,7 @@ class FlightRide < ApplicationRecord
     # check for flight passes inspection (true or False)
 
 
-    def take_flight
+    def take_flight(owner_departure)
 
       #issue is our self.flight... is not making it inhere.
 

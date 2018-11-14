@@ -13,9 +13,12 @@ Rails.application.routes.draw do
    resources :users, :only => [:new, :create, :show]
    resources :flights, only: [:index, :show, :new, :create, :edit, :update]  # access to all the functions.
    
-   
    post '/flight_ride/new' => "flight_ride#new"
    
-   # root 'flights#index' # i will add it if i need it. 
+  #  resources :users, :only => [:show] do
+  #     resources :flight_rides, only: [:index, :show, :new, :create, :edit, :update] # reduce the actions to what you only need
 
+  #  end
+    
+   
  end
