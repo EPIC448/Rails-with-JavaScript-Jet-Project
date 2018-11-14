@@ -13,5 +13,5 @@ class Flight < ApplicationRecord
     validates :flight_sit, :presence => true
 
 
-    scope :pass_inspection, -> { where(pass_inspeciton: true) }
+    scope :pass_inspection, -> { where(inspection: true) }
 end

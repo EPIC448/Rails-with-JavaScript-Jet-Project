@@ -8,11 +8,13 @@ class FlightRide < ApplicationRecord
     # check for flight passes inspection (true or False)
 
 
-    def take_flight(owner_departure)
+    def take_flight
 
       #issue is our self.flight... is not making it inhere.
 
-                    if  self.user.user_cash > self.flight.fuel_cost && self.flight.inspection == "true" && self.user.owner_departure < self.flight.flight_departure  #= need to be true
+                    if  self.user.user_cash > self.flight.fuel_cost && self.flight.inspection == "true" 
+                        
+                        # && self.user.owner_departure < self.flight.flight_departure  #= need to be true
                 
                        new_cash = self.user.user_cash - self.flight.fuel_cost
                         self.user.update(:user_cash => new_cash)
@@ -20,9 +22,11 @@ class FlightRide < ApplicationRecord
                         self.user.save
                         "Thanks for riding this flight #{self.user.name}!"
 
-                    elsif self.user.user_cash < self.flight.fuel_cost && self.user.owner_departure < self.flight.flight_departure  #= need to be true
+                    elsif self.user.user_cash < self.flight.fuel_cost
+                        #  self.flight.flight_departure  #= need to be true
                         "Sorry. You dont have enough cash for this flight #{self.user.name}."
-                    elsif self.user.user_cash > self.flight.fuel_cost && self.user.owner_departure > self.flight.flight_departure
+                    elsif self.user.user_cash > self.flight.fuel_cost 
+                        # self.user.owner_departure > self.flight.flight_departure
                         # user height is greater then attraction & user ticket is less than attraction tickets
                         "Sorry. You missed your appionted flight for your trip #{self.user.name}."
                     else
