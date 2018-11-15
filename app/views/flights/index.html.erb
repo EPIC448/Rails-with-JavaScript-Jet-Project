@@ -6,7 +6,7 @@
 
   <br/>
    
-     <h3> <%= link_to "Go on #{flight.id}", flight_path(flight)%></h3> <br />
+     <h3> <%= link_to "Go on flight #{flight.id}", flight_path(flight)%></h3> <br />
 
      <p> flight inspection </p>
      <h3> <%= flight.inspection%></h3>
@@ -29,11 +29,7 @@
 #  It not displaying current_user...???
      <%= hidden_field_tag :user_id, current_user.id %>
 
-    <%#= hidden_field_tag :flight_id, @flight.id %>
-   
     <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
-
-
    
-        <h3><%= link_to "Create a New flight", new_user_flight_ride_path %></h3>
+        <h3><%= link_to "Create a New flight", new_flight_path %></h3>
     # want user that is logged in to create a new flight with flight_ride classes etc.
