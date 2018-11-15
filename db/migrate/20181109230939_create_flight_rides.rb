@@ -5,7 +5,9 @@ class CreateFlightRides < ActiveRecord::Migration[5.2]
       t.integer :flight_id
       t.string :flight_class, :default => economy 
 
+
       t.timestamps
+      
     end
   end
 end

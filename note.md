@@ -13,29 +13,31 @@
     => add the authentications in the  controllers
   -->
 
-    NEXT-STEP
-    Nested routs. of this...
+   √  NEXT-STEP
+    √ Nested routs. of this...
 
-     Flight
+     √ Flight
            Nest  Flight_ride..... ( Flight will have list of flight_ride(a.k.a people that will be taking/ using that flight.))
 
 
             skip_before_action :verify_authenticity_token
 
-  def new
+  √def new
     @user = User.new
   end
 
-  => today list-------
+  √=> today list-------
 
- =>  Flight_rides==> 
+ √=>  Flight_rides==> 
 
-     - 	Flight_Ride class – string (economy, first-class) Default     to Economy, [Add as check box for First class else,         default to coach]   
-       -And the Views that goes with flight_rides it and it controllers......
+  √   - 	Flight_Ride class – string (economy, first-class) Default     to Economy, [Add as check box for First class else,         default to coach]   
+  √-And the Views that goes with flight_rides it and it controllers......
 
-  => Need to You Implemnt Nested Resources..(code the flight_rides controller)
+  √=> Need to You Implemnt Nested Resources..(code the flight_rides controller)
   
-  and Remove owner_departure ( and it logic in flight_rides controller.)
+  √and Remove owner_departure ( and it logic in √flight_rides controller.)
+
+  <!-- VVVThis is the next pieceVVV -->
 
   => Error messages... / validation error..
   => amniot authenitcation
