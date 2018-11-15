@@ -12,9 +12,8 @@ class FlightRide < ApplicationRecord
 
       #issue is our self.flight... is not making it inhere.
 
-                    if  self.user.user_cash > self.flight.fuel_cost && self.flight.inspection == "true" 
+                if  self.user.user_cash > self.flight.fuel_cost && self.flight.inspection == "true" 
                         
-                        # && self.user.owner_departure < self.flight.flight_departure  #= need to be true
                 
                        new_cash = self.user.user_cash - self.flight.fuel_cost
                         self.user.update(:user_cash => new_cash)
@@ -22,16 +21,13 @@ class FlightRide < ApplicationRecord
                         self.user.save
                         "Thanks for riding this flight #{self.user.name}!"
 
-                    elsif self.user.user_cash < self.flight.fuel_cost
-                        #  self.flight.flight_departure  #= need to be true
-                        "Sorry. You dont have enough cash for this flight #{self.user.name}."
-                    elsif self.user.user_cash > self.flight.fuel_cost 
-                        # self.user.owner_departure > self.flight.flight_departure
-                        # user height is greater then attraction & user ticket is less than attraction tickets
-                        "Sorry. You missed your appionted flight for your trip #{self.user.name}."
-                    else
-                        "Sorry for the inconvenience, This flight did not pass inspection #{self.user.name}. You don't have enough for this flight #{self.user.name}."
-                    end
+                        # "Sorry. You dont have enough cash for this flight #{self.user.name}."
+                elsif self.user.user_cash > self.flight.fuel_cost && self.flight.inspection == "false" 
+                    "Sorry for the inconvenience, This flight did not pass inspection #{self.user.name}"
+                else
+                        "Sorry. You dont have enough money flight for your trip #{self.user.name}."
+                    
+                 end
         
             
 
