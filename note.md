@@ -44,7 +44,9 @@
   => Read up on understanding of scope(It in your coursess)
   => navigation bar / links to other parts of project (options... Look up in google)
 
+---------------------
 
+<!-- >>>>> -->
 
   
 
