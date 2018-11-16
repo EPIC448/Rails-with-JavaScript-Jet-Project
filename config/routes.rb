@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   delete '/logout' => "sessions#destroy"
 
   get '/users' => "users#new"
-
+  get '/auth/facebook/callback' => 'sessions#create'
  
    resources :users, :only => [:new, :create, :show]
    resources :flights, only: [:index, :show, :new, :create, :edit, :update]  # access to all the functions.

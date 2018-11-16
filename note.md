@@ -40,15 +40,32 @@
   <!-- VVVThis is the next pieceVVV -->
 
   √=> Error messages... / validation error..
-  => amniot authenitcation
 
  √ => test associations in console
   => Read up on understanding of scope(It in your coursess)
   => navigation bar / links to other parts of project (options... Look up in google)
 
   √ => Login in page..
-   => a way to build costume validations to make flight_ride default "economy" and with possible check book for First class. Or  Type in first class, or Drop down menu.
-    =>
+   √=> a way to build costume validations to make flight_ride default "economy" and with possible check book for First class. Or  Type in first class, or Drop down menu.
+   
+
+   ----------------------
+   Omniauth Break down.
+     Separate Omni model with name.email,image, uid (all string)
+     Separate omni controller That the check that omniauth works..
+
+
+      Create the Routing (i.e- get '/auth/facebook/callback' => 'omni#create') 
+        ^^^ omni controller_create.^^^^^
+
+      -> Then it links into the Indexs of ALL THE FLIGHT
+
+
+   ---------------
+   
+    => app/views/flights/ needs [
+      #How do i add flight.ride attribute [flight.ride.class]
+      # so it deplay on the NewLy created flight on app/view/flights/show]
 
 ---------------------
 
