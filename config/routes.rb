@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   post '/sessions' => "sessions#create"
   delete '/logout' => "sessions#destroy"
 
+  get '/users' => "users#new"
+
  
    resources :users, :only => [:new, :create, :show]
    resources :flights, only: [:index, :show, :new, :create, :edit, :update]  # access to all the functions.
@@ -16,9 +18,8 @@ Rails.application.routes.draw do
   #  post '/flight_ride/new' => "flight_ride#new" 
 
    # this is the code you need
-    resources :users, :only => [:show] do
+    resources :users, :only => [:new, :create, :show] do
       resources :flight_rides, only: [:index, :show, :new, :create, :edit, :update] # reduce the actions to what you only need
-
      end
   
    

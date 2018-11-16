@@ -3,18 +3,18 @@
 <p>Find me in app/views/sessions/new.html.erb</p>
 
 <p> choose your name</p>
-    <%= form_for @user, url:sessions_path do |f| %>
+    <%= form_for (@user) do |f| %>
      <select name="user[id]" id="user_name"> 
       <% User.all.each do |user| %>
         <option value="<%= user.id %>"><%= user.name %></option>
+        <br>
         <% end %>
         </select>
-
- <br>
+        <br>
         <%= f.label :password %>
         <%= f.password_field :password, id:"password" %><br />
         
-        <%= f.submit "Sign In"%>
+        <%= f.submit "Login"%>
 <% end %>
 
    

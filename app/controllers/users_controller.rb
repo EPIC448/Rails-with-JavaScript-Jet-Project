@@ -30,9 +30,6 @@ class UsersController < ApplicationController
     end
   end
   
-
-
-
    private
 
 
