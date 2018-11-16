@@ -12,12 +12,11 @@ class Flight < ApplicationRecord
     validates :flight_departure, :presence => true
     validates :flight_sit, :presence => true
     
-    validates :flight_class, inclusion: { in: %w(economy first_class),
-    message: "%{value} is not a valid size" }, allow_nil: true
-   end
-    # validates :flight_class, :default =>  
-
-
+    # validates :flight_class, inclusion: { in: %w(economy first_class),
+    # message: "%{value} is not a valid size" }, allow_nil: true
+    #  end
+    
+    # validates :flight_class, :default => "Economy"
 
     scope :pass_inspection, -> { where(inspection: true) }
 end

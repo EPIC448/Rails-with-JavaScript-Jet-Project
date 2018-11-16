@@ -10,10 +10,12 @@ class UsersController < ApplicationController
 
   if @user.save
     session[:user_id] = @user.id  #attempt to log them in.
-    redirect_to user_path(@user) #this is a get request GET "/"
+    
+    redirect_to flights_path
    else
 
-    render 'users/new' #show them the form.
+    render 'sessions/new' 
+    # sign up page
    end
   end
 
