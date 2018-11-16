@@ -5,6 +5,7 @@ class User < ApplicationRecord
 
 
 	validates :name, presence: true
+	validates :name, format: {without: /[0-9]/, message: "does not allow numbers" }
 	validates :password, presence: true
 
  # omniauth goes here.

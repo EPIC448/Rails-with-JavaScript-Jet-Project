@@ -7709,3 +7709,309 @@ Unpermitted parameter: :id
 Completed 200 OK in 60ms (Views: 53.9ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2018-11-16 13:35:56 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 109ms (Views: 77.8ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 13:36:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"13LKYo5CP7IZKnuCjdLEjYyVgbYXi0KnquuklQpo2qwE4ymCe/340xM9mGwr7AlZ0fUAawq/k5fzMEBW6A27Uw==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 87ms (Views: 76.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 13:36:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sHG4ZGquQkaj+BHtSmhJ1XO/iJo79VthTgk4Zycy9QBj4FuEnxGFJ6nv8gPsVoQBLt8JRybBilEX0tykxVeU/w==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 115ms (Views: 105.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 13:36:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJtnx8/UGc2y37rlh2yC2U2oIe3P5X/ShRcvNVl1E7SfCoQnOmverLjIWQshUk8NEMigMNLRruLczMv2uxBySw==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 83ms (Views: 73.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 13:36:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dBUhiE4rxpQwM0TRAnhTaTURX2rNQUomfYNmP2BUztGnhMJou5QB9Tokpz+kRp69aHHet9B1mxYkWIL8gjGvLg==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 99ms (Views: 89.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 13:36:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pBND6T4Oisyf1pFyBXNbNC9fyDlOwwpYr+HQ42obT793gqAJy7FNrZXBcpyjTZbgcj9J5FP322j2OjQgiH4uQA==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 137ms (Views: 52.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:29:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GK77AUw7shJkMfnkR24ri8tvh0Yu6k4cJ8hMH53OkG/LPxjhuYR1c24mGgrhUOZflg8GmzPenyx+E6jcf6vxkA==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/omoogun/Desktop/Flaitron_Dev/rails-class/Jet-Rails-Project-/app/models/user.rb:8: syntax error, unexpected tLABEL
+...idates :name, presence: format: { without: /[0-9]/, message:...
+...                               ^):
+  
+app/models/user.rb:8: syntax error, unexpected tLABEL
+app/controllers/users_controller.rb:9:in `create'
+Started PUT "/__web_console/repl_sessions/881c0beee97f57d2c53bf7af275fcba4" for 127.0.0.1 at 2018-11-16 14:40:26 -0500
+Started PUT "/__web_console/repl_sessions/881c0beee97f57d2c53bf7af275fcba4" for 127.0.0.1 at 2018-11-16 14:40:27 -0500
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:40:40 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/omoogun/Desktop/Flaitron_Dev/rails-class/Jet-Rails-Project-/app/models/user.rb:8: syntax error, unexpected tLABEL
+...lidate :name, presence: format: {without: /[0-9]/, message: ...
+...                               ^):
+  
+app/models/user.rb:8: syntax error, unexpected tLABEL
+app/controllers/users_controller.rb:5:in `new'
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:42:33 -0500
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :format. Valid keys are: :on, :if, :unless, :prepend. Perhaps you meant to call `validates` instead of `validate`?):
+  
+app/models/user.rb:8:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:5:in `new'
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:42:57 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 73ms (Views: 53.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:43:04 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 55ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:43:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4IER2ivtobXk51HXoK5SAwvdKwnIf283DeM/aPXHkdczEPI63lJm1O7wsjkGkJ/XVr2q1NVLvgdUONurF6LwKA==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `email' for #<User:0x007fe76edf9cd0>):
+  
+app/controllers/users_controller.rb:11:in `create'
+Started PUT "/__web_console/repl_sessions/63499a12499b5ac4e057e39047c64115" for 127.0.0.1 at 2018-11-16 14:43:56 -0500
+Started PUT "/__web_console/repl_sessions/63499a12499b5ac4e057e39047c64115" for 127.0.0.1 at 2018-11-16 14:43:57 -0500
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:44:16 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4IER2ivtobXk51HXoK5SAwvdKwnIf283DeM/aPXHkdczEPI63lJm1O7wsjkGkJ/XVr2q1NVLvgdUONurF6LwKA==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `email' for #<User:0x007fe7752f9e78>):
+  
+app/controllers/users_controller.rb:11:in `create'
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:45:39 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4IER2ivtobXk51HXoK5SAwvdKwnIf283DeM/aPXHkdczEPI63lJm1O7wsjkGkJ/XVr2q1NVLvgdUONurF6LwKA==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 58ms (Views: 31.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:45:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"meV8zxGMT9IlVdPPMvsK0Hj6+OhbqP0/+MZifhLXHH5KdJ8v5DOIsy9CMCGUxccEJZp5NUacLA+hHYa98LJ9gQ==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:45:45 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qp5hxisXPzMq1AF6WBQwpGU2xdhA4vOR46rJpEkBI+uRD4Im3qj4UiDD4pT+Kv1wOFZEBV3WIqG6cS1nq2RCFA==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 69ms (Views: 66.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:45:46 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ugettqaKJWm0sMGmd9ixTF+3ocKFPU2NT6WMXr+89EBplk5WUzXiCL6nIkjR5nyYAtcgH5gJnL0WfmidXdmVvw==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 70ms (Views: 64.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:45:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ihwkLBgbwpJLgL6XZeIGvQ7rKc9DggGGEgk319ulEHtZjcfM7aQF80GXXXnD3MtpU4uoEl620LZL0tMUOcBxhA==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 64ms (Views: 58.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:46:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rI9hA36oh4ja94Ztas3paVxiNIKYR1qXkmRQw6FfJJ5/HoLjixdA6dDgZYPM8yS9AQK1X4Vzi6fLv7QAQzpFYQ==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 49ms (Views: 40.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:50:06 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:50:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"db/lLZzw2JUQnyP1M63zqeziE0pHUbzWMTvU2aNdVRGmLgbNaU8f9BqIwBuVkz59sYKSl1plbeZo4DAaQTg07g==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:50:13 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g/vIY497SW6ZYK5AdOGfyg00iXvqj91tJTzW6+cBeSBQaiuDesSOD5N3Ta7S31IeUFQIpve7DF185zIoBWQY3w==", "user"=>{"id"=>"1", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+Unpermitted parameter: :id
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 70ms (Views: 64.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:52:28 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:52:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U5AbcySvxjdpoM7m8UDabYGm4HJaYSSCjYHa9qjGKhuAAfiT0RABVmO3LQhXfhe53MZhr0dV9bLUWj41SqNL5A==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 92ms (Views: 88.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:53:00 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 46ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:53:02 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k1ftMd/I62LxP8OmMJOpqZ7dZQW4dCeQ4OnLUkA5lb1Axg7RKncsA/soIEiWrWR9w73k2KVA9qC5Mi+Rolz0Qg==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:53:14 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-11-16 14:53:16 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wvC2MEifzBujpV77yNErOo2ElT4GuEQJry7Q//DBjtoRYVXQvSALeqmyvRVu7+bu0OQU4xuMlTn29TQ8EqTvJQ==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-11-16 14:53:18 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 80ms (Views: 73.9ms | ActiveRecord: 0.0ms)
+
+

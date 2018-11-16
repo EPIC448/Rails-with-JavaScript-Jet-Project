@@ -39,15 +39,15 @@
 
   <!-- VVVThis is the next pieceVVV -->
 
-  => Error messages... / validation error..
+  √=> Error messages... / validation error..
   => amniot authenitcation
 
-  => test associations in console
+ √ => test associations in console
   => Read up on understanding of scope(It in your coursess)
   => navigation bar / links to other parts of project (options... Look up in google)
 
-    => Login in page..
-    => a way to build costume validations to make flight_ride default "economy" and with possible check book for First class. Or  Type in first class, or Drop down menu.
+  √ => Login in page..
+   => a way to build costume validations to make flight_ride default "economy" and with possible check book for First class. Or  Type in first class, or Drop down menu.
     =>
 
 ---------------------

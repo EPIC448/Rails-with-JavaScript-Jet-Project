@@ -1,6 +1,23 @@
 <h1>Flights#new</h1> 
 <p>Find me in app/views/flights/new.html.erb</p> 
 
+
+<% if @flight.errors.any? %>
+  <div id="error_explanation">
+    <h2>
+      <%= pluralize(@flight.errors.count, "error") %>
+      prohibited this post from being saved:
+    </h2>
+ 
+    <ul>
+    <% @flight.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
 <section class="jet">
   <header class="header">
     <h1>Create a New Flight</h1>

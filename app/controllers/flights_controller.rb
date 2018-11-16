@@ -20,6 +20,7 @@ class FlightsController < ApplicationController
 
    def create
     @flight = Flight.create(flight_params)
+    
     if @flight.save
       session[:flight_id] = @flight.id 
       #  redirect_to flight(@flight)
