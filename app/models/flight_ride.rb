@@ -2,7 +2,7 @@ class FlightRide < ApplicationRecord
     belongs_to :user
     belongs_to :flight
 
-    validate :password, presence: true
+    validates :password, presence: true
 
     def take_flight
 

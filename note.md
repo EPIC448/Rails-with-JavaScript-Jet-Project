@@ -51,8 +51,8 @@
 
    ----------------------
    Omniauth Break down.
-     Separate Omni model with name.email,image, uid (all string)
-     Separate omni controller That the check that omniauth works..
+     How to code Omniauth into your sessions/create controller.
+     I just had if/else statements in my create function in the sessions controller. It should not require a model and controller of its own, it can all be done in the sessions controller. Hope that helps
 
 
       Create the Routing (i.e- get '/auth/facebook/callback' => 'omni#create') 

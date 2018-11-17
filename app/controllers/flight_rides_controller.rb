@@ -8,7 +8,9 @@ class FlightRidesController < ApplicationController
         end
       
         def new
-         @flight_ride = FlightRide.create(:user_id => params[:user_id], :flight_id => params[:flight_id])
+         # @flight_ride = FlightRide.create(:user_id => params[:user_id], :flight_id => params[:flight_id])
+         @flight_ride = FlightRide.create(flight_ride_params)
+
          # we want to add the take a ride logic here.
          flash[:notice] = @flight_ride.take_flight
 
@@ -41,8 +43,17 @@ class FlightRidesController < ApplicationController
          private
 
       def flight_ride_params
-       params.permit(:user_id, :flight_id, :flight_class)
+         params.require(:flight_ride).permit(:user_id, :flight_id, :flight_class)
       end 
+
+
+  
+# [https://learn.co/tracks/full-stack-web-development-v6/rails/associations-and-rails/has-many-through-in-forms]
+      # You definitely want to keep the strong params. 
+      # The issue is that you need your params from your 
+      # form to be passed through like this: `{flight_ride" => {"user_id"=>"14", "flight_id"=>"3" }}` 
+      #  If you use form_for with an empty flight ride object, 
+      # the params will typically generate correctly on their own
       
       
 end

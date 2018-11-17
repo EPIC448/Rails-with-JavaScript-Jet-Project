@@ -14,14 +14,22 @@
     <h3><%= @flight.flight_sit %> </h3> <br>
      
 
-    <form method= "post" action= <%= user_flight_rides_path(current_user.id)%>>
-    # route to the flight_ride index
+  <form method= "post" action= <%= user_flight_rides_path(@current_user)%>>
 
+    # You definitely want to keep the strong params. 
+      # The issue is that you need your params from your 
+      # form to be passed through like this: `{flight_ride" => {"user_id"=>"14", "flight_id"=>"3" }}` 
+      #  If you use form_for with an empty flight ride object, 
+      # the params will typically generate correctly on their own
+      
      <%= hidden_field_tag :user_id, current_user.id %>
 
      <%= hidden_field_tag :flight_id, @flight.id %>
    
      <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
+    <br>
+
     <input type = "submit", value = "Go on Flight Ride" >
-   
+
+      
     </form>
