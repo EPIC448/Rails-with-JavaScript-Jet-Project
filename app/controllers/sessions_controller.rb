@@ -5,21 +5,32 @@ class SessionsController < ApplicationController
 
   def create
     
-    @user = User.find_by(:id => params[:user][:id])
-        if @user && @user.authenticate(params[:user][:password])
+     # normal log in
+          @user = User.find_by(:id => params[:user][:id])
+         if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
 
             redirect_to user_path
-        else
-                render 'sessions/login' 
-        end
+
+          elsif
+
+            if auth_hash = request.env["omniauth.auth"]
+                @user = User.find_or_create_by(uid: auth["info"]["email"]) do |u|
+                  u.email = auth['info']['email']
+                end 
+              
+                session[:user_id] = @user.id
+      
+                redirect_to user_path
+              else
+                      render 'sessions/login'
+              end
+         end 
+    end
 
         #  How i will be using authenticate
         # def create
-        #   if auth
-        #       @user = User.find_or_create_by(username: auth["info"]["email"]) do |u|
-        #         u.password = Password.pronounceable 9
-        #       end
+        #  
       
         #       if @user.save
         #         session[:user_id] = @user.id
@@ -38,5 +49,10 @@ class SessionsController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :user_cash, :password, :user_id)
   end 
+
+
+  def auth
+    request.env['omniauth.auth']
+  end
 
 end
