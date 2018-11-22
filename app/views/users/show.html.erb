@@ -5,8 +5,9 @@
 
           Cash: <%= @user.user_cash %><br>
 
-        #   <%#= @user.owner_departure %><br>
 
+  <br>
+      <h2><%= link_to "See all Flights", flights_path %></h2>
 
         <% if flash[:notice] %>
          <div class="notice"><%= flash[:notice] %></div>
@@ -15,9 +16,10 @@
      <%=link_to "Log Out", logout_path, :method => :delete %>
         <%= hidden_field_tag :user_id, current_user.id %>
   <br>
+   OR
   <br>
 
-        <% if session[:user_id] %>
+        <% if auth_hash = request.env["omniauth.auth"] %>
         <h1><%= @user.name %></h1>
         <h2>Email: <%= @user.email %></h2>
         <h2>Facebook UID: <%= @user.uid %></h2>
@@ -26,8 +28,6 @@
         <%= link_to('Log in with Facebook!', '/auth/facebook') %>
         <% end %>
 
-  <br>
-      <h2><%= link_to "See all Flights", flights_path %></h2>
   </header>
 
   
