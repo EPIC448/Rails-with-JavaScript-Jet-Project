@@ -1,13 +1,14 @@
 class FlightsController < ApplicationController
   def index
-     @user = User.new
+    @user = User.new
     @flights = Flight.new
     @flights = Flight.all
   end
 
   def show
+    @flight_rides = FlightRide.new
+    @user = current_user
     @flight = Flight.find(params[:id])
-
     render 'flights/show'
   end
 

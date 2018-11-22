@@ -66,6 +66,7 @@
     => app/views/flights/ needs [
       #How do i add flight.ride attribute [flight.ride.class]
       # so it deplay on the NewLy created flight on app/view/flights/show]
+       # you Want this to route back to the Flight Show page, With the updated version after the already went on a Flight_ride....
 
 ---------------------
 

@@ -18,6 +18,7 @@ class FlightRidesController < ApplicationController
         end
       
          def create
+        
             @user = User.find(params[:user_id]) # finding the parent
             @flight_ride = @user.flight_rides.build(flight_ride_params)
            if @flight_ride.save
