@@ -50,16 +50,18 @@
    
 
    ----------------------
-   Omniauth Break down.
-     How to code Omniauth into your sessions/create controller.
-     I just had if/else statements in my create function in the sessions controller. It should not require a model and controller of its own, it can all be done in the sessions controller. Hope that helps
+  √ Omniauth Break down.
+    √ How to code Omniauth into your sessions/create √controller.
+    √ I just had if/else statements in my create √function in the sessions controller. It should √not require a model and controller of its own, it √can all be done in the sessions controller. Hope √that helps
 
 
       Create the Routing (i.e- get '/auth/facebook/callback' => 'omni#create') 
         ^^^ omni controller_create.^^^^^
 
-      -> Then it links into the Indexs of ALL THE FLIGHT
+     √ -> Then it links into the Indexs of ALL THE FLIGHT
 
+ Get Login to work properly..
+ Finalize authenicate for FAcebook .
 
    ---------------
    
