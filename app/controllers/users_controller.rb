@@ -26,6 +26,7 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
     @user = User.find(params[:id])
+    binding.pry
     render 'users/show'
    # list out in the user / show template
     end
