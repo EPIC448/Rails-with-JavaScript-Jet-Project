@@ -24,18 +24,21 @@
               </div>
             <% end %>
 
-
+   <br>
        <%= f.label :name %>
        <%= f.text_field :name %>
        <br />
+       <br>
       
         <%= f.label :password %>
         <%= f.text_field :password %>
         <br />
 
         <%= f.submit%>
+        <br>
         <% end %>
       </form>
+      <br>
 
       <%= link_to('Log in with Facebook!', '/auth/facebook') %>
 

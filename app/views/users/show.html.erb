@@ -1,21 +1,19 @@
  <p> This is the users show page, List result or tickets after the went on the ride</p>
 <header class="header">
-    #List avilable trips open to the current_user
     
-          User: <%= @user.name %><br>
-          Cash: <%= @user.user_cash %><br>
-
+          User: <h3><%= @user.name %><br></h3>
+    <br>
+    <h4> Flight_Ride Iternary</h4>
 <br>
-
+   
     <% @user.flight_rides.each do |user_flight_ride|%>
      <br>
      <p>flight_ride_id</p>
      <h3> <%= user_flight_ride.id%></h3>
 
-     <p>user_id</p>
-     <h3> <%= user_flight_ride.user_id%></h3>
+     <h3> <%#= user_flight_ride.user_id%></h3>
 
-     <p>flight ID Number</p>
+     <p>flight_id </p>
      <h3> <%= user_flight_ride.flight_id%></h3>
 
 <br>
