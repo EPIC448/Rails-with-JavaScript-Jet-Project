@@ -5,24 +5,36 @@ class SessionsController < ApplicationController
 
   def create
 
-     # normal log in
+     # normal log in  
+ 
+    if auth_hash = request.env["omniauth.auth"]
+
+      user = User.find_by(:name => params[:name])
+      if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+
+        # @user = User.find_or_create_by_omniauth(auth_hash)
+        # self.where(:name => auth_hash[:info][:name]).first_or_create
+        # # binding.pry
+        # @current_user = @user.name
+        # session[:user_id] = @user.id
+
+        redirect_to user_path
+      else
+ binding.pry
         @user = User.find_by(:id => params[:user][:id])
-        if @user && @user.authenticate(params[:user][:password])
+          if @user && @user.authenticate(params[:user][:password])
             session[:user_id] = @user.id
 
             redirect_to user_path
 
-        else
-
-            if auth_hash = request.env["omniauth.auth"]
-                @user = User.find_or_create_by_omniauth(auth_hash)
-                session[:user_id] = @user.id
-                redirect_to root_path
-            else
+          else 
                 render 'sessions/login'
-            end 
-         end # end of regular user login and out.
+          end 
+       end # auth 
+      end
    end # create 
+
 
   def destroy
     session[:user_id] = nil

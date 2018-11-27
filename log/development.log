@@ -11835,3 +11835,502 @@ Completed 200 OK in 356ms (Views: 318.8ms | ActiveRecord: 0.6ms)
 
 Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-26 15:27:30 -0500
 Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-26 15:27:31 -0500
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:08:07 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 979ms (Views: 942.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:08:13 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:08:14 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:12:10 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:12:10 -0500
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:13:35 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 305ms (Views: 270.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:13:39 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:13:39 -0500
+Started GET "/auth/facebook/callback?code=AQBy8FvXdGxww18x07CsNN1AQhn27Ov0ltsujV5aRqhIBWagJ1ZCivuV_-b1N0vyT5DHH4ZJaoOV6Q8r4FXr8wwyv17hE-HniKH2YU5_JHEXIWhimDxsQov2KyBg0QR5k4zMZiy9UNOH01RfjmTpLoSqoqwFttnAXk8QGP1HRV1Hor-o-kuMg93q2upQEX6IqAP_BnUd-sSbXDdvuZWk55KVCWIhZXMjvjl7K_VJNpgdcw6XYh_w9HF4Rt36ZDmz_9NM6a1WALEhLP4nfLVPqy__Ycr0GZ8uROqZZyD7n6r8WW2gyRgn0FqXnqUWN9v2AagnhHcRXj5Hk75AK21RhCy2wTuWNpBcQhQWzvGQHrr-Pg&state=78bee33300631af2397a7e2a9693726d919df5372b0cf24a" for 127.0.0.1 at 2018-11-27 14:13:45 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBy8FvXdGxww18x07CsNN1AQhn27Ov0ltsujV5aRqhIBWagJ1ZCivuV_-b1N0vyT5DHH4ZJaoOV6Q8r4FXr8wwyv17hE-HniKH2YU5_JHEXIWhimDxsQov2KyBg0QR5k4zMZiy9UNOH01RfjmTpLoSqoqwFttnAXk8QGP1HRV1Hor-o-kuMg93q2upQEX6IqAP_BnUd-sSbXDdvuZWk55KVCWIhZXMjvjl7K_VJNpgdcw6XYh_w9HF4Rt36ZDmz_9NM6a1WALEhLP4nfLVPqy__Ycr0GZ8uROqZZyD7n6r8WW2gyRgn0FqXnqUWN9v2AagnhHcRXj5Hk75AK21RhCy2wTuWNpBcQhQWzvGQHrr-Pg", "state"=>"78bee33300631af2397a7e2a9693726d919df5372b0cf24a"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/auth/facebook/callback?code=AQBzY1YZgROnonnn-LpeFqJ0b5mRddkWzaTqRFLNO6GQLa0rxEopoM7DXSwwTCS1aDJUrBN3LvjoYo7EiB0KbJua7S-JxVlpRx_frnavTz0azrqtUF96-1-2Z3VftJJoFNdUZkqWO5Cg-LMbA5LU_JfVcPzakkkU7boQ_Hhl2eRPCl65JQq_uU3ruxYhdafCZ-ng6Kr3XFmvUGwomfAE5FmWHfFwu51-dwIIGSg3nA2Ur96B26NoFFIM4SBTBDtPfeD2L-Zyumuu1A7yMTk8miu_F2mElI3_YxOmMhlQ2OVbG3NE8nJQIaNIEhUUUmGPY9T1PMhNy4JBUuz3VXpZfdAW6vfoZFXe5o38FWTWo00drw&state=78bee33300631af2397a7e2a9693726d919df5372b0cf24a" for 127.0.0.1 at 2018-11-27 14:17:08 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:17:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBzY1YZgROnonnn-LpeFqJ0b5mRddkWzaTqRFLNO6GQLa0rxEopoM7DXSwwTCS1aDJUrBN3LvjoYo7EiB0KbJua7S-JxVlpRx_frnavTz0azrqtUF96-1-2Z3VftJJoFNdUZkqWO5Cg-LMbA5LU_JfVcPzakkkU7boQ_Hhl2eRPCl65JQq_uU3ruxYhdafCZ-ng6Kr3XFmvUGwomfAE5FmWHfFwu51-dwIIGSg3nA2Ur96B26NoFFIM4SBTBDtPfeD2L-Zyumuu1A7yMTk8miu_F2mElI3_YxOmMhlQ2OVbG3NE8nJQIaNIEhUUUmGPY9T1PMhNy4JBUuz3VXpZfdAW6vfoZFXe5o38FWTWo00drw", "state"=>"78bee33300631af2397a7e2a9693726d919df5372b0cf24a"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:17:19 -0500
+Started GET "/auth/facebook/callback?code=AQAvoROUKMxX0AmAu4SRwF6VUPCquAc2FnYgK8vp1Sc6ibG4DzUabjm-QTTJRIZj6X40EAknSelsFjXgRhArFz5xHFGb68bVUVnCeKBX8SiJBVnAUzbBFEjKTG6XCiIs63X3ua7RgcAKNESVXaH931d39YPESG8abihdg396MKxJkCzKefWao_Ongj7I0K1N1NqsOaxK7MO0JeqCgqJlM3nSGgvk9M8f_rjfKIh79bVjO5OBoU-d_cMgz_hOLxGis1n85ww7eA84n6kbWGH6whwiby9Rdp2yX_2c4quVlBX2_ErmEGH4sJONoYTQ-Zpr6ZDXjdgOfNRtjq7CBUeX9IRki_YzocRTqFjR2-UZhCgljQ&state=0907ade0d1a78c873bb98dbb8f657d242c3c7324ce1e6e58" for 127.0.0.1 at 2018-11-27 14:17:19 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAvoROUKMxX0AmAu4SRwF6VUPCquAc2FnYgK8vp1Sc6ibG4DzUabjm-QTTJRIZj6X40EAknSelsFjXgRhArFz5xHFGb68bVUVnCeKBX8SiJBVnAUzbBFEjKTG6XCiIs63X3ua7RgcAKNESVXaH931d39YPESG8abihdg396MKxJkCzKefWao_Ongj7I0K1N1NqsOaxK7MO0JeqCgqJlM3nSGgvk9M8f_rjfKIh79bVjO5OBoU-d_cMgz_hOLxGis1n85ww7eA84n6kbWGH6whwiby9Rdp2yX_2c4quVlBX2_ErmEGH4sJONoYTQ-Zpr6ZDXjdgOfNRtjq7CBUeX9IRki_YzocRTqFjR2-UZhCgljQ", "state"=>"0907ade0d1a78c873bb98dbb8f657d242c3c7324ce1e6e58"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:20:06 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:20:06 -0500
+Started GET "/auth/facebook/callback?code=AQDfkXpw40JLugVCYXMcvM4HmjWrXWx5j_rNvPKk9JjLastzsMQOHy5egzIj6zIKVa9vHEAqmmQWWkBF1lYRtBCQ8iTBdZbGLT79SZMIwKUzu0eNX_-62gLoIf2R3f1txNg-FpAecjloYuDncC6pjj0u4LHs5iFLjmESIH7zg9pPzpY1E_to6NbA3PLD-Z-mjLGgLL0-Q3K7HRPlQstkaqiNAjylnwJXtzjY-Cez2jdO81nC1YicYAjShz5BrzLC3YFoykuttlcd5VfKfivC_AiW0gvoXo46EC4iD2QYP7Z4dPIYtl8BaaocqsSnkke-VA4ArfpgfLGFZePUOwhQygdKYhyiG7zxi0ekBkNCr8RnYA&state=c9ef71f5fb7b0098ace471aa38bcbb932e3148b98f5a950a" for 127.0.0.1 at 2018-11-27 14:20:06 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDfkXpw40JLugVCYXMcvM4HmjWrXWx5j_rNvPKk9JjLastzsMQOHy5egzIj6zIKVa9vHEAqmmQWWkBF1lYRtBCQ8iTBdZbGLT79SZMIwKUzu0eNX_-62gLoIf2R3f1txNg-FpAecjloYuDncC6pjj0u4LHs5iFLjmESIH7zg9pPzpY1E_to6NbA3PLD-Z-mjLGgLL0-Q3K7HRPlQstkaqiNAjylnwJXtzjY-Cez2jdO81nC1YicYAjShz5BrzLC3YFoykuttlcd5VfKfivC_AiW0gvoXo46EC4iD2QYP7Z4dPIYtl8BaaocqsSnkke-VA4ArfpgfLGFZePUOwhQygdKYhyiG7zxi0ekBkNCr8RnYA", "state"=>"c9ef71f5fb7b0098ace471aa38bcbb932e3148b98f5a950a"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "samuelogundiran@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.email: SELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?):
+  
+app/models/user.rb:13:in `find_or_create_by_omniauth'
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:28:47 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:28:48 -0500
+Started GET "/auth/facebook/callback?code=AQC7j6Mw51Si4dTUolQg-YVo8ZCQVZBBR_GkMRG5ALOEnXurlN8QguC4o0zVwLoSa_KEmzYyBoWSsmeMSJubUbUhgysdZR9GOzusPcD0npLKmhwKN4NOhbvey7MYsUwt3uyZaVQFm91mikQbYTQbQ2ilHlLFRlmhCgii2LQhqtNXBiI7lD_O9wKn7QHIuaBU9BlrngLkEHUgCXdKCcfa73Y0RxM_bV0vRUuwUXymPS6f1IXZCIoRov3QgrBzzkDTr5nQCTeUhtvwoBpk1zo2GFaMvSimfG1ph52aXdCEgYGOxD91nj6FzidD2VZ5sLQDhuPBCZ9xkUSbyn_Kvj-Ylr3AVmOJdRWLjOVhwgWFwj5gaQ&state=2f1545e416a96e7fa27b2b15e1dd5d4892f3a6fe3629725b" for 127.0.0.1 at 2018-11-27 14:28:48 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC7j6Mw51Si4dTUolQg-YVo8ZCQVZBBR_GkMRG5ALOEnXurlN8QguC4o0zVwLoSa_KEmzYyBoWSsmeMSJubUbUhgysdZR9GOzusPcD0npLKmhwKN4NOhbvey7MYsUwt3uyZaVQFm91mikQbYTQbQ2ilHlLFRlmhCgii2LQhqtNXBiI7lD_O9wKn7QHIuaBU9BlrngLkEHUgCXdKCcfa73Y0RxM_bV0vRUuwUXymPS6f1IXZCIoRov3QgrBzzkDTr5nQCTeUhtvwoBpk1zo2GFaMvSimfG1ph52aXdCEgYGOxD91nj6FzidD2VZ5sLQDhuPBCZ9xkUSbyn_Kvj-Ylr3AVmOJdRWLjOVhwgWFwj5gaQ", "state"=>"2f1545e416a96e7fa27b2b15e1dd5d4892f3a6fe3629725b"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "samuelogundiran@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:14
+Completed 500 Internal Server Error in 49211ms (ActiveRecord: 7.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.email: SELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?):
+  
+app/models/user.rb:14:in `find_or_create_by_omniauth'
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:29:46 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:29:46 -0500
+Started GET "/auth/facebook/callback?code=AQDi6pRJ23ABm8GqV1OXRGemI9fe8q8lDI7LKRMZl2ihhDLbmC8tnceSl9yQz_tDHgkwwNhcl4ncMNCqFgvak2_98PiGpX5F5FQggdnF7WqRxBNempqva6upZOiQppMM4rlaxNbJyWArErIJ2_WzLyoIQiQk3kCL2nBKG3TEK_KL2lCodQNRfK9EcPtegBj30CNHvPz-IpEbj0hKcssRyUztnESSYR4rW18VHbDscDAO4GpMvBJ7A1mTYTHh6kmyG2R6eYqLRZIfrWzOQIYL01abxKEeJMmlGy5CEKxazDuEiM2Y_fTAk2uSxs4kXFo_tsm-nyxrxuwRYbbEuVeLB15m48RV_1LW2raZVSq-LYz00g&state=49e5a54cfc25ae8afb68978e8c2dccc32d920b3a51e3fa2b" for 127.0.0.1 at 2018-11-27 14:29:46 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDi6pRJ23ABm8GqV1OXRGemI9fe8q8lDI7LKRMZl2ihhDLbmC8tnceSl9yQz_tDHgkwwNhcl4ncMNCqFgvak2_98PiGpX5F5FQggdnF7WqRxBNempqva6upZOiQppMM4rlaxNbJyWArErIJ2_WzLyoIQiQk3kCL2nBKG3TEK_KL2lCodQNRfK9EcPtegBj30CNHvPz-IpEbj0hKcssRyUztnESSYR4rW18VHbDscDAO4GpMvBJ7A1mTYTHh6kmyG2R6eYqLRZIfrWzOQIYL01abxKEeJMmlGy5CEKxazDuEiM2Y_fTAk2uSxs4kXFo_tsm-nyxrxuwRYbbEuVeLB15m48RV_1LW2raZVSq-LYz00g", "state"=>"49e5a54cfc25ae8afb68978e8c2dccc32d920b3a51e3fa2b"}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "samuelogundiran@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:14
+Completed 500 Internal Server Error in 336722ms (ActiveRecord: 5.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.email: SELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?):
+  
+app/models/user.rb:14:in `find_or_create_by_omniauth'
+app/controllers/sessions_controller.rb:11:in `create'
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:35:34 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (246.1ms)
+Completed 200 OK in 1348ms (Views: 1069.6ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:35:52 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:35:52 -0500
+Started GET "/auth/facebook/callback?code=AQBDnNutV76YWb_5b2hpKPXuNHE0AuoKZKbA3OgDiyiLKdIWiYxaHmxIWWFl7a3oaiyWn7CAXo_SHAApgnFLiyujvIfGJDLJi76juY4KFewc7CgPxdhvweCFDTHh_dvx6P7dqJwu4__aFDQUiRrhvxXYnDR9-aOorIaDBcwAlr1_NcX30KDzuJZwUGqgODl4QyH5jOV4PlahOinfVJ8vF-G78h7Y_JGE6RCgk28BiDWV8Rmf4RdXtp4vFzTiSe3PX0ovKGqUbgKvQCjnDYQO_IEtX4XdHdbp0BQuawlVGXjl6yNJ2sWHAAJpC9rFwUQEeSHuFf9LJI91Ce6UjM1s-J7r9TZUIAEBApeb8s_PH3Heuw&state=f435526cb0a1611bc62aadc4d3a4bae0f4af258cf9fdb9e6" for 127.0.0.1 at 2018-11-27 14:35:53 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBDnNutV76YWb_5b2hpKPXuNHE0AuoKZKbA3OgDiyiLKdIWiYxaHmxIWWFl7a3oaiyWn7CAXo_SHAApgnFLiyujvIfGJDLJi76juY4KFewc7CgPxdhvweCFDTHh_dvx6P7dqJwu4__aFDQUiRrhvxXYnDR9-aOorIaDBcwAlr1_NcX30KDzuJZwUGqgODl4QyH5jOV4PlahOinfVJ8vF-G78h7Y_JGE6RCgk28BiDWV8Rmf4RdXtp4vFzTiSe3PX0ovKGqUbgKvQCjnDYQO_IEtX4XdHdbp0BQuawlVGXjl6yNJ2sWHAAJpC9rFwUQEeSHuFf9LJI91Ce6UjM1s-J7r9TZUIAEBApeb8s_PH3Heuw", "state"=>"f435526cb0a1611bc62aadc4d3a4bae0f4af258cf9fdb9e6"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "uid"."email" = ? AND "uid"."name" = ? AND "uid"."image" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "samuelogundiran@yahoo.com"], ["name", "Milo King"], ["image", "http://graph.facebook.com/v2.10/2229161043763552/picture"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 7.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: uid.email: SELECT  "users".* FROM "users" WHERE "uid"."email" = ? AND "uid"."name" = ? AND "uid"."image" = ? ORDER BY "users"."id" ASC LIMIT ?):
+  
+app/models/user.rb:13:in `find_or_create_by_omniauth'
+app/controllers/sessions_controller.rb:11:in `create'
+Started PUT "/__web_console/repl_sessions/e885c0a06ad098482b0ac270b897b561" for 127.0.0.1 at 2018-11-27 14:36:24 -0500
+Started PUT "/__web_console/repl_sessions/e885c0a06ad098482b0ac270b897b561" for 127.0.0.1 at 2018-11-27 14:36:27 -0500
+Started PUT "/__web_console/repl_sessions/e885c0a06ad098482b0ac270b897b561" for 127.0.0.1 at 2018-11-27 14:36:29 -0500
+Started PUT "/__web_console/repl_sessions/e885c0a06ad098482b0ac270b897b561" for 127.0.0.1 at 2018-11-27 14:36:30 -0500
+Started PUT "/__web_console/repl_sessions/e885c0a06ad098482b0ac270b897b561" for 127.0.0.1 at 2018-11-27 14:40:50 -0500
+Started PUT "/__web_console/repl_sessions/e885c0a06ad098482b0ac270b897b561" for 127.0.0.1 at 2018-11-27 14:41:18 -0500
+Started PUT "/__web_console/repl_sessions/e885c0a06ad098482b0ac270b897b561" for 127.0.0.1 at 2018-11-27 14:46:53 -0500
+Started PUT "/__web_console/repl_sessions/e885c0a06ad098482b0ac270b897b561" for 127.0.0.1 at 2018-11-27 14:47:03 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:47:14 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:47:14 -0500
+Started GET "/auth/facebook/callback?code=AQCAGEOYuGjn7VYUgc5G8F93jj8esqaiSSWZyiYlKKBfI7c7oHArUFp6IeK5mv79Apd6Dy5VeZ-wi0oaS3_BCGf6nJJGN-0N9eabhp9oeYC31SIrg5i_EBriQRxiYzFbMSBk41aK3KNfUxJUiSw4U4tyv_Ehqgo-Ywi6qWCpB0Cr-KNTHJIwDpHDxgVXwCzAh6RqLs-8i8644I4yD-RZAhK3fCiSsHTevTQBVUslfxHM9C_CfYqEP9DvouJEpuGA57lERVbM9QamRoiuyGWtahbkeFnQefY6KctkuoTAmAbyDgnQYfcQwUfGVYH-IauhDiHsuh2dbVGaHRVTSt3H3xnYhxpu0N3m-BYedHJo9dnhtQ&state=67a923022d912a0b585a4382813a41ddc8b72242d5d1db79" for 127.0.0.1 at 2018-11-27 14:47:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCAGEOYuGjn7VYUgc5G8F93jj8esqaiSSWZyiYlKKBfI7c7oHArUFp6IeK5mv79Apd6Dy5VeZ-wi0oaS3_BCGf6nJJGN-0N9eabhp9oeYC31SIrg5i_EBriQRxiYzFbMSBk41aK3KNfUxJUiSw4U4tyv_Ehqgo-Ywi6qWCpB0Cr-KNTHJIwDpHDxgVXwCzAh6RqLs-8i8644I4yD-RZAhK3fCiSsHTevTQBVUslfxHM9C_CfYqEP9DvouJEpuGA57lERVbM9QamRoiuyGWtahbkeFnQefY6KctkuoTAmAbyDgnQYfcQwUfGVYH-IauhDiHsuh2dbVGaHRVTSt3H3xnYhxpu0N3m-BYedHJo9dnhtQ", "state"=>"67a923022d912a0b585a4382813a41ddc8b72242d5d1db79"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["uid", "2229161043763552"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.uid: SELECT  "users".* FROM "users" WHERE "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?):
+  
+app/models/user.rb:13:in `find_or_create_by_omniauth'
+app/controllers/sessions_controller.rb:11:in `create'
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:47:57 -0500
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:47:59 -0500
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:48:05 -0500
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:48:31 -0500
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:48:34 -0500
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:48:37 -0500
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:48:44 -0500
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:48:52 -0500
+Started PUT "/__web_console/repl_sessions/41ae78977d78ded7cc0ae4ef3854e295" for 127.0.0.1 at 2018-11-27 14:48:59 -0500
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:51:05 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (166.5ms)
+Completed 200 OK in 1134ms (Views: 977.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:51:13 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:51:14 -0500
+Started GET "/auth/facebook/callback?code=AQBdE2kFfhE3Ap9ZwRaysswk3gIBwe6vvletO-a-kzIMIO960h-ZlAv7nQGJIZ6APmJRN_DuEQf3mN-iPcCFF4CZTA_VVc-CQZvggZkQrvKXkpj0mNyd8A2xd0GHUsnfWfiLzwBQ9hK20V_KCkHDrd_53L_jxXYr3H_1f3p6cWLYXslxjqplSX_SC8uFcFBYGZkRlqnA_LgAzqV75Muwuvc5Bj1sigv1LoRhIL94qz8UgYBDfF-z5hSYHO1MxMeSAMft23rcpfYJbXkEvlPymwpUUrvTcDOliWewZUm9HdkUdUT17sqB7H3fKBDF2zN2LBqRhlZHENSi9rBgFyORoV3pjP38Qofs-EcKyD-FddByAg&state=7430b721094049c20fe6cd23d4bb5c4cb50efef2e53cbe74" for 127.0.0.1 at 2018-11-27 14:51:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBdE2kFfhE3Ap9ZwRaysswk3gIBwe6vvletO-a-kzIMIO960h-ZlAv7nQGJIZ6APmJRN_DuEQf3mN-iPcCFF4CZTA_VVc-CQZvggZkQrvKXkpj0mNyd8A2xd0GHUsnfWfiLzwBQ9hK20V_KCkHDrd_53L_jxXYr3H_1f3p6cWLYXslxjqplSX_SC8uFcFBYGZkRlqnA_LgAzqV75Muwuvc5Bj1sigv1LoRhIL94qz8UgYBDfF-z5hSYHO1MxMeSAMft23rcpfYJbXkEvlPymwpUUrvTcDOliWewZUm9HdkUdUT17sqB7H3fKBDF2zN2LBqRhlZHENSi9rBgFyORoV3pjP38Qofs-EcKyD-FddByAg", "state"=>"7430b721094049c20fe6cd23d4bb5c4cb50efef2e53cbe74"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:13
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Milo King"], ["password_digest", "$2a$10$VL3Z7I4uU6.03rlf.pIbhebMBzb7NEShwjLq5vec9ogcYH8Cf0Cv2"], ["created_at", "2018-11-27 19:51:14.740183"], ["updated_at", "2018-11-27 19:51:14.740183"]]
+  ↳ app/models/user.rb:13
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 86ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:51:14 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 75ms (Views: 67.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:51:18 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:51:18 -0500
+Started GET "/auth/facebook/callback?code=AQANAyaglRTaYFRQbEQUNehzxTCTc022kz8o7_NE73yiWAn_HQ56C6cctMRfZJghT6PkoTgHtELAHQBSEV7NQh-qQNvGeqmwUXqiuCrgI-wyLzJfB8ECwtXSA-KUoStpuzFJVgS6_-UuJpNs4hsoH8zb2Wop8usZYT19sUC7E3NcGOYPTcezKcNrzx2MT_YmCqkHVKXobQ9g5gUX9JPu4zLLOKk7IUlIBksLDDGRGVEpW9oUAyk0J7y9n8ls34R32ikjAvHZM7MfVnMD_HhyGGRPPYOCcI19LVcLLENx-jntZQSGqo8tiQO5B52YrfRqBzdZfy-XWVibSIfqURj1nwTm6g-r5Tg5B9NFOzFJ-033hQ&state=489775083587d2400238bb6fb82928ecc198c9af101d025f" for 127.0.0.1 at 2018-11-27 14:51:18 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQANAyaglRTaYFRQbEQUNehzxTCTc022kz8o7_NE73yiWAn_HQ56C6cctMRfZJghT6PkoTgHtELAHQBSEV7NQh-qQNvGeqmwUXqiuCrgI-wyLzJfB8ECwtXSA-KUoStpuzFJVgS6_-UuJpNs4hsoH8zb2Wop8usZYT19sUC7E3NcGOYPTcezKcNrzx2MT_YmCqkHVKXobQ9g5gUX9JPu4zLLOKk7IUlIBksLDDGRGVEpW9oUAyk0J7y9n8ls34R32ikjAvHZM7MfVnMD_HhyGGRPPYOCcI19LVcLLENx-jntZQSGqo8tiQO5B52YrfRqBzdZfy-XWVibSIfqURj1nwTm6g-r5Tg5B9NFOzFJ-033hQ", "state"=>"489775083587d2400238bb6fb82928ecc198c9af101d025f"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:51:18 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 58ms (Views: 52.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:52:25 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:52:35 -0500
+Started GET "/auth/facebook/callback?code=AQCIMcL4YL6oizmuZqCxf-H0DBuC7IW46dXd9dE247Mpejy_qmdp-zPXh7ame1a4UhNHJb618-VbprHSbYC5yJ7FTsoeDeBHpu8qIw_EZp-GO9_7-VUuHY_SSDp8XXqy2taEDZB6TDk5PIvBLZ5YJIHEcJ7TrSGrzK6kbLGTDnSHKRLwoCXeOJFASjqjRMVzSw27Zgh4UYwppkMs7NN5fjJ9ANMFAFpQ6OvQzgGiBcOmpOrYVIx-nkXe3K-XJFqz92iIX4JBWcJ2bOy8xSdqe5mjvDtFmiRWMzBczGJvyQuLU69kl2SwlvnOF_a-6ChCNRaje1Xbtk7uGmEiKCFiCb3IqSLSXq13yNygFE-gasd-cA&state=e90903b645c9e9f9be2364aa1066e1d78e78b1ba1f5ffa40" for 127.0.0.1 at 2018-11-27 14:52:35 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCIMcL4YL6oizmuZqCxf-H0DBuC7IW46dXd9dE247Mpejy_qmdp-zPXh7ame1a4UhNHJb618-VbprHSbYC5yJ7FTsoeDeBHpu8qIw_EZp-GO9_7-VUuHY_SSDp8XXqy2taEDZB6TDk5PIvBLZ5YJIHEcJ7TrSGrzK6kbLGTDnSHKRLwoCXeOJFASjqjRMVzSw27Zgh4UYwppkMs7NN5fjJ9ANMFAFpQ6OvQzgGiBcOmpOrYVIx-nkXe3K-XJFqz92iIX4JBWcJ2bOy8xSdqe5mjvDtFmiRWMzBczGJvyQuLU69kl2SwlvnOF_a-6ChCNRaje1Xbtk7uGmEiKCFiCb3IqSLSXq13yNygFE-gasd-cA", "state"=>"e90903b645c9e9f9be2364aa1066e1d78e78b1ba1f5ffa40"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 65ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:52:36 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 98ms (Views: 90.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:53:12 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 75ms (Views: 50.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:53:14 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:53:14 -0500
+Started GET "/auth/facebook/callback?code=AQAPqJAHqy8Hcr-0dc-VWo8GVZWGYWPJUzMIYEoy05_Np4uNHLYy7Jd3Sve2ahy2HuhJPSX-Y0D4IdRtZuoal1Jk9MUl79MlzCJYUVCB7R2iK_CLhRXbxnxbuwioDr7aBIEXp0S1ybRLjcSEdxVWJchaiiCfaxA8hBTTHsfgOm0EmPP4Xlb6qVvXq5Eu_FKJdU88LI6gj7zdTcTMsucJ7vPOXi1vnltK0k-HT87_Q9NyA90dHmOn_AlAxoNxAj_6EszdFxVr_BOh1j1t5lq35BuqYkUXb5cfQ6MgU7rxdqn3d_DZn3L1I0mq4Ck4YgIhwtGvIQ6FLvZi07Gfiyz31qZudg6Z7ALX84TOXleL-U3rnA&state=a2f8f84951f206ee5010b65aaea4f6f63f42a5340fc8d381" for 127.0.0.1 at 2018-11-27 14:53:14 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAPqJAHqy8Hcr-0dc-VWo8GVZWGYWPJUzMIYEoy05_Np4uNHLYy7Jd3Sve2ahy2HuhJPSX-Y0D4IdRtZuoal1Jk9MUl79MlzCJYUVCB7R2iK_CLhRXbxnxbuwioDr7aBIEXp0S1ybRLjcSEdxVWJchaiiCfaxA8hBTTHsfgOm0EmPP4Xlb6qVvXq5Eu_FKJdU88LI6gj7zdTcTMsucJ7vPOXi1vnltK0k-HT87_Q9NyA90dHmOn_AlAxoNxAj_6EszdFxVr_BOh1j1t5lq35BuqYkUXb5cfQ6MgU7rxdqn3d_DZn3L1I0mq4Ck4YgIhwtGvIQ6FLvZi07Gfiyz31qZudg6Z7ALX84TOXleL-U3rnA", "state"=>"a2f8f84951f206ee5010b65aaea4f6f63f42a5340fc8d381"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 14:53:14 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 61ms (Views: 55.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:57:58 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 14:57:58 -0500
+Started GET "/auth/facebook/callback?code=AQA1ewMvsRxEzJgPgQ6ydwapcw1F9fBy6BXUah8Jdq2EkWZVGhdFWmRtBiI0ac_IpBP2ugY9z4-tW7Qwc_PPYFa7j_DpFoRBNOFKr9hmre8rIAxvib1etnb-_f8yuTxm_G4VQoKOD7HEnlS6gEHOoktDRbZldPYtI7lVqYH-rnBCZn9_E7oKZPUE8Bm-pmdAHGeGZoyhFCLjdk9cX5BjRAvmPekD83N4XOe1XYPysAtEC0SMOXwZTkpyfv4eaZhkLHQUVBfA0uUMw8c60jByC6EZo7qKG921qZWp5s5KfXX502wnybFUjdPk0on34hLevsQQ10H3SiKycaWm7PRyhjEEWan6RyZviEygmsiTAnNU2w&state=3b779a643b70c3d98ac664a48fea947a0f6a389b758978b0" for 127.0.0.1 at 2018-11-27 14:57:58 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA1ewMvsRxEzJgPgQ6ydwapcw1F9fBy6BXUah8Jdq2EkWZVGhdFWmRtBiI0ac_IpBP2ugY9z4-tW7Qwc_PPYFa7j_DpFoRBNOFKr9hmre8rIAxvib1etnb-_f8yuTxm_G4VQoKOD7HEnlS6gEHOoktDRbZldPYtI7lVqYH-rnBCZn9_E7oKZPUE8Bm-pmdAHGeGZoyhFCLjdk9cX5BjRAvmPekD83N4XOe1XYPysAtEC0SMOXwZTkpyfv4eaZhkLHQUVBfA0uUMw8c60jByC6EZo7qKG921qZWp5s5KfXX502wnybFUjdPk0on34hLevsQQ10H3SiKycaWm7PRyhjEEWan6RyZviEygmsiTAnNU2w", "state"=>"3b779a643b70c3d98ac664a48fea947a0f6a389b758978b0"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 250260ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-27 15:02:09 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 91ms (Views: 63.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:02:17 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:02:17 -0500
+Started GET "/auth/facebook/callback?code=AQCQAT3T9b7AiwOWHVIHAV1ne8UHGrf4UByxe0l9A9B9p5JjPD_u07yG024j6pOuRi-8smLtAjJOJWNXzfBS5p2q2h0U9yoFovPQhNUMlPkZbPkgUuD85h_IVDcl76n4JXlRmRdE35jVfVGPE_BWJntDxCaoMKZQMTyLpL62wok7g5AMkes83vdna2rtjIZrhhjechwdLuq1sKY21YtDxUIMaitBUQV6JPuPfW-d_w_dcOYQgSToKC56VJBeq-BNgBHdIfjermjhU-aNxjdhXUvNws1vTBMIDakrS3Z3kKS2ywoPrswtaaDbTsaSIg1GA-cfEtNu8GejvjeqXAcn65D7Mr5ynGkQKh-6XrHK_SVjkQ&state=c9fc63c196b240574bffa7ef44568ca35093429cb7baf61a" for 127.0.0.1 at 2018-11-27 15:02:17 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCQAT3T9b7AiwOWHVIHAV1ne8UHGrf4UByxe0l9A9B9p5JjPD_u07yG024j6pOuRi-8smLtAjJOJWNXzfBS5p2q2h0U9yoFovPQhNUMlPkZbPkgUuD85h_IVDcl76n4JXlRmRdE35jVfVGPE_BWJntDxCaoMKZQMTyLpL62wok7g5AMkes83vdna2rtjIZrhhjechwdLuq1sKY21YtDxUIMaitBUQV6JPuPfW-d_w_dcOYQgSToKC56VJBeq-BNgBHdIfjermjhU-aNxjdhXUvNws1vTBMIDakrS3Z3kKS2ywoPrswtaaDbTsaSIg1GA-cfEtNu8GejvjeqXAcn65D7Mr5ynGkQKh-6XrHK_SVjkQ", "state"=>"c9fc63c196b240574bffa7ef44568ca35093429cb7baf61a"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:13:in `create'
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:07:21 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:07:22 -0500
+Started GET "/auth/facebook/callback?code=AQBtZDgp1TBr2IjMUYEJaFx9Q6kHw-9mpBPKU2g2-RGPLcG2G2wNYs4v6P9hcqh3QngC1xvELSjyCyv42ZuXajoimDUuXGxhYRNhb4SSJv80SW9UniPAKraHpnEDeKJcY66ogY6ss_V-ojDHR80By9o853NPdFWBEE-VBKLLOcLD0nj3BMwXmi-fuJRmPmwNwpw-A1Tt-IR7A6w7AFboy9_Oe6qFO7a1yBjYyVmXo80fHoDSllg_ybuPmAKFj3XJjoaBv6qYFxRi-IOGAKJsqM6DGOHSmyq7GDo3P9KIJP9LoEMllt3W8T0Sv1nmQ-DeYTGNEQu0WQKL7JuvFmguBgd4-TvmbX-M5V-TzhQqHEiHmg&state=0cbf9a96fd0b5b9133416730cc482f09880e7ae9fdc3269d" for 127.0.0.1 at 2018-11-27 15:07:22 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBtZDgp1TBr2IjMUYEJaFx9Q6kHw-9mpBPKU2g2-RGPLcG2G2wNYs4v6P9hcqh3QngC1xvELSjyCyv42ZuXajoimDUuXGxhYRNhb4SSJv80SW9UniPAKraHpnEDeKJcY66ogY6ss_V-ojDHR80By9o853NPdFWBEE-VBKLLOcLD0nj3BMwXmi-fuJRmPmwNwpw-A1Tt-IR7A6w7AFboy9_Oe6qFO7a1yBjYyVmXo80fHoDSllg_ybuPmAKFj3XJjoaBv6qYFxRi-IOGAKJsqM6DGOHSmyq7GDo3P9KIJP9LoEMllt3W8T0Sv1nmQ-DeYTGNEQu0WQKL7JuvFmguBgd4-TvmbX-M5V-TzhQqHEiHmg", "state"=>"0cbf9a96fd0b5b9133416730cc482f09880e7ae9fdc3269d"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:40:06 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/auth/facebook/callback?code=AQC8LMt3i7z32Zm7Z54UxGVfIub9DrxVwjfr9e_TyMJJGC1uE1sAhCX99oDMft-uf7kafu8Gcmnnp7euqZ2GS774KCbr_Cjr2sPAAfrQYZz7bXH0UX4HRepSzoBgIdDQbkWXcmn_0YihohOLUtaFDv9u6M4wUwKs30ICmAAX5cthb4OVdIKIPosYuypVJ5Z75TS03wTZGSZ0f8glb_0w9ne_UsFiLXo778iAobMH1RLdXUZxnm4wT2GMlAdgvdg17swiZTCEcDHwhXlzhxlVMxeMVMRt3sziHb5CTYexG02erHiMm6G1ayUyrqHAiTLg8GpGkAn-eBEHtECUr5McKIfpEiuSuXi9HFH8aknkYumRtg&state=f46c1daf230f0e0f8fadc337488ee05fba6b64bd1d389c06" for 127.0.0.1 at 2018-11-27 15:40:07 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC8LMt3i7z32Zm7Z54UxGVfIub9DrxVwjfr9e_TyMJJGC1uE1sAhCX99oDMft-uf7kafu8Gcmnnp7euqZ2GS774KCbr_Cjr2sPAAfrQYZz7bXH0UX4HRepSzoBgIdDQbkWXcmn_0YihohOLUtaFDv9u6M4wUwKs30ICmAAX5cthb4OVdIKIPosYuypVJ5Z75TS03wTZGSZ0f8glb_0w9ne_UsFiLXo778iAobMH1RLdXUZxnm4wT2GMlAdgvdg17swiZTCEcDHwhXlzhxlVMxeMVMRt3sziHb5CTYexG02erHiMm6G1ayUyrqHAiTLg8GpGkAn-eBEHtECUr5McKIfpEiuSuXi9HFH8aknkYumRtg", "state"=>"f46c1daf230f0e0f8fadc337488ee05fba6b64bd1d389c06"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `where' for #<SessionsController:0x007ff668f5aff8>):
+  
+app/controllers/sessions_controller.rb:12:in `create'
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:42:28 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:42:39 -0500
+Started GET "/auth/facebook/callback?code=AQCxmPrBJte4LVqB2cEtgf0yz-_Rbp6rBJVixCJ4-YLHgfYTGMmmko-SZSirotaHrtnvoaDK16DsKcrVHEZEc4bI2nbuFB3xeAm9v4bVG69IYInR-mflal7ChC48DJx3cCPXTPhra3xspgOgnBusdvRs_U_d9oO7qsnNv4rgNmWjzC2K77MGRG20sSQxfcVV63bWdHopL1lPdvsPhptvVQ7YJoWeRl4P6GH6FbF9eLHxwhpyVmdznCH7izU2Og7IWUHQjTiRhRwwaAhJC_y1iNkkWMX0i5ABOtU7Y81sM6fOF6nms6tvaiKT9YAQT9hO69iieSZmtdeblR6IdV6J_t6KiS-Kigbi9_rhl4RdmW9fpg&state=e7f28e3e78660797d28cb01b6fb851e5450dc59f5fa5ed4a" for 127.0.0.1 at 2018-11-27 15:42:39 -0500
+  
+SyntaxError (/Users/omoogun/Desktop/Flaitron_Dev/rails-class/Jet-Rails-Project-/app/controllers/sessions_controller.rb:55: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/sessions_controller.rb:55: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/auth/facebook/callback?code=AQCxmPrBJte4LVqB2cEtgf0yz-_Rbp6rBJVixCJ4-YLHgfYTGMmmko-SZSirotaHrtnvoaDK16DsKcrVHEZEc4bI2nbuFB3xeAm9v4bVG69IYInR-mflal7ChC48DJx3cCPXTPhra3xspgOgnBusdvRs_U_d9oO7qsnNv4rgNmWjzC2K77MGRG20sSQxfcVV63bWdHopL1lPdvsPhptvVQ7YJoWeRl4P6GH6FbF9eLHxwhpyVmdznCH7izU2Og7IWUHQjTiRhRwwaAhJC_y1iNkkWMX0i5ABOtU7Y81sM6fOF6nms6tvaiKT9YAQT9hO69iieSZmtdeblR6IdV6J_t6KiS-Kigbi9_rhl4RdmW9fpg&state=e7f28e3e78660797d28cb01b6fb851e5450dc59f5fa5ed4a" for 127.0.0.1 at 2018-11-27 15:44:12 -0500
+  
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"Fajyio6LBx9"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"Fajyio6LBx9"}}):
+  
+oauth2 (1.4.1) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.1) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.1) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-27 15:44:35 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 419ms (Views: 366.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:44:38 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:44:38 -0500
+Started GET "/auth/facebook/callback?code=AQCUOZS9ar7hj2bAHMEsUpFQ4XSpsn2G5tEraH0Et40b8HLE1dwYCRDS2DQbWPTP6gYkKviA7fYesqwkhkM0pryWoT65P95HOQek5EvQlT5Bzw6sWL9vC740RLHwegfZXXYVJY1l9EccC4x--y6oYa59NgKJaBdpxk46C5aCcBaH3Dn3lMGmxaAz8xAv2xdldipwHPWHVpNtWjLn5eCcA8haATQT3zz9uHPFmrxvSh-WSqXEQcIGoCPnsfy7aHJkqLXI2JYWA8Hq38MSIlggHr4G-IbhYnz2TIaqwe3i0-6qGnaGSoe7ZxYwbywNL2E1hJ6jalpKp0nq0g3vOUIM0NeJwVAgq2RNgfuU0Y8PXZ0Tog&state=3a601f184ee243a78100fdf2888661df43e8661a8dd6a69a" for 127.0.0.1 at 2018-11-27 15:44:38 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCUOZS9ar7hj2bAHMEsUpFQ4XSpsn2G5tEraH0Et40b8HLE1dwYCRDS2DQbWPTP6gYkKviA7fYesqwkhkM0pryWoT65P95HOQek5EvQlT5Bzw6sWL9vC740RLHwegfZXXYVJY1l9EccC4x--y6oYa59NgKJaBdpxk46C5aCcBaH3Dn3lMGmxaAz8xAv2xdldipwHPWHVpNtWjLn5eCcA8haATQT3zz9uHPFmrxvSh-WSqXEQcIGoCPnsfy7aHJkqLXI2JYWA8Hq38MSIlggHr4G-IbhYnz2TIaqwe3i0-6qGnaGSoe7ZxYwbywNL2E1hJ6jalpKp0nq0g3vOUIM0NeJwVAgq2RNgfuU0Y8PXZ0Tog", "state"=>"3a601f184ee243a78100fdf2888661df43e8661a8dd6a69a"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:25:in `create'
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:45:41 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-27 15:45:51 -0500
+Started GET "/auth/facebook/callback?code=AQDi_Zm__7DaQ4IGQR-3FYp-SP6KssZ1xGVKKfWqdcppB_xRkI6rsQu5HmVI_oFupGoDJGA1WMdsD3aRuTYsVdHN-HZE8V1LjGlzSS6yanZ5KSaVjeotKt43QX98mvJ-oIPEHsRA7_8SDyN53lZf0lF0lGUGFBNo1KFAVWkJP9KZO4uKI-nuVlooROdwpRX5uaCY6y3OFCLlK4dobkEETS5EA2xln60aDD5AGX7lBM_1h-ICd6qE8WaO1HEq2_sZWvtqsFsTu_bPOIADTSCSoGa7xMCH5Smq7EAl0zhI_uLwVG6LEQv4Igegefk6_JQ7p2F2VYYFO0_bpb0bt3x_yo3yQQtIrrFGFwyEbBrfGpuZ9A&state=da5e0dfec4f0962e736818c7ec4b9a43be674d083c3bbcaa" for 127.0.0.1 at 2018-11-27 15:45:52 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDi_Zm__7DaQ4IGQR-3FYp-SP6KssZ1xGVKKfWqdcppB_xRkI6rsQu5HmVI_oFupGoDJGA1WMdsD3aRuTYsVdHN-HZE8V1LjGlzSS6yanZ5KSaVjeotKt43QX98mvJ-oIPEHsRA7_8SDyN53lZf0lF0lGUGFBNo1KFAVWkJP9KZO4uKI-nuVlooROdwpRX5uaCY6y3OFCLlK4dobkEETS5EA2xln60aDD5AGX7lBM_1h-ICd6qE8WaO1HEq2_sZWvtqsFsTu_bPOIADTSCSoGa7xMCH5Smq7EAl0zhI_uLwVG6LEQv4Igegefk6_JQ7p2F2VYYFO0_bpb0bt3x_yo3yQQtIrrFGFwyEbBrfGpuZ9A", "state"=>"da5e0dfec4f0962e736818c7ec4b9a43be674d083c3bbcaa"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:12
+Completed 500 Internal Server Error in 33323ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:25:in `create'
+Started GET "/auth/facebook/callback?code=AQDi_Zm__7DaQ4IGQR-3FYp-SP6KssZ1xGVKKfWqdcppB_xRkI6rsQu5HmVI_oFupGoDJGA1WMdsD3aRuTYsVdHN-HZE8V1LjGlzSS6yanZ5KSaVjeotKt43QX98mvJ-oIPEHsRA7_8SDyN53lZf0lF0lGUGFBNo1KFAVWkJP9KZO4uKI-nuVlooROdwpRX5uaCY6y3OFCLlK4dobkEETS5EA2xln60aDD5AGX7lBM_1h-ICd6qE8WaO1HEq2_sZWvtqsFsTu_bPOIADTSCSoGa7xMCH5Smq7EAl0zhI_uLwVG6LEQv4Igegefk6_JQ7p2F2VYYFO0_bpb0bt3x_yo3yQQtIrrFGFwyEbBrfGpuZ9A&state=da5e0dfec4f0962e736818c7ec4b9a43be674d083c3bbcaa" for 127.0.0.1 at 2018-11-27 15:46:37 -0500
+  
+OAuth2::Error ({"message"=>"This authorization code has been used.", "type"=>"OAuthException", "code"=>100, "fbtrace_id"=>"FbbxZodrdI/"}: 
+{"error":{"message":"This authorization code has been used.","type":"OAuthException","code":100,"fbtrace_id":"FbbxZodrdI\/"}}):
+  
+oauth2 (1.4.1) lib/oauth2/client.rb:119:in `request'
+oauth2 (1.4.1) lib/oauth2/client.rb:146:in `get_token'
+oauth2 (1.4.1) lib/oauth2/strategy/auth_code.rb:30:in `get_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:89:in `build_access_token'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:110:in `build_access_token'
+omniauth-oauth2 (1.5.0) lib/omniauth/strategies/oauth2.rb:73:in `callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:67:in `block in callback_phase'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:131:in `with_authorization_code!'
+omniauth-facebook (5.0.0) lib/omniauth/strategies/facebook.rb:66:in `callback_phase'
+omniauth (1.8.1) lib/omniauth/strategy.rb:236:in `callback_call'
+omniauth (1.8.1) lib/omniauth/strategy.rb:188:in `call!'
+omniauth (1.8.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.8.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PUT "/__web_console/repl_sessions/89056238207b74cbc456daf5436e1075" for 127.0.0.1 at 2018-11-27 15:46:49 -0500
+Started PUT "/__web_console/repl_sessions/89056238207b74cbc456daf5436e1075" for 127.0.0.1 at 2018-11-27 15:47:04 -0500
