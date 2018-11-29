@@ -6,11 +6,6 @@ class SessionsController < ApplicationController
   def create
      # normal log in  
     if auth_hash = request.env["omniauth.auth"]
-
-            # user = User.find_by(:name => params[:name])
-            # if user && user.authenticate(params[:password])
-            # session[:user_id] = user.id
-
               @user = User.find_or_create_by_omniauth(auth_hash)
               @current_user = @user.name
               session[:user_id] = @user.id

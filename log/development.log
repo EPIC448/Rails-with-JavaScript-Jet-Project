@@ -12561,3 +12561,123 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 190ms (Views: 186.5ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/flights" for 127.0.0.1 at 2018-11-29 11:43:56 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  Rendered flights/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 80ms (Views: 49.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/flights/5" for 127.0.0.1 at 2018-11-29 11:43:59 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:11
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 199ms (Views: 152.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/29/flight_rides" for 127.0.0.1 at 2018-11-29 11:44:02 -0500
+Processing by FlightRidesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"coKEj5AHso48f+BsD6JpSH91zTK47ym3Xlir/m/H9mIjeHz30JWKeCgU9xJZ05C58CLsVIAo5AEJz1zUSXMO+Q==", "flight_ride"=>{"user_id"=>"29", "flight_id"=>"5"}, "commit"=>"Go on flight Ride #", "user_id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:24
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:24
+  [1m[36mFlightRide Create (1.8ms)[0m  [1m[32mINSERT INTO "flight_rides" ("user_id", "flight_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 29], ["flight_id", 5], ["created_at", "2018-11-29 16:44:02.776561"], ["updated_at", "2018-11-29 16:44:02.776561"]]
+  ↳ app/controllers/flight_rides_controller.rb:24
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:24
+Redirected to https://0.0.0.0:3000/users/29
+Completed 302 Found in 97ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/users/29" for 127.0.0.1 at 2018-11-29 11:44:02 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 29]]
+  ↳ app/views/users/show.html.erb:9
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2018-11-29 11:44:05 -0500
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bMnSMLyU8dHGVA1NH5o19EcWrrQGDgCsjbq+hy1AOdf7ufZ69PZ5rjPwXO/sCSzF8B2PlfevTg3ukAiEaMRqiA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Redirected to https://0.0.0.0:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-29 11:44:05 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 81ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-29 11:44:07 -0500
+Started GET "/auth/facebook" for 127.0.0.1 at 2018-11-29 11:44:08 -0500
+Started GET "/auth/facebook/callback?code=AQBrO-evDPuIRAAdOO3bkHn4aYGicp4Rb4WCSgopm56b84V13u96I1aw3vBJVUzuKkLevyP-0af5rv4FDUae3lp9tq3ECSB_NY6qq9Cm473JPuNTc506VtXjWerRXW4mQwIJF9aQ2DA5QOS7bKollghryNj0fPWjE6Oijc73tvjz8UZAtyV2XaesfspSlK-78I9NOzyP6QbCBTtRPo4RGaZoHkaq9ITHNl8TtxH_cuVObCeCJ1aQh2UsA1op4PXY2SYgZ-2fZD3puACAva8RCgBfq3D7ndJKpjq6PLJYLGra-G3UJScrzjsFIZzE2be-5SOlwZsm7vfBgK5eD50ZCqX5os3RfVWMVLpwz4d84VvAbQ&state=3941e47483c6ebd1a3a9a12c8c92b981d6dfab79dbb228b4" for 127.0.0.1 at 2018-11-29 11:44:08 -0500
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBrO-evDPuIRAAdOO3bkHn4aYGicp4Rb4WCSgopm56b84V13u96I1aw3vBJVUzuKkLevyP-0af5rv4FDUae3lp9tq3ECSB_NY6qq9Cm473JPuNTc506VtXjWerRXW4mQwIJF9aQ2DA5QOS7bKollghryNj0fPWjE6Oijc73tvjz8UZAtyV2XaesfspSlK-78I9NOzyP6QbCBTtRPo4RGaZoHkaq9ITHNl8TtxH_cuVObCeCJ1aQh2UsA1op4PXY2SYgZ-2fZD3puACAva8RCgBfq3D7ndJKpjq6PLJYLGra-G3UJScrzjsFIZzE2be-5SOlwZsm7vfBgK5eD50ZCqX5os3RfVWMVLpwz4d84VvAbQ", "state"=>"3941e47483c6ebd1a3a9a12c8c92b981d6dfab79dbb228b4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "Milo King"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to https://0.0.0.0:3000/users/29
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/29" for 127.0.0.1 at 2018-11-29 11:44:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 29]]
+  ↳ app/views/users/show.html.erb:9
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 47ms (Views: 45.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-11-29 11:44:29 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  Rendered flights/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 73ms (Views: 65.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/flights/1" for 127.0.0.1 at 2018-11-29 11:44:31 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:11
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 88ms (Views: 81.6ms | ActiveRecord: 0.5ms)
+
+
