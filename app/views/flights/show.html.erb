@@ -15,10 +15,13 @@
      
   
 
-<%= form_for @flight_rides, :url => user_flight_rides_path(@user) do |f| %>
+<%= form_for @flight_rides, :url => user_flight_rides_path(current_user) do |f| %>
  
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :flight_id, :value => @flight.id %>
+
+   # create a check box for " flight rides class...flight_class".. You can allow use to type in 
+   # flight class they want... 
 
   <%= f.submit "Go on flight Ride #" %>
 <% end %>

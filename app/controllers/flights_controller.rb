@@ -24,8 +24,7 @@ class FlightsController < ApplicationController
     
     if @flight.save
       session[:flight_id] = @flight.id 
-      #  redirect_to flight(@flight)
-       render 'flights/show'
+        redirect_to flight_path(@flight)
     else
       render 'flights/new'
     end
