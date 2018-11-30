@@ -82,6 +82,7 @@ thin start --ssl
 
   - Have all CRUD actions for flights -- edit and delete
   - Protecting routes from unauthorized users [ only the users that create the flight can be the only one to edit and delete a flight.]
-  - Give users an option in the form that will let them select flgiht_ride class.
-  
+ √ - Give users an option in the form that will let them select flgiht_ride class.
+  - your Want you sections to Cap and bold. stuff to be syntaxly checked. 
+  - take Out the underscores I.E flight_clas..in your views
 

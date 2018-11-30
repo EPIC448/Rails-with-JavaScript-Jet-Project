@@ -7,17 +7,19 @@
 <br>
    
     <% @user.flight_rides.each do |user_flight_ride|%>
+
      <br>
      <p>flight_ride_id</p>
      <h3> <%= user_flight_ride.id%></h3>
 
-     <h3> <%#= user_flight_ride.user_id%></h3>
+      <p>flight_class</p>
+     <h3> <%= user_flight_ride.flight_class%></h3>
 
      <p>flight_id </p>
      <h3> <%= user_flight_ride.flight_id%></h3>
 
 <br>
-
+   <p><%= link_to "Delete This Flight", user_flight_ride_path(current_user) %></p>
     <%end%>
 
 
@@ -27,6 +29,10 @@
         <% if flash[:notice] %>
          <div class="notice"><%= flash[:notice] %></div>
         <% end %>
+   <br>
+    
+   <br>
+
 
      <%=link_to "Log Out", logout_path, :method => :delete %>
         <%= hidden_field_tag :user_id, current_user.id %>

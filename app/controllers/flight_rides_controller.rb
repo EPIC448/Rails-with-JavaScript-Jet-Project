@@ -37,9 +37,22 @@ class FlightRidesController < ApplicationController
          end
         
          def show
-            @flight_ride = Flight_ride.find(params[:id])
-            render 'flight_rides/show'
+            @flight_ride = FlightRide.find(params[:id])
+            redirect_to 'flight_rides/show'
+
          end
+
+         def destroy
+            @flight_ride = Flight_ride.find(params[:id])
+            session[:user_id] = nil
+             reset_session
+            @flight_ride.delete
+            redirect_to root_path
+
+         end
+
+         
+
 
          private
 

@@ -30,6 +30,8 @@ class UsersController < ApplicationController
    # list out in the user / show template
     end
   end
+
+  
   
    private
 

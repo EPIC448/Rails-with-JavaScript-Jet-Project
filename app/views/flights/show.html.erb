@@ -19,9 +19,11 @@
  
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :flight_id, :value => @flight.id %>
+<p> Type of flight </p>
+ <%= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
 
-   # create a check box for " flight rides class...flight_class".. You can allow use to type in 
-   # flight class they want... 
-
+ <br>
+ <br>
   <%= f.submit "Go on flight Ride #" %>
+  <br>
 <% end %>
