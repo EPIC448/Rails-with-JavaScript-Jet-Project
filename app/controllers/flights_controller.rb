@@ -32,6 +32,15 @@ class FlightsController < ApplicationController
     def edit
       @flight = Flight.find(params[:id])
     end
+
+    # get "/pay_receipts/:id/edit" do
+    #   if logged_in?
+    #     @pay_receipt = PayReceipt.find_by_id(params[:id]) # slug helps to find by name instaed of ID
+    #     erb :"/pay_receipts/edit"
+    #   else
+    #     redirect to "/login"
+    #     end
+    # end
    
 
    end

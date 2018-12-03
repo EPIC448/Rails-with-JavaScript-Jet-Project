@@ -1,0 +1,33 @@
+
+<section class="jet">
+  <header class="header">
+    <h1>Edit Flight_ride</h1>
+
+<%= form_for @flight_rides, :url => user_flight_rides_path(current_user) do |f| %>
+    ## need to reroute to the flight show page.
+       <%= f.label :inspection %>
+       <%= f.check_box :inspection %>  <br />
+
+       <%= f.label :fuel_cost %>
+        <%= f.text_field :fuel_cost %><br />
+
+        <%= f.label :destination %>
+        <%= f.text_field :destination %><br />
+
+        <%= f.label :flight_departure %>
+        <%= f.text_field :flight_departure %><br />
+
+          <%= f.label :flight_sit %>
+        <%= f.text_field :flight_sit %><br />
+
+        <%= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
+
+    
+        <br>
+        <%= f.submit%>
+        <% end %>
+      </form>
+
+  </header>
+  
+</section>

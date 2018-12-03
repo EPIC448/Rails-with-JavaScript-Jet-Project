@@ -80,9 +80,9 @@ thin start --ssl
   - Use nested route users/:user_id/flight_rides 
   - INdex template for all flight_ride . index.... (# display stuff your displaying on user show page.. But using a nested route...) Simply ---- Display all flight_ride for a specific user....
 
-  - Have all CRUD actions for flights -- edit and delete
+  - Have all CRUD actions for flights -- edit and √ delete
   - Protecting routes from unauthorized users [ only the users that create the flight can be the only one to edit and delete a flight.]
  √ - Give users an option in the form that will let them select flgiht_ride class.
   - your Want you sections to Cap and bold. stuff to be syntaxly checked. 
-  - take Out the underscores I.E flight_clas..in your views
+  - take Out the underscores I.E flight_class..in your views
 
