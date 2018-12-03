@@ -1,7 +1,7 @@
  <p> This is the users show page, List result or tickets after the went on the ride</p>
 <header class="header">
     
-          User: <h3><%= @user.name %><br></h3>
+          User: <p><%= @user.name %><br></p>
     <br>
     <h4> Flight_Ride Iternary</h4>
 <br>
@@ -9,19 +9,19 @@
     <% @user.flight_rides.each do |user_flight_ride|%>
 
      <br>
-     <p>flight_ride_id</p>
-     <h3> <%= user_flight_ride.id%></h3>
+     <h4>flight_ride_id</h4>
+     <p> <%= user_flight_ride.id%></p>
 
       <p>flight_class</p>
-     <h3> <%= user_flight_ride.flight_class%></h3>
+     <p> <%= user_flight_ride.flight_class%></p>
 
      <p>flight_id </p>
-     <h3> <%= user_flight_ride.flight_id%></h3>
+     <p> <%= user_flight_ride.flight_id%></p>
 <br>
    <p><%#= link_to "Edit FlightRide", edit_user_flight_ride_path(current_user) %></p>
 
 <br>
-   <p><%= link_to "Delete This Flight", user_flight_ride_path(current_user) %></p>
+   <h4><%= link_to "Delete This Flight", user_flight_ride_path(current_user) %></h4>
     <%end%>
 
 

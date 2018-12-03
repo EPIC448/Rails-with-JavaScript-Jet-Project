@@ -6,22 +6,22 @@
 
   <br/>
    
-     <h3> <%= link_to "Go on flight #{flight.id}", flight_path(flight)%></h3> <br />
+     <p> <%= link_to "Go on flight #{flight.id}", flight_path(flight)%></p> <br />
 
      <p> flight inspection </p>
-     <h3> <%= flight.inspection%></h3>
+     <p> <%= flight.inspection%></p>
 
      <p> flight fuel_cost</p>
-     <h3> <%= flight.fuel_cost%></h3>
+     <p> <%= flight.fuel_cost%></p>
 
      <p> flight destination</p>
-     <h3> <%= flight.destination%></h3>
+     <p> <%= flight.destination%></p>
 
      <p> flight flight_departure</p>
-     <h3> <%= flight.flight_departure%></h3>
+     <p> <%= flight.flight_departure%></p>
 
      <p> flight flight_sit</p>
-     <h3> <%= flight.flight_sit%></h3>
+     <p> <%= flight.flight_sit%></p>
 
 <% end %>
 <br>
@@ -30,4 +30,4 @@
 
     <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
    
-        <h3><%= link_to "Create a New flight", new_flight_path %></h3>
+        <p><%= link_to "Create a New flight", new_flight_path %></p>
