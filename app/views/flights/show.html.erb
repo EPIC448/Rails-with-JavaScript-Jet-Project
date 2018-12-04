@@ -21,11 +21,10 @@
    <%= f.hidden_field :flight_id, :value => @flight.id %>
 <p> Type of flight </p>
  <%= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
-
- <br>
-   <p><%= link_to "Edit Flight", edit_flight_path(current_user) %></p>
-
  <br>
   <%= f.submit "Go on flight Ride #" %>
+  <br>
+    <p><%= link_to "Edit Flight", edit_flight_path(@flight) %></p>
+
   <br>
 <% end %>

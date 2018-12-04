@@ -86,3 +86,6 @@ thin start --ssl
   - your Want you sections to Cap and bold. stuff to be syntaxly checked. 
   - take Out the underscores I.E flight_class..in your views
 
+--- Check we want the Whole objec of User and all it attributes.  Not just the User_id or current_User.id.
+ ---  [5] pry(#<FlightsController>)> params[:id]
+=> "47"  => this is the user_id
