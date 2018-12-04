@@ -1,18 +1,18 @@
  
   <p> Flight Information</p>
+   <% if @flight.pass_inspection %>
 
- <p>Inspection</p>
- <p><%= @flight.inspection %> </p> <br>
-  <p>fuel_cost</p>
-  <p>Show <%= @flight.fuel_cost %></p> <br>
-   <p>destination</p>
-  <p><%= @flight.destination %> </p> <br>
-   <p>flight_departure</p>
-   <p><%= @flight.flight_departure %> </p> <br>
-    <p>flight_sit</p>
-    <p><%= @flight.flight_sit %> </p> <br>
-
-     
+   <p>Inspection</p>
+   <p><%= @flight.pass_inspection %> </p> <br>
+        <p>fuel_cost</p>
+        <p>Show <%= @flight.fuel_cost %></p> <br>
+        <p>destination</p>
+        <p><%= @flight.destination %> </p> <br>
+        <p>flight_departure</p>
+        <p><%= @flight.flight_departure %> </p> <br>
+        <p>flight_sit</p>
+        <p><%= @flight.flight_sit %> </p> <br>
+     <%end%>
   
 
 <%= form_for @flight_rides, :url => user_flight_rides_path(current_user) do |f| %>
@@ -25,6 +25,7 @@
   <%= f.submit "Go on flight Ride #" %>
   <br>
     <p><%= link_to "Edit Flight", edit_flight_path(@flight) %></p>
+  <br>
 
   <br>
 <% end %>
