@@ -18,9 +18,9 @@
      <p>flight_id </p>
      <p> <%= user_flight_ride.flight_id%></p>
 <br>
+   <h4><%= link_to "Delete This Flight", user_flight_ride_path(current_user, user_flight_ride), :method => :delete%></h4>
 
 <br>
-   <h4><%= link_to "Delete This Flight", user_flight_ride_path(current_user) %></h4>
     <%end%>
 
 

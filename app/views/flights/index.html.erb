@@ -25,9 +25,19 @@
 
 <% end %>
 <br>
+       <p>#<%#= link_to "Show All Flight that pass inspection",  %></p>
+
 <br>
      <%= hidden_field_tag :user_id, current_user.id %>
 
     <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
    
         <p><%= link_to "Create a New flight", new_flight_path %></p>
+
+
+
+<% Flight.pass_inspection.each do |p|%>
+    <p> List all flight that passed inspection</p>
+     <%p.flight%>
+     <%p.flight.id%>
+<%end%>

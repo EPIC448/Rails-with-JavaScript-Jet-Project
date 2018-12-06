@@ -12,7 +12,6 @@ class FlightsController < ApplicationController
     render 'flights/show'
   end
 
-   # create a new flight
 
    def new
     @flight = Flight.new
@@ -31,41 +30,12 @@ class FlightsController < ApplicationController
   end
 
     def edit 
-      #need a way to access the Users total infomation as well as the flight information.
-      # All included in the flight_ride table.
-      binding.pry
-
-      --------------
-      # [47] pry(#<FlightsController>)> Flight.first
-      # => #<Flight:0x007fda8e6af9f8
-      #  id: 1,
-      #  inspection: true,
-      #  fuel_cost: 0,
-      #  destination: "xzbv",
-      #  flight_departure: 0,
-      #  flight_sit: 0,
-      #  created_at: Wed, 14 Nov 2018 14:50:11 UTC +00:00,
-      #  updated_at: Wed, 14 Nov 2018 14:50:11 UTC +00:00>
-      # [48] pry(#<FlightsController>)> Flight.first.flight_rides
-      # => [#<FlightRide:0x007fda8869f450
-      #   id: 1,
-      #   user_id: 1,
-      #   flight_id: 1,
-      #   flight_class: nil,
-      #   created_at: Wed, 14 Nov 2018 14:50:13 UTC +00:00,
-      #   updated_at: Wed, 14 Nov 2018 14:50:13 UTC +00:00>,
-      #  #<FlightRide:0x007fda8fa24088
-      #   id: 2,
-      #   user_id: 2,
-      #   flight_id: 1,
-      #   flight_class: nil,
-      # [49] pry(#<FlightsController>)> Flight.flight_rides
-      # NoMethodError: undefined met
-      ---------------
+  
       @flight = Flight.find(params[:id])
-      Flight.users
+      @flight.users
 
-      if  @current_user =  session[:user_id]
+      if  @current_user 
+            # session[:user_id]
          redirect_to flight_path
       else
        render 'flights/index'

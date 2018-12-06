@@ -18,7 +18,6 @@ class FlightRidesController < ApplicationController
         end
       
          def create
-        
             @user = User.find(params[:user_id]) # finding the parent
             @flight_ride = @user.flight_rides.build(flight_ride_params)
            if @flight_ride.save
@@ -53,7 +52,7 @@ class FlightRidesController < ApplicationController
          end
 
          def destroy
-            @flight_ride = Flight_ride.find(params[:id])
+            @flight_ride = FlightRide.find(params[:id])
             session[:user_id] = nil
              reset_session
             @flight_ride.delete
