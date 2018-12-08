@@ -1,12 +1,8 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
 
-<p> this is the sessions New page...</p>
 <section class="jet">
   <header class="header">
 
     <h1>SignUp</h1>
-    ## this route to the users controller
     <%= form_for(@user) do |f| %>
   
             <% if @user.errors.any? %>
@@ -33,13 +29,13 @@
         <%= f.label :password %>
         <%= f.text_field :password %>
         <br />
-
+       <br>
         <%= f.submit%>
         <br>
         <% end %>
       </form>
       <br>
-
+ <br>
       <%= link_to('Log in with Facebook!', '/auth/facebook') %>
 
   </header>

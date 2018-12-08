@@ -1,7 +1,5 @@
  <P> show all the flights.</P>
 
-   <h1> This is the Flight index page, Lists all the Flight.. </h1>
-
   <% @flights.each do |flight| %>
 
   <br/>
@@ -24,20 +22,47 @@
      <p> <%= flight.flight_sit%></p>
 
 <% end %>
-<br>
-       <p>#<%#= link_to "Show All Flight that pass inspection",  %></p>
 
 <br>
+<br>
+
+<% Flight.pass_inspection.each do |p|%>
+    <h4>  Flight that passed inspection</h4>
+     
+   <h5> flight id</h5>
+     <%= p.id%>
+     <br>
+
+   <h5> flight Inspection</h5>
+     <%= p.inspection%>
+    <br>
+
+   <h5> flight Fuel_cost</h5>
+     <%= p.fuel_cost%>
+     <br>
+
+   <h5> flight Destination</h5>
+     <%= p.destination%>
+     <br>
+
+   <h5> flight departure</h5>
+     <%= p.flight_departure%>
+     <br>
+
+   <h5> flight Sit</h5>
+     <%= p.flight_sit%>
+ <br>
+ <%end%>
+
+<br>
+
+<br>
+ <h4> Create a Flight</h4>
      <%= hidden_field_tag :user_id, current_user.id %>
 
     <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
    
-        <p><%= link_to "Create a New flight", new_flight_path %></p>
+     <p><%= link_to "Create a New flight", new_flight_path %></p>
 
 
 
-<% Flight.pass_inspection.each do |p|%>
-    <p> List all flight that passed inspection</p>
-     <%p.flight%>
-     <%p.flight.id%>
-<%end%>

@@ -1,5 +1,3 @@
-<h1>Flights#new</h1> 
-<p>Find me in app/views/flights/new.html.erb</p> 
 
 
 <% if @flight.errors.any? %>
@@ -21,11 +19,10 @@
 <section class="jet">
   <header class="header">
     <h1>Create a New Flight</h1>
-    ## this route to the users controller
 
     <%= form_for(@flight) do |f| %>
        <%= f.label :inspection %>
-       <%= f.check_box :inspection %>  <br />
+       <%= f.check_box :inspection %> [Check For  pass inspection] <br />
 
        <%= f.label :fuel_cost %>
         <%= f.text_field :fuel_cost %><br />

@@ -1,21 +1,21 @@
- <p> This is the users show page, List result or tickets after the went on the ride</p>
 <header class="header">
     
-          User: <p><%= @user.name %><br></p>
+          <h4>User</h4>
+           <p><%= @user.name %><br></p>
     <br>
     <h4> Flight_Ride Iternary</h4>
 <br>
-   
+
     <% @user.flight_rides.each do |user_flight_ride|%>
 
      <br>
      <h4>flight_ride_id</h4>
      <p> <%= user_flight_ride.id%></p>
 
-      <p>flight_class</p>
+      <h4>flight_class</h4>
      <p> <%= user_flight_ride.flight_class%></p>
 
-     <p>flight_id </p>
+     <h4>flight_id </h4>
      <p> <%= user_flight_ride.flight_id%></p>
 <br>
    <h4><%= link_to "Delete This Flight", user_flight_ride_path(current_user, user_flight_ride), :method => :delete%></h4>
