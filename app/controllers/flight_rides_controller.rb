@@ -60,8 +60,7 @@ class FlightRidesController < ApplicationController
 
          end
 
-         
-
+      
 
          private
 
