@@ -1,7 +1,7 @@
  
-  <p> Flight Information</p>
+  <h3> Flight Information</h3>
 
-   <p>Inspection</p>
+   <h3>Inspection</h3>
         <h4>fuel_cost</h4>
         <p>Show <%= @flight.fuel_cost %></p> <br>
         <h4>destination</h4>
@@ -16,14 +16,13 @@
  
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :flight_id, :value => @flight.id %>
-<h4> Type of flight </h4>
+<h4> Prefer Flight Classs </h4>
  <%= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
  <br>
  <br>
-  <%= f.submit "Go on flight Ride #" %>
+  <%= f.submit "Go on flight Ride" %>
   <br>
-    #<#%= link_to "Edit Flight", edit_flight_path(@flight) %>
-  <br>
+
 
   <br>
 <% end %>

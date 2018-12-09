@@ -14,5 +14,4 @@ class Flight < ApplicationRecord
     
    
     scope :pass_inspection, -> { where(inspection: true) }
-       #Note pass_inspections is a class method... Which can be used in flight index page or flight show page.. 
 end

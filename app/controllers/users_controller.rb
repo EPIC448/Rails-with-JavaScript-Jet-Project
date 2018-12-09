@@ -16,7 +16,7 @@ class UsersController < ApplicationController
    else
 
     render 'sessions/login' 
-    # sign up page
+    
    end
   end
 

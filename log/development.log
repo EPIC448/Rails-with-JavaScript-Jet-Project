@@ -21560,3 +21560,1691 @@ Processing by FlightsController#index as HTML
 Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 0.9ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-12-09 10:53:58 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/thin:23
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (74.4ms)
+Completed 200 OK in 392ms (Views: 353.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-09 10:54:35 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kOzb5ruiNaNp/lAy9Y+4YyNXnx9Ewjz358vB0Je8beYIQblD598Hnu2grbQ0gJVQhyR5gYsUkJkM18qdClhKtg==", "user"=>{"name"=>"maik", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "maik"], ["password_digest", "$2a$10$dgDAbz8Nt0UsO7WdSuVC3.AMx2ImHTIfhRanb50oraOtw9x16pytu"], ["created_at", "2018-12-09 15:54:35.144693"], ["updated_at", "2018-12-09 15:54:35.144693"]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to https://0.0.0.0:3000/flights
+Completed 302 Found in 77ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 10:54:35 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 80ms (Views: 61.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-09 10:54:40 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-09 10:54:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tR3GnTaKal5tzqA+ME18v93G3gG9AHOUdCDzR47DvYYtsKQ4avdYY+mQXbjxQlGMebU4n3LW3/qfPPgKEyea1g==", "user"=>{"name"=>"maik", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "maik"], ["password_digest", "$2a$10$4mFMB/gPbJFOJ69DAWpjou3eQQUxWLMiOyRWUaQdT0BX4mh4iG33i"], ["created_at", "2018-12-09 15:54:58.171013"], ["updated_at", "2018-12-09 15:54:58.171013"]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to https://0.0.0.0:3000/flights
+Completed 302 Found in 137ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 10:54:58 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:3
+  [1m[36mCACHE Flight Load (0.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:3
+  [1m[36mCACHE Flight Load (0.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ (pry):8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 1]]
+  ↳ (pry):8
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 2]]
+  ↳ (pry):8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 3]]
+  ↳ (pry):8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (1.0ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 4]]
+  ↳ (pry):8
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 5]]
+  ↳ (pry):8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 6]]
+  ↳ (pry):8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 7]]
+  ↳ (pry):8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 8]]
+  ↳ (pry):8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 9]]
+  ↳ (pry):8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 10]]
+  ↳ (pry):8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 11]]
+  ↳ (pry):8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 12]]
+  ↳ (pry):8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 13]]
+  ↳ (pry):8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 14]]
+  ↳ (pry):8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 15]]
+  ↳ (pry):8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 16]]
+  ↳ (pry):8
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 17]]
+  ↳ (pry):8
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 18]]
+  ↳ (pry):8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 19]]
+  ↳ (pry):8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 20]]
+  ↳ (pry):8
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 21]]
+  ↳ (pry):8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 22]]
+  ↳ (pry):8
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 23]]
+  ↳ (pry):8
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):8
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ (pry):9
+  [1m[36mCACHE Flight Load (0.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:3
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mCACHE Flight Load (0.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 328320ms (Views: 35.4ms | ActiveRecord: 40.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:02:01 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 54ms (Views: 30.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-09 11:02:04 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oC+YOZqIlfjz1RpiGYl/HO1M+2xGn/Qw4SWlg7ti27U4gvqcxvWnxXeL5+TYhlIvST8d8olJWF4KOa7OJob85Q==", "user"=>{"name"=>"maik", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "maik"], ["password_digest", "$2a$10$boBS1UmwSEI5/GYHahXkqukNAJEfm/33vHycuYeMBAk1QCHbeXcIC"], ["created_at", "2018-12-09 16:02:04.587238"], ["updated_at", "2018-12-09 16:02:04.587238"]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to https://0.0.0.0:3000/flights
+Completed 302 Found in 78ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:02:04 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 49ms (Views: 30.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2018-12-09 11:02:08 -0500
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 57ms (Views: 53.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-12-09 11:02:18 -0500
+Processing by FlightsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0udugEIwyxwlqV+LjTriR46hk2EHnZ22hzv/IWhYCr3SrB0qnT29QrnubUrMxe1aIq9mHkOS4oIDegxO+U9mbg==", "flight"=>{"inspection"=>"1", "fuel_cost"=>"123", "destination"=>"pml", "flight_departure"=>"dv", "flight_sit"=>"zvb"}, "commit"=>"Create Flight"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:22
+  [1m[36mFlight Create (0.7ms)[0m  [1m[32mINSERT INTO "flights" ("inspection", "fuel_cost", "destination", "flight_departure", "flight_sit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["inspection", 1], ["fuel_cost", 123], ["destination", "pml"], ["flight_departure", 0], ["flight_sit", 0], ["created_at", "2018-12-09 16:02:19.007421"], ["updated_at", "2018-12-09 16:02:19.007421"]]
+  ↳ app/controllers/flights_controller.rb:22
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flights_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+Redirected to https://0.0.0.0:3000/flights/24
+Completed 302 Found in 12ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:02:19 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:11
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 96ms (Views: 35.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2018-12-09 11:02:37 -0500
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 88ms (Views: 45.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-12-09 11:02:39 -0500
+Processing by FlightsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iEArJvQeBug/yD++GH5/LQI75Za10F81W5bW+AOYOEAQ7UmDqGM01buWwjjZcVIepkgDCHoG81uwit21nnwfEA==", "flight"=>{"inspection"=>"1", "fuel_cost"=>"123", "destination"=>"pml", "flight_departure"=>"dv", "flight_sit"=>"zvb"}, "commit"=>"Create Flight"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:23
+  [1m[36mFlight Create (0.5ms)[0m  [1m[32mINSERT INTO "flights" ("inspection", "fuel_cost", "destination", "flight_departure", "flight_sit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["inspection", 1], ["fuel_cost", 123], ["destination", "pml"], ["flight_departure", 0], ["flight_sit", 0], ["created_at", "2018-12-09 16:02:39.785576"], ["updated_at", "2018-12-09 16:02:39.785576"]]
+  ↳ app/controllers/flights_controller.rb:23
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flights_controller.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+Redirected to https://0.0.0.0:3000/flights/25
+Completed 302 Found in 17ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/flights/25" for 127.0.0.1 at 2018-12-09 11:02:39 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 63ms (Views: 48.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/55/flight_rides" for 127.0.0.1 at 2018-12-09 11:02:50 -0500
+Processing by FlightRidesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0mhEZbbE4DoJAIsj+Cgm+bJHkepu+ZxWgWmEvOIvlepKxSbA6rnSB41edqU5JwvKFjR3dKEvMDhqdY/xf8uyug==", "flight_ride"=>{"user_id"=>"55", "flight_id"=>"25", "flight_class"=>"Economy"}, "commit"=>"Go on flight Ride #", "user_id"=>"55"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:24
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:24
+  [1m[36mFlightRide Create (0.3ms)[0m  [1m[32mINSERT INTO "flight_rides" ("user_id", "flight_id", "flight_class", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 55], ["flight_id", 25], ["flight_class", "Economy"], ["created_at", "2018-12-09 16:02:50.800047"], ["updated_at", "2018-12-09 16:02:50.800047"]]
+  ↳ app/controllers/flight_rides_controller.rb:24
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:24
+Redirected to https://0.0.0.0:3000/users/55
+Completed 302 Found in 115ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/users/55" for 127.0.0.1 at 2018-12-09 11:02:50 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 55]]
+  ↳ app/views/users/show.html.erb:9
+  Rendered users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:02:53 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:3
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mCACHE Flight Load (0.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 26722ms (Views: 48.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:03:57 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 65ms (Views: 32.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/flights/25" for 127.0.0.1 at 2018-12-09 11:03:59 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides"[0m
+  ↳ app/controllers/flights_controller.rb:9
+  [1m[36mCACHE FlightRide Load (0.0ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides"[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 1]]
+  ↳ (pry):15
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 2]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 3]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 4]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 5]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 6]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 7]]
+  ↳ (pry):15
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 8]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 9]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 10]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 11]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 12]]
+  ↳ (pry):15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 13]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 14]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 15]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 16]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 17]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 18]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 19]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 20]]
+  ↳ (pry):15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 21]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 22]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 23]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 24]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 25]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 26]]
+  ↳ (pry):15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 27]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 28]]
+  ↳ (pry):15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 29]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 30]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 31]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 32]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.4ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 33]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 34]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 35]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 36]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.2ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 37]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 38]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 39]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 40]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 41]]
+  ↳ (pry):15
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 42]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 43]]
+  ↳ (pry):15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 44]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 46]]
+  ↳ (pry):15
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 48]]
+  ↳ (pry):15
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):15
+  [1m[36mFlightRide Load (0.4ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides"[0m
+  ↳ app/controllers/flights_controller.rb:9
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:13
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 53278ms (Views: 33.1ms | ActiveRecord: 66.8ms)
+
+
+Started GET "/flights/25" for 127.0.0.1 at 2018-12-09 11:04:52 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:13
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 14199ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/55/flight_rides" for 127.0.0.1 at 2018-12-09 11:05:11 -0500
+Processing by FlightRidesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8BhhI4V6rZC5vx/lntfW/CWwyEwSOvehMqh+MjOFVAf3NFx5kXM2mAmdTRt4tOu7t8f2SYsZmKnTsfKyaZRX0Q==", "flight_ride"=>{"user_id"=>"55", "flight_id"=>"25", "flight_class"=>"Economy"}, "commit"=>"Go on flight Ride #", "user_id"=>"55"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[36mFlightRide Create (0.4ms)[0m  [1m[32mINSERT INTO "flight_rides" ("user_id", "flight_id", "flight_class", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 55], ["flight_id", 25], ["flight_class", "Economy"], ["created_at", "2018-12-09 16:05:11.614808"], ["updated_at", "2018-12-09 16:05:11.614808"]]
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:23
+Redirected to https://0.0.0.0:3000/users/55
+Completed 302 Found in 44ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/55" for 127.0.0.1 at 2018-12-09 11:05:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 55]]
+  ↳ app/views/users/show.html.erb:9
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:05:15 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.8ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 48ms (Views: 38.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:05:34 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:13
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 76ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:06:23 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:13
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 15182ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:06:42 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 87ms (Views: 35.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:06:46 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 48ms (Views: 39.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:06:48 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 69ms (Views: 66.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:07:03 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 50ms (Views: 45.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/55/flight_rides" for 127.0.0.1 at 2018-12-09 11:07:08 -0500
+Processing by FlightRidesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xiKOCjyuwhqsHBy22HUjTCoUmFQ2p3MVHpKhyHmZgCvBDrNQKKdZEhw+Tkg+Fh4LuGOmUa+EHB3/iy1II4iD/Q==", "flight_ride"=>{"user_id"=>"55", "flight_id"=>"24", "flight_class"=>"Coach"}, "commit"=>"Go on flight Ride #", "user_id"=>"55"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[36mFlightRide Create (1.1ms)[0m  [1m[32mINSERT INTO "flight_rides" ("user_id", "flight_id", "flight_class", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 55], ["flight_id", 24], ["flight_class", "Coach"], ["created_at", "2018-12-09 16:07:08.919360"], ["updated_at", "2018-12-09 16:07:08.919360"]]
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:23
+Redirected to https://0.0.0.0:3000/users/55
+Completed 302 Found in 23ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/users/55" for 127.0.0.1 at 2018-12-09 11:07:08 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 55]]
+  ↳ app/views/users/show.html.erb:9
+  Rendered users/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/55/flight_rides/50" for 127.0.0.1 at 2018-12-09 11:07:12 -0500
+Processing by FlightRidesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m5GgcFfG8pF8BVuGnlx9HHuRk6z+YzqPLJ+ryp3qIRcDPMLVC7vArPhbpgBfU1Av3+J1MjG1luHHg6CHAA4GRw==", "user_id"=>"55", "id"=>"50"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT  "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."id" = ? LIMIT ?[0m  [["id", 50], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:55
+  [1m[36mFlightRide Destroy (8.6ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 50]]
+  ↳ app/controllers/flight_rides_controller.rb:58
+Redirected to https://0.0.0.0:3000/
+Completed 302 Found in 13ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:07:12 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-09 11:07:14 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UWLsQF5In6btNILtj1eY2Rdp0YEhtBziX46FddfuQyf/PnZ+OMK2Yl0C+oGj5k0V8mZyIZaPLCnoYUwpNg+C3g==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 75ms (Views: 66.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:08:05 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/thin:23
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 305ms (Views: 275.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-09 11:08:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dVfcE1csfQC9af6mP7Sp/x5goE5U10ZGkRVsIZGSCorbC0YtMaZUxA1fhsoTBXwz+28D7uPsdo0m+qV9cHPLcw==", "user"=>{"name"=>"pete", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "pete"], ["password_digest", "$2a$10$AU1YXmeL7AeJX/Y9z9HbGOsl9Fn7CUZqIY6Rctjor915p2JwBt30q"], ["created_at", "2018-12-09 16:08:15.881266"], ["updated_at", "2018-12-09 16:08:15.881266"]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to https://0.0.0.0:3000/flights
+Completed 302 Found in 79ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:08:15 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 50ms (Views: 31.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:08:23 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 105ms (Views: 32.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:09:05 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:09:22 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:09:35 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 52ms (Views: 46.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:09:48 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 47ms (Views: 43.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/flights/24" for 127.0.0.1 at 2018-12-09 11:10:14 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/56/flight_rides" for 127.0.0.1 at 2018-12-09 11:10:20 -0500
+Processing by FlightRidesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"guVBdzBaLUEtRYLRoWAkEpXx0qXopqTJ9zpDGGobEngsudtJVtAEhZ1z+r2N0fHecP5xBV+dlAJA1YpEi/rTgQ==", "flight_ride"=>{"user_id"=>"56", "flight_id"=>"24", "flight_class"=>"Coach"}, "commit"=>"Go on flight Ride #", "user_id"=>"56"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[36mFlightRide Create (0.4ms)[0m  [1m[32mINSERT INTO "flight_rides" ("user_id", "flight_id", "flight_class", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 56], ["flight_id", 24], ["flight_class", "Coach"], ["created_at", "2018-12-09 16:10:20.049544"], ["updated_at", "2018-12-09 16:10:20.049544"]]
+  ↳ app/controllers/flight_rides_controller.rb:23
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:23
+Redirected to https://0.0.0.0:3000/users/56
+Completed 302 Found in 25ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/56" for 127.0.0.1 at 2018-12-09 11:10:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mCACHE Flight Load (0.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ (pry):2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):2
+  [1m[36mFlight Destroy (0.5ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 24]]
+  ↳ (pry):2
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):2
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):2
+  [1m[36mFlight Destroy (0.6ms)[0m  [1m[31mDELETE FROM "flights" WHERE "flights"."id" = ?[0m  [["id", 25]]
+  ↳ (pry):2
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):2
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 56]]
+  ↳ app/views/users/show.html.erb:9
+  Rendered users/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 33128ms (Views: 45.0ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:11:01 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 54ms (Views: 46.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:11:26 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:11:39 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/56" for 127.0.0.1 at 2018-12-09 11:12:22 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  ↳ (pry):6
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (1.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  ↳ (pry):6
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ (pry):6
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 5]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  ↳ (pry):6
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 7]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 9]]
+  ↳ (pry):6
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 10]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 11]]
+  ↳ (pry):6
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ (pry):6
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 15]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 16]]
+  ↳ (pry):6
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 17]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 18]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 19]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 20]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 21]]
+  ↳ (pry):6
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 22]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 23]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 24]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 25]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 26]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 27]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 28]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 29]]
+  ↳ (pry):6
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 30]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 31]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 32]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 33]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 34]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 35]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 36]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 37]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 38]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 39]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 40]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 41]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 42]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 43]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 44]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 45]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 46]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 47]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 48]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 49]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 50]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 51]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 52]]
+  ↳ (pry):6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 53]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 54]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 55]]
+  ↳ (pry):6
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 56]]
+  ↳ (pry):6
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:24
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+Completed 404 Not Found in 32285ms (ActiveRecord: 78.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=56):
+  
+app/controllers/users_controller.rb:28:in `show'
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:13:27 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/bin/thin:23
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 404 Not Found in 21ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=56):
+  
+app/controllers/application_controller.rb:25:in `current_user'
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:13:28 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=56):
+  
+app/controllers/application_controller.rb:25:in `current_user'
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:13:47 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=56):
+  
+app/controllers/application_controller.rb:25:in `current_user'
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:14:06 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 404 Not Found in 5ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=56):
+  
+app/controllers/application_controller.rb:25:in `current_user'
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:14:18 -0500
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=56):
+  
+app/controllers/application_controller.rb:25:in `current_user'
+Started PUT "/__web_console/repl_sessions/f0cc9b09bd7b971b0f22171c1f33db39" for 127.0.0.1 at 2018-12-09 11:18:13 -0500
+Started PUT "/__web_console/repl_sessions/f0cc9b09bd7b971b0f22171c1f33db39" for 127.0.0.1 at 2018-12-09 11:18:14 -0500
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:18:52 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 209ms (Views: 193.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-09 11:19:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Epy0S6ezhV7ScC//DpOeQhHP8iGy9NsO5kZ9jCMtWQcoGpPSlKZu27V5N3AUxfmX6ZfqtlDrJO8I2t5GwiUH2Q==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 44ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-09 11:19:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5lJY9Fmfq7XQVwviYj6cfgcmGq+XI3Puv0mp3Xoi11nc1H9taopAMLdeE214aPur/34COHU8jA9R1QoXmyqJhw==", "user"=>{"password"=>"[FILTERED]"}, "commit"=>"Login"}
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:8
+  Rendered sessions/login.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-12-09 11:19:17 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 42.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-12-09 11:19:34 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TkYspp5uCb/Uc6AiqLE3hTPrBOxZD53JCi1WeYWNKACi0LmE9ORa1fAhs6rayl+NJcR/qyUsAM05BcazKyXtaQ==", "user"=>{"name"=>"Sadie", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sadie"], ["password_digest", "$2a$10$CPCqxidfeoNML6huE/TaTexw/lA9uM6H2akmSnYNiOC11ZaGpyFTW"], ["created_at", "2018-12-09 16:19:34.696913"], ["updated_at", "2018-12-09 16:19:34.696913"]]
+  ↳ app/controllers/users_controller.rb:12
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:12
+Redirected to https://0.0.0.0:3000/flights
+Completed 302 Found in 77ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:19:34 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 83ms (Views: 53.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2018-12-09 11:19:38 -0500
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2018-12-09 11:20:07 -0500
+Processing by FlightsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g106CuLpcNOZwk95k6c/wq7rX4/0s2E3I0bAiYnVU8raR8EkkcOSBO/C/czOuN088FeQHiQ3Tbifz2U4gPmv+Q==", "flight"=>{"inspection"=>"1", "fuel_cost"=>"567", "destination"=>"pana", "flight_departure"=>"10am", "flight_sit"=>"13"}, "commit"=>"Create Flight"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:23
+  [1m[36mFlight Create (0.4ms)[0m  [1m[32mINSERT INTO "flights" ("inspection", "fuel_cost", "destination", "flight_departure", "flight_sit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["inspection", 1], ["fuel_cost", 567], ["destination", "pana"], ["flight_departure", 10], ["flight_sit", 13], ["created_at", "2018-12-09 16:20:07.518106"], ["updated_at", "2018-12-09 16:20:07.518106"]]
+  ↳ app/controllers/flights_controller.rb:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flights_controller.rb:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+Redirected to https://0.0.0.0:3000/flights/26
+Completed 302 Found in 8ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/flights/26" for 127.0.0.1 at 2018-12-09 11:20:07 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 57ms (Views: 28.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights/26" for 127.0.0.1 at 2018-12-09 11:20:35 -0500
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.1ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:12
+  Rendering flights/show.html.erb within layouts/application
+  Rendered flights/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/57/flight_rides" for 127.0.0.1 at 2018-12-09 11:20:36 -0500
+Processing by FlightRidesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"STnCECgDwForljBnG1gBMHW98fPTOP7likNRjvWcdINzv+WJGxYr30yfKOgBDmbljeXpZDEnAQRk3/JEFJQqXQ==", "flight_ride"=>{"user_id"=>"57", "flight_id"=>"26", "flight_class"=>"Economy"}, "commit"=>"Go on flight Ride", "user_id"=>"57"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:21
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:21
+  [1m[36mFlightRide Create (0.4ms)[0m  [1m[32mINSERT INTO "flight_rides" ("user_id", "flight_id", "flight_class", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 57], ["flight_id", 26], ["flight_class", "Economy"], ["created_at", "2018-12-09 16:20:36.997591"], ["updated_at", "2018-12-09 16:20:36.997591"]]
+  ↳ app/controllers/flight_rides_controller.rb:21
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/flight_rides_controller.rb:21
+Redirected to https://0.0.0.0:3000/users/57
+Completed 302 Found in 19ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/users/57" for 127.0.0.1 at 2018-12-09 11:20:37 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 57]]
+  ↳ app/views/users/show.html.erb:9
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2018-12-09 11:20:41 -0500
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:3
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 43ms (Views: 36.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/57/flight_rides/52" for 127.0.0.1 at 2018-12-09 11:20:54 -0500
+Processing by FlightRidesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NE8+ZD8j62/kC/aQ1KOYjpkI6afTLPjRL6T2KuugzqMOyRn9DDYA6oMC7h/O9f9bYVDxMDEzBzDBOFXgCqiQfQ==", "user_id"=>"57", "id"=>"52"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT  "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."id" = ? LIMIT ?[0m  [["id", 52], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:53
+  [1m[36mFlightRide Destroy (9.3ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 52]]
+  ↳ app/controllers/flight_rides_controller.rb:56
+Redirected to https://0.0.0.0:3000/
+Completed 302 Found in 12ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-09 11:20:54 -0500
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+

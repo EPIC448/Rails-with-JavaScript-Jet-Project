@@ -89,3 +89,8 @@ thin start --ssl
 --- Check we want the Whole objec of User and all it attributes.  Not just the User_id or current_User.id.
  ---  [5] pry(#<FlightsController>)> params[:id]
 => "47"  => this is the user_id
+
+
+
+NOTE: to clear out all data in a table.
+-> Pry into the data and say Flight.destroy_all
