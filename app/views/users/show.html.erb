@@ -1,13 +1,11 @@
 <header class="header">
     
           <h4>User</h4>
-           <p><%= @user.name %><br></p>
+           <p><%= @user.name %></p>
     <br>
-    <h4> Flight_Ride Iternary</h4>
-<br>
+    <h4> FlightRide Iternary</h4>
 
     <% @user.flight_rides.each do |user_flight_ride|%>
-
      <br>
      <h4>flight_ride_id</h4>
      <p> <%= user_flight_ride.id%></p>
@@ -17,7 +15,7 @@
 
      <h4>flight_id </h4>
      <p> <%= user_flight_ride.flight_id%></p>
-<br>
+
    <h4><%= link_to "Delete This Flight", user_flight_ride_path(current_user, user_flight_ride), :method => :delete%></h4>
 
 <br>
@@ -32,14 +30,9 @@
         <% end %>
    <br>
     
-   <br>
-
-
      <%=link_to "Log Out", logout_path, :method => :delete %>
         <%= hidden_field_tag :user_id, current_user.id %>
-  <br>
-   OR
-  <br>
+  <br> <br>
 
         <% if auth_hash = request.env["omniauth.auth"] %>
         <h1><%= @user.name %></h1>

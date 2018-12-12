@@ -54,7 +54,7 @@ class FlightRidesController < ApplicationController
             session[:user_id] = nil
              reset_session
             @flight_ride.delete
-            redirect_to root_path
+            redirect_to user_flight_ride_path
 
          end
 

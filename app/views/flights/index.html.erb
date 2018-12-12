@@ -4,21 +4,21 @@
 
   <br/>
    
-     <p> <%= link_to "Go on flight #{flight.id}", flight_path(flight)%></p> <br />
+     <h3> <%= link_to "Go on flight #{flight.id}", flight_path(flight)%></ph3> <br />
 
-     <p> flight inspection </p>
+     <h5> flight inspection </h5>
      <p> <%= flight.inspection%></p>
 
-     <p> flight fuel_cost</p>
+     <h5> flight fuel_cost</h5>
      <p> <%= flight.fuel_cost%></p>
 
-     <p> flight destination</p>
+     <h5> flight destination</h5>
      <p> <%= flight.destination%></p>
 
-     <p> flight flight_departure</p>
+     <h5> flight flight_departure</h5>
      <p> <%= flight.flight_departure%></p>
 
-     <p> flight flight_sit</p>
+     <h5> flight flight_sit</h5>
      <p> <%= flight.flight_sit%></p>
 
 <% end %>
