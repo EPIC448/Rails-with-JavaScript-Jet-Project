@@ -4,7 +4,6 @@
     <h1>Edit Flight_ride</h1>
 
 <%= form_for @flight_rides, :url => user_flight_rides_path(current_user) do |f| %>
-    ## need to reroute to the flight show page.
        <%= f.label :inspection %>
        <%= f.check_box :inspection %>  <br />
 
