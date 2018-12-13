@@ -9,7 +9,6 @@ class FlightRidesController < ApplicationController
       
         def new
          @flight_ride = FlightRide.create(flight_ride_params)
-         binding.pry
 
          flash[:notice] = @flight_ride.take_flight
 
@@ -20,7 +19,9 @@ class FlightRidesController < ApplicationController
             @user = User.find(params[:user_id]) 
             @flight_ride = @user.flight_rides.build(flight_ride_params)
            if @flight_ride.save
-             redirect_to user_path(@user)
+             redirect_to user_flight_rides_path(@user)
+              # make sure we seeing nested routes Url.
+              # user Id when changes to affect what we see.
            else
            render "users/show"
            end
