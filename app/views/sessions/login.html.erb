@@ -3,7 +3,8 @@
 <p> choose your name</p>
 
 
-    <%= form_for :sessions, url: sessions_path do |f| %>   # route to session controller instead of the user controller
+    <%= form_for @user, url: sessions_path do |f| %>  
+    
      <select name="user[id]" id="user_name"> 
 
       <% User.all.each do |user| %>

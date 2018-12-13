@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   def new
-    @user = User.new
+     @user = User.new
   end
 
   def create
@@ -12,16 +12,15 @@ class SessionsController < ApplicationController
               redirect_to user_path(@user)
             
     else
-        @user = User.find_by(:name => params[:user][:name])
+        @user = User.find_by(:id => params[:user][:id])
           if @user && @user.authenticate(params[:user][:password])
-            binding.pry
             session[:user_id] = @user.id
-
+     
             redirect_to user_path(@user)
 
           else 
                 render 'sessions/login'
-          end 
+           end 
 
        end 
     end # create 
@@ -46,4 +45,3 @@ class SessionsController < ApplicationController
 
 end
 
-#joe blow.... pass: qwert
