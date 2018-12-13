@@ -9,6 +9,7 @@ class FlightRidesController < ApplicationController
       
         def new
          @flight_ride = FlightRide.create(flight_ride_params)
+         binding.pry
 
          flash[:notice] = @flight_ride.take_flight
 
