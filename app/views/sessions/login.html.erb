@@ -1,7 +1,9 @@
 <h1> Login</h1>
 
 <p> choose your name</p>
-    <%= form_for (@user) do |f| %>
+
+
+    <%= form_for :sessions, url: sessions_path do |f| %>   # route to session controller instead of the user controller
      <select name="user[id]" id="user_name"> 
 
       <% User.all.each do |user| %>

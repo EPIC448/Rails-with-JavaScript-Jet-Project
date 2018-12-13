@@ -12,8 +12,9 @@ class SessionsController < ApplicationController
               redirect_to user_path(@user)
             
     else
-        @user = User.find_by(:id => params[:user][:id])
+        @user = User.find_by(:name => params[:user][:name])
           if @user && @user.authenticate(params[:user][:password])
+            binding.pry
             session[:user_id] = @user.id
 
             redirect_to user_path(@user)
@@ -29,7 +30,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     reset_session
-      redirect_to root_path
+    render 'sessions/login'
   end
 
   private
@@ -44,3 +45,5 @@ class SessionsController < ApplicationController
   end
 
 end
+
+#joe blow.... pass: qwert

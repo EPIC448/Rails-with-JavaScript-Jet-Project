@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'users#new'
   get 'flights/index'
   get '/signin' => "sessions#login"
-  # get '/login'  => "session#new"
+  get '/login'  => "sessions#new"
   post '/sessions' => "sessions#create"
   delete '/logout' => "sessions#destroy"
 
