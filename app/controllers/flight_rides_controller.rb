@@ -3,8 +3,22 @@ class FlightRidesController < ApplicationController
         skip_before_action :verify_authenticity_token
       
         def index
-          @flight_ride = FlightRide.new
-          @flight_rides= FlightRide.all
+
+          if params[:user_id] # this comes from Url
+            @user = User.find_by_id(params[:user_id])
+               
+            if @user 
+               @flight_rides = @user.flight_rides
+
+            else
+               redirect_to users_path
+            end
+         else
+         
+            @flight_rides= FlightRide.all
+
+          end
+   
         end
       
         def new

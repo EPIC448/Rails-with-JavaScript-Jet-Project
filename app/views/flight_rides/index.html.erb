@@ -1,10 +1,12 @@
  <p> Show all the Flight ride of the specific User {tip look at your URL in your browser}</p>
+       <br> 
+       <p>Flight_ride Infor</p>
+
  <% @flight_rides.each do |flight_ride| %>
   <div>
     <h2><%= flight_ride.id %></h2>
-
-    <h3>by: <%= link_to flight_ride.user_id, user_flight_rides_path(flight_ride.user_id) %></h3>
-    #  i will like to get the name in here
+  
+    <h3>by: <%= link_to flight_ride.user.name, user_path(flight_ride.user_id) %></h3>
     <p><%= flight_ride.flight_class %></p>
   </div>
 <% end %>
