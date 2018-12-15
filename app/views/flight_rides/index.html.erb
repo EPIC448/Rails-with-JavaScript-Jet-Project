@@ -2,10 +2,19 @@
  <% @flight_rides.each do |flight_ride| %>
   <div>
     <h2><%= flight_ride.id %></h2>
-   <%binding.pry%>  
 
     <h3>by: <%= link_to flight_ride.user_id, user_flight_rides_path(flight_ride.user_id) %></h3>
     #  i will like to get the name in here
     <p><%= flight_ride.flight_class %></p>
   </div>
 <% end %>
+
+ <%= hidden_field_tag :user_id, current_user.id %>
+
+    <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
+   
+
+     <p><%= link_to "Create a New flight", new_flight_path %></p>
+
+     <%=link_to "Log Out", logout_path, :method => :delete %>
+        <%= hidden_field_tag :user_id, current_user.id %>
