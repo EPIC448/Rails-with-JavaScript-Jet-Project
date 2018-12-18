@@ -72,3 +72,9 @@ end
 
    This will open up the project for you
 
+ * Author
+ Samuel Ogundiran
+ Samrey2018@gmail.com
+
+ License
+This project is free
