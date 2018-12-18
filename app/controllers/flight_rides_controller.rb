@@ -4,7 +4,7 @@ class FlightRidesController < ApplicationController
       
         def index
 
-          if params[:user_id] # this comes from Url
+          if params[:user_id] 
             @user = User.find_by_id(params[:user_id])
                
             if @user 
