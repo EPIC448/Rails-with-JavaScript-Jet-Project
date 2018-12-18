@@ -10,7 +10,6 @@ class User < ApplicationRecord
 	validates :name, format: {without: /[0-9]/, message: "does not allow numbers" }
 	validates :password, presence: true
 
-#  omniauth goes here.
 	def self.find_or_create_by_omniauth(auth_hash)
         self.where(:name => auth_hash[:info][:name]).first_or_create do |user|
 			user.password = SecureRandom.hex

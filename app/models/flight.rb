@@ -1,11 +1,8 @@
 class Flight < ApplicationRecord
  
-    # relationshsip
     has_many :flight_rides
     has_many :users, through: :flight_rides
 
-
-    #  validations
     validates :inspection, :presence => true
     validates :fuel_cost, :presence => true
     validates :destination, :presence => true
