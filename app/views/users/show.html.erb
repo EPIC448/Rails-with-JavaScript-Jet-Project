@@ -1,14 +1,14 @@
 <header class="header">
     
-          <h4>User</h4>
+    <h4>User</h4>
     <p><%= @user.name %></p>
 
   <br>
-      <h2><%= link_to "See all Flights", flights_path %></h2>
+     <h2><%= link_to "See all Flights", flights_path %></h2>
 </header>
         <% if flash[:notice] %>
-         <div class="notice"><%= flash[:notice] %></div>
-        <% end %>
+      <div class="notice"><%= flash[:notice] %></div>
+         <% end %>
   
     <br>
     <h4> FlightRides</h4>
@@ -19,20 +19,18 @@
      <p> <%= user_flight_ride.id%></p>
 
       <h4>flight_class</h4>
-     <p> <%= user_flight_ride.flight_class%></p>
+      <p> <%= user_flight_ride.flight_class%></p>
 
-     <h4>flight_id </h4>
-     <p> <%= user_flight_ride.flight_id%></p>
+      <h4>flight_id </h4>
+      <p> <%= user_flight_ride.flight_id%></p>
 
-   <h4><%= link_to "Delete This Flight", user_flight_ride_path(current_user, user_flight_ride), :method => :delete%></h4>
-<br>
+      <h4><%= link_to "Delete This Flight", user_flight_ride_path(current_user, user_flight_ride), :method => :delete%></h4>
+      <br>
     <%end%>
 
-
-    
      <%=link_to "Log Out", logout_path, :method => :delete %>
-        <%= hidden_field_tag :user_id, current_user.id %>
-  <br> <br>
+     <%= hidden_field_tag :user_id, current_user.id %>
+      <br>
 
         <% if auth_hash = request.env["omniauth.auth"] %>
         <h1><%= @user.name %></h1>

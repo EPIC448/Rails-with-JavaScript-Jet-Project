@@ -15,12 +15,10 @@
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :flight_id, :value => @flight.id %>
 <h4> Flight Classs </h4>
- <%= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
+   <%= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
  <br>
  <br>
-  <%= f.submit "Go on flight Ride" %>
-  <br>
+   <%= f.submit "Go on flight Ride" %>
+ <br>
 
-
-  <br>
 <% end %>

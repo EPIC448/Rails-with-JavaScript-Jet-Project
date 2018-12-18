@@ -1,20 +1,19 @@
 <p> Shows all flight_Ride</p>
 
  <p> This is the users show page, List result or tickets after the went on the ride</p>
-<header class="header">
+ <header class="header">
     
-          User: <p><%= @user.name %><br></p>
+    User: <p><%= @user.name %><br></p>
     <br>
     <h4> Flight_Ride Iternary</h4>
-<br>
+   <br>
    
     <% @user.flight_rides.each do |user_flight_ride|%>
-
      <br>
      <p>flight_ride_id</p>
      <p> <%= user_flight_ride.id%></p>
 
-      <p>flight_class</p>
+     <p>flight_class</p>
      <p> <%= user_flight_ride.flight_class%></p>
 
      <p>flight_id </p>
@@ -29,7 +28,7 @@
       <h2><%= link_to "See all Flights", flights_path %></h2>
 
         <% if flash[:notice] %>
-         <div class="notice"><%= flash[:notice] %></div>
+       <div class="notice"><%= flash[:notice] %></div>
         <% end %>
    <br>
     
