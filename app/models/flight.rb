@@ -14,4 +14,7 @@ class Flight < ApplicationRecord
     
    
     scope :pass_inspection, -> { where(inspection: true) }
+
+    scope :big_flight, -> { where('flight_sit >= 5')}
+
 end

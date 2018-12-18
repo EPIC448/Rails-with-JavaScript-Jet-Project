@@ -15,7 +15,7 @@ class FlightRidesController < ApplicationController
             end
          else
          
-            @flight_rides= FlightRide.all
+            @flight_rides = FlightRide.all
 
           end
    
@@ -34,8 +34,7 @@ class FlightRidesController < ApplicationController
             @flight_ride = @user.flight_rides.build(flight_ride_params)
            if @flight_ride.save
              redirect_to user_flight_rides_path(@user)
-              # make sure we seeing nested routes Url.
-              # user Id when changes to affect what we see.
+         
            else
            render "users/show"
            end
@@ -67,10 +66,9 @@ class FlightRidesController < ApplicationController
 
          def destroy
             @flight_ride = FlightRide.find(params[:id])
-            session[:user_id] = nil
-             reset_session
+          
             @flight_ride.delete
-            redirect_to user_flight_ride_path
+            redirect_to user_flight_rides_path(session[:user_id])
 
          end
 

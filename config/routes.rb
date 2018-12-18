@@ -23,5 +23,8 @@ Rails.application.routes.draw do
       resources :flight_rides, only: [:index, :show, :new, :create, :edit, :update, :destroy] # reduce the actions to what you only need
      end
   
+    # resources :flight_rides, only:[:index]
+# make Commercial . Not restful Flight +
    
+    get 'commercial' => 'flights#commercial'
  end

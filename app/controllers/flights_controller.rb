@@ -1,7 +1,6 @@
 class FlightsController < ApplicationController
   def index
     @user = User.new
-    @flights = Flight.new
     @flights = Flight.all
   end
 
@@ -23,7 +22,6 @@ class FlightsController < ApplicationController
     @flight = Flight.create(flight_params)
     
     if @flight.save
-      session[:flight_id] = @flight.id 
         redirect_to flight_path(@flight)
     else
       render 'flights/new'
@@ -31,12 +29,9 @@ class FlightsController < ApplicationController
   end
 
     def edit 
-  
       @flight = Flight.find(params[:id])
-      @flight.users
 
       if  @current_user 
-            # session[:user_id]
          redirect_to flight_path
       else
        render 'flights/index'
@@ -49,6 +44,17 @@ class FlightsController < ApplicationController
     @flight.update(flight_params)
     redirect_to flight_path(@flight)
  end
+
+  def commercial
+    @flight = Flight.all
+   end
+    
+
+    # Display flight that has > 5 sits.
+
+
+
+
 
  private
    # will come handy if want to give people the chance to create there own flight

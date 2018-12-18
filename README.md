@@ -24,3 +24,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Note:
+ <<<<<<<<Session is only used to store the user_id <<<<<<<>>>>>>>
+ >> You got the flow down... Work on Drying up your code & Make sure when you lend code, it works on both ends...<<>

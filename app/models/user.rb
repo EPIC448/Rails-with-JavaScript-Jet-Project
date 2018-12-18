@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
 
 	validates :name, presence: true
+	validates :name, unique:  true
+
 	validates :name, format: {without: /[0-9]/, message: "does not allow numbers" }
 	validates :password, presence: true
 
