@@ -12,7 +12,7 @@ Project Title
    And Cost of Fuel to run the jet
   
 
-* Prerequisites
+ Prerequisites
   gem 'rails', '~> 5.2.1'
   gem 'thin'
   gem 'omniauth'
