@@ -68,7 +68,15 @@ end
 
    In the Browser address bar, you Type
 
-   https://0.0.0.0:3000/
+   https://0.0.0.0:3000/ Or
+
+   BootStrip was added to the Project
+    to Booth it, We say
+
+ 1. Open up the Terminal to the     Jet-Rails-Project-Directory
+ 2.Type in "Rails Server"
+ 3. make sure you link to http://localhost:3000/
+ 4. And there you have it.
 
    This will open up the project for you
 
