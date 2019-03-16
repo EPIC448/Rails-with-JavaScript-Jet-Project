@@ -2,6 +2,13 @@ class FlightsController < ApplicationController
   def index
     @user = User.new
     @flights = Flight.all
+
+    respond_to do |f|
+      f.html {render :index}
+      f.json {render json: @flights}
+
+      # to test just say http://localhost:3000/flights.json
+    end
   end
 
   def show
@@ -9,7 +16,14 @@ class FlightsController < ApplicationController
     @flight_rides = FlightRide.new
     @user = current_user
     @flight = Flight.find(params[:id])
-    render 'flights/show'
+    # render 'flights/show'
+  
+    respond_to do |f|
+      f.html {render :index}
+      f.json {render  json: @flight}
+
+    end
+
   end
 
 

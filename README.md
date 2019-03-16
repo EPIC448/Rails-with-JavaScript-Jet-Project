@@ -2,8 +2,11 @@
 
 
 Project Title
- Jets Rails Project.
+ RAils_with_JavaScript_Jets_Project.
   This Project simulate owning a private Jets. In which the User would be able to see what Jets are available, go on a flight-ride, make sure the Jets pasted inspections, and even able to delete a created jets.
+  
+   This is a dupilcated project of the orginal Ruby on Rails Jet Project. However, the front-end section was added to this project built with JavaScript. 
+
 
   In the Process of creating what type of flight they want, the User can choose:
    Destination
