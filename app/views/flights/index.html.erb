@@ -29,7 +29,9 @@
 <br>
 
 <% Flight.pass_inspection.each do |p|%>
-    <h4>  Flight that passed inspection</h4>
+
+    <h4><strong>Flight that passed inspection</strong></h4>
+    <br>
      
    <h5> flight id</h5>
      <%= p.id%>
@@ -59,7 +61,7 @@
 <br>
 
 <br>
- <h4> Create a Flight</h4>
+ <h4> <strong>Create a Flight</strong></h4>
      <%= hidden_field_tag :user_id, current_user.id %>
 
     <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
