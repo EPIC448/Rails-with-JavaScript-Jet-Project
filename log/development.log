@@ -34182,3 +34182,12 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 11351ms (Views: 11274.0ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-16 14:13:43 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (555.6ms)
+Completed 200 OK in 5124ms (Views: 4941.9ms | ActiveRecord: 0.9ms)
+
+
