@@ -2,7 +2,7 @@ class FlightsController < ApplicationController
   def index
     @user = User.new
     @flights = Flight.all
-
+    
     respond_to do |f|
       f.html {render :index}
       f.json {render json: @flights}
@@ -36,7 +36,9 @@ class FlightsController < ApplicationController
     @flight = Flight.create(flight_params)
     
     if @flight.save
-        redirect_to flight_path(@flight)
+        # redirect_to flight_path(@flight)
+        @flight = Flight.create(post_params)
+        render json: @flight, status: 201
     else
       render 'flights/new'
     end

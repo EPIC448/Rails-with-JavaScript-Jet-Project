@@ -1,11 +1,8 @@
  <h1> All Flights</h1>
  
 <%= image_tag '/images/example.png', class: "img-fluid" %>
-
   <% @flights.each do |flight| %>
 
-  <br/>
-   
      <h3> <%= link_to "Go on flight #{flight.id}", flight_path(flight)%></ph3> <br />
 
      <h5> flight inspection </h5>

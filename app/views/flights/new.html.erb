@@ -35,12 +35,35 @@
 
           <%= f.label :flight_sit %>
         <%= f.text_field :flight_sit %><br />
-  
     
         <br>
         <%= f.submit%>
         <% end %>
-      </form>
+
+        <div id="flightResult">
+        <h2 id="flightInfor"></h2>
+        <p id = "flightBody"></p>
+        </div>
+
+
+    <script type="text/javascript" charset="utf-8">
+     $(funciton() {
+       $('form').submit(function(event){
+         event.preventDefault();
+         //alert("we hijack the key")
+
+         var values = $(this).serialize();
+         var flying = $.flight('/flights', values);
+           flying.done(function(data){
+             ///console.log(data);
+                $("#flightInfor").text(flight["destination"]);
+                   $("#flightBody").text(flight["flight_sit"]);
+           })
+         })
+       });
+     </script>
+
+  </form>
 
   </header>
   
