@@ -4,7 +4,8 @@ class FlightsController < ApplicationController
     @flights = Flight.all
     
     respond_to do |f|
-      f.html {render :index}
+       f.html
+        # {render :index}
       f.json {render json: @flights}
 
       # to test just say http://localhost:3000/flights.json
@@ -37,7 +38,7 @@ class FlightsController < ApplicationController
     
     if @flight.save
         # redirect_to flight_path(@flight)
-        @flight = Flight.create(post_params)
+        @flight = Flight.create(flight_params)
         render json: @flight, status: 201
     else
       render 'flights/new'
