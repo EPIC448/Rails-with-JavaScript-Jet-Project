@@ -3,9 +3,22 @@ $(document).ready(function() {
 })
 
 
-//$(() => {
-    //bindClickHandlers()
-//})
+// $(() => {
+//     bindClickHandlers()
+// })
+
+$(function () {
+    console.log('flight.js is loaded...')
+    listenForClick()
+})
+
+function listenForClick() {
+    $('button.all_flight').on('click', function (event) {
+        event.preventDefault()
+        bindClickHandlers()
+    })
+}
+
 // Issue... JS is not loading. Solution: Brad and Ceren (start of the videos.)
 
 //functions you need ot create or you can hijack the buttons that are already do this is functions.
