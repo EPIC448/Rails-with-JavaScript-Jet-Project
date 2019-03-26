@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   post '/sessions' => "sessions#create"
   delete '/logout' => "sessions#destroy"
 
+  patch '/login', to: 'sessions#create'
+
+
   get '/users' => "users#new"
   get '/auth/facebook/callback' => 'sessions#create'
  
