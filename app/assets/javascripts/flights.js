@@ -9,6 +9,7 @@ $(document).ready(function() {
 
 $(function () {
     console.log('flight.js is loaded...')
+    
     listenForClick()
 })
 

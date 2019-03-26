@@ -69,10 +69,6 @@ class FlightsController < ApplicationController
 
     # Display flight that has > 5 sits.
 
-
-
-
-
  private
    # will come handy if want to give people the chance to create there own flight
    
