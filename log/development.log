@@ -43791,3 +43791,1034 @@ Processing by FlightsController#index as HTML
 Completed 200 OK in 97ms (Views: 94.7ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-03-27 12:56:19 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (130.4ms)
+Completed 200 OK in 1201ms (Views: 1127.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-03-27 12:56:37 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"29/3iFtCfmPwo8HZkhEw3YlfMwSpGCA0HbefICULiu0g33mwW9DPCkdP9oSlIByRvrKwUtzBBPe0vY1RjIo9SA==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:10
+  Rendered sessions/login.html.erb within layouts/application (63.4ms)
+Completed 200 OK in 148ms (Views: 135.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-03-27 12:56:42 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ry6hOET3MKmNtZy0TV0UeviergJzdweQQa/vUGLOL6RULi8ARGWBwDpZq+l6bDg2z3MtVAauI1Popf0hy0+YAQ==", "user"=>{"id"=>"87", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/users/87
+Completed 302 Found in 93ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/users/87" for 127.0.0.1 at 2019-03-27 12:56:42 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:28
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (120.2ms)
+Completed 200 OK in 241ms (Views: 236.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 12:56:46 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 120ms (Views: 95.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:01:41 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 101ms (Views: 98.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:03:08 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:25:33 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 125ms (Views: 121.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:33:08 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 101ms (Views: 97.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:33:09 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:36:22 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:37:47 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 109ms (Views: 107.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:38:54 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 103ms (Views: 100.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:40:38 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 108ms (Views: 103.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:40:50 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:44:22 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:47:46 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 108ms (Views: 104.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/flights?fuel_cost=&fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 13:48:30 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights?fuel_cost=&fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 13:50:34 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/flights?fuel_cost=&fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 13:51:19 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 103ms (Views: 100.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights?fuel_cost=&fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 13:52:01 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 92ms (Views: 89.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights?fuel_cost=&fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 13:52:52 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 115ms (Views: 112.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/flights?fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 13:52:55 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 13:53:04 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (193.81ms)
+Completed 200 OK in 423ms (Views: 418.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/flights?fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 14:00:01 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 83ms (Views: 80.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights?fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 14:01:00 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 43ms (Views: 40.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights?fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 14:02:59 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 99ms (Views: 96.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/flights?fuel_cost=14&destination=Japn&flight_departure=NewYork" for 127.0.0.1 at 2019-03-27 14:03:42 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"Japn", "flight_departure"=>"NewYork"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 14:03:55 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (45.31ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 14:03:58 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.9ms)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 14:03:59 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.4ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (53.12ms)
+Completed 200 OK in 59ms (Views: 52.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 14:04:01 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (55.27ms)
+Completed 200 OK in 60ms (Views: 55.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/flights?fuel_cost=14&destination=Japn&flight_departure=NewYork" for 127.0.0.1 at 2019-03-27 14:04:03 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"Japn", "flight_departure"=>"NewYork"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 14:10:11 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (56.56ms)
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/flights?fuel_cost=14&destination=Japn&flight_departure=NewYork" for 127.0.0.1 at 2019-03-27 14:10:22 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"Japn", "flight_departure"=>"NewYork"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.9ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 45ms (Views: 40.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/flights?fuel_cost=14&destination=Japn&flight_departure=NewYork" for 127.0.0.1 at 2019-03-27 14:10:28 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"Japn", "flight_departure"=>"NewYork"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/flights?fuel_cost=14&destination=Japn&flight_departure=NewYork" for 127.0.0.1 at 2019-03-27 14:10:43 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"Japn", "flight_departure"=>"NewYork"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 109ms (Views: 104.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 14:10:46 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.5ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (48.02ms)
+Completed 200 OK in 51ms (Views: 46.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/flights?fuel_cost=14&destination=Japn&flight_departure=NewYork" for 127.0.0.1 at 2019-03-27 14:11:06 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"Japn", "flight_departure"=>"NewYork"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 14:12:00 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (44.43ms)
+Completed 200 OK in 48ms (Views: 43.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/flights?fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-03-27 14:12:41 -0400
+Processing by FlightsController#index as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:15
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:39
+  Rendered flights/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 107ms (Views: 105.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-03-27 14:12:43 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "flight_rides" ON "users"."id" = "flight_rides"."user_id" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] No serializer found for resource: #<User id: 79, name: "Tedd", user_cash: nil, password_digest: "$2a$10$DMnA0jX.uR3bUpVQpEYyTOGCTmSZZrgEMJ3tlvW64.T...", created_at: "2018-12-13 21:23:56", updated_at: "2018-12-13 21:23:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (47.06ms)
+Completed 200 OK in 51ms (Views: 46.0ms | ActiveRecord: 3.0ms)
+
+
