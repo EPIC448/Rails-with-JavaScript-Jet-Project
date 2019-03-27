@@ -8,7 +8,6 @@ class FlightsController < ApplicationController
     respond_to do |f|
        f.html {render :index}
        f.json {render json: @flights}
-      # to test just say http://localhost:3000/flights.json
     end
   end
 
@@ -17,7 +16,6 @@ class FlightsController < ApplicationController
     @flight_rides = FlightRide.new
     @user = current_user
     @flight = Flight.find(params[:id])
-    # render 'flights/show'
     respond_to do |f|
 
       f.html 
@@ -37,7 +35,6 @@ class FlightsController < ApplicationController
     @flight = Flight.create(flight_params)
     
     if @flight.save
-        # redirect_to flight_path(@flight)
         @flight = Flight.create(flight_params)
         render json: @flight, status: 201
     else
@@ -67,11 +64,8 @@ class FlightsController < ApplicationController
    end
     
 
-    # Display flight that has > 5 sits.
 
- private
-   # will come handy if want to give people the chance to create there own flight
-   
+ private   
    def flight_params
     params.require(:flight).permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit, :user_id)
   end 

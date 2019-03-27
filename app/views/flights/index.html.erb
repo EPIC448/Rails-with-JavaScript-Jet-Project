@@ -1,5 +1,16 @@
- <h1> All Flights</h1>
  
+ <h3> AJAX Flight</h3>
+<button id='flights-data'> Get Flight data</button>
+ <div id='ajax-flights'>[flights.....]</div>
+ <br>
+ <br>
+
+  <button id='ajax-new-flight-form'>New Flight</button>
+   <div id="new-flight-form">[flight-form]</div>
+
+   <br>
+
+ <h1> All Flights</h1>
 
   <% @flights.each do |flight| %>
 
@@ -64,6 +75,6 @@
     <%= hidden_field_tag :name => request_forgery_protection_token.to_s, :value => form_authenticity_token %>
    
      <p><%= link_to "Create a New flight", new_flight_path %></p>
-
+ <br>
 
 
