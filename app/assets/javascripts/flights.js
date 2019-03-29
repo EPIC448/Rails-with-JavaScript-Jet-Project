@@ -55,6 +55,7 @@ function listenForClick() {
             return(`
                 <strong>New Flight Form</strong>
                 <form>
+                   Inspection <input type="checkbox" id="myCheck"><br>
                    FuelCost <input type='integer'name='fuel_cost'></input><br>
                     Destination<input type='text' name='destination'></input> <br>
                     Flight Departure<input type='text' name='flight_departure'></input><br>

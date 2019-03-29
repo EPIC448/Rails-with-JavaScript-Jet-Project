@@ -50,14 +50,16 @@
      $(funciton() {
        $('form').submit(function(event){
          event.preventDefault();
-         //alert("we hijack the key")
+         alert("we hijack the key")
 
          var values = $(this).serialize();
-         var flying = $.flight('/flights', values);
-           flying.done(function(data){
-             ///console.log(data);
-                $("#flightInfor").text(flight["destination"]);
-                   $("#flightBody").text(flight["flight_sit"]);
+         var flight_data = $.flight('/flights', values);
+
+            flight_data.done(function(data){
+             var flight = data;
+            
+                $("#flightInspection").text(flight["inspection"]);
+                   $("#flightDestination").text(flight["destination"]);
            })
          })
        });
