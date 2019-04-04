@@ -4,11 +4,8 @@ class FlightsController < ApplicationController
   def index
     @user = User.new
     @flights = Flight.all
-    
-    respond_to do |f|
-       f.html {render :index}
-       f.json {render json: @flights}
-    end
+       render json: @poflight, status: 201
+
   end
 
   def show
@@ -18,7 +15,7 @@ class FlightsController < ApplicationController
     @flight = Flight.find(params[:id])
     respond_to do |f|
 
-      f.html 
+      # f.html 
       f.json {render  json: @flight}
 
     end
@@ -35,11 +32,12 @@ class FlightsController < ApplicationController
     @flight = Flight.create(flight_params)
     
     if @flight.save
-        @flight = Flight.create(flight_params)
-        render json: @flight, status: 201
+        @flight = Flight.create(flight_params)       
+        f.json {render  json: @flight}
     else
       render 'flights/new'
     end
+   
   end
 
     def edit 

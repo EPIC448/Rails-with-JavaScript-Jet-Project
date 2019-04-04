@@ -126,3 +126,9 @@ Template Engineers. Might be resources
 
 Borrowing from the blog domain example, instead of plainly taking the JSON response of the newly created comment and appending it to the DOM, you would create a Comment prototype object and add a function to that prototype to perhaps concatenate (format) the comments authors first and last name. You would then use the object to append the comment information to the DOM.
 
+ NOte Of where the app is.
+  When we hit submit for Ajax, the Form is submiting to flight_controller index.
+
+  we want it to submit to app/assests/ javascripts/line 39.  document.querySelector('div#new-flight-form').innerHTML
+
+  good Source... : https://learn.co/tracks/full-stack-web-development-v6/rails-and-javascript/building-apis/receiving-api-posts
