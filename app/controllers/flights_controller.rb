@@ -4,7 +4,7 @@ class FlightsController < ApplicationController
   def index
     @user = User.new
     @flights = Flight.all
-       render json: @poflight, status: 201
+       render json: @flight, status: 201
 
   end
 
@@ -44,6 +44,7 @@ class FlightsController < ApplicationController
       @flight = Flight.find(params[:id])
 
       if  @current_user 
+      
          redirect_to flight_path
       else
        render 'flights/index'

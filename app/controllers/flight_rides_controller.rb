@@ -41,12 +41,12 @@ class FlightRidesController < ApplicationController
          end
 
           def edit
-               # if logged_in?
+               if logged_in?
                   @flight_ride = FlightRide.find(params[:id])
-                  # redirect_to user_flight_ride_path(current_user)
-               # else
-               #   render 'flights/new'
-               # end
+                  redirect_to user_flight_ride_path(current_user)
+               else
+                 render 'flights/new'
+               end
             
           end
       
