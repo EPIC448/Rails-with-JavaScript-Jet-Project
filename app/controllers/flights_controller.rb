@@ -4,7 +4,7 @@ class FlightsController < ApplicationController
   def index
     @user = User.new
     @flights = Flight.all
-       render json: @flight, status: 201
+       render json: @flights, status: 201
 
   end
 
