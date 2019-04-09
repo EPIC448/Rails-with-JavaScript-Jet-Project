@@ -37,10 +37,11 @@ function listenNewFlightForm () {
 
 class Flight {
   constructor (obj) {
-    // this.id = obj.inspection
-    this.id = obj.fuel_cost
-    this.id = obj.destination
-    this.id = obj.flight_departure
+    this.id = obj.id
+    this.destination = obj.destination
+    this.fuel_cost = obj.fuel_cost
+
+    this.flight_departure = obj.flight_departure
   }
 
   static newFlightForm () {
@@ -48,21 +49,30 @@ class Flight {
                 <strong>New Flight Form</strong>
                 <form>
                    Inspection <input type="checkbox" id="myCheck"><br>
-                   FuelCost <input type='integer'name='fuel_cost'></input><br>
-                    Destination<input type='text' name='destination'></input> <br>
-                    Flight Departure<input type='text' name='flight_departure'></input><br>
-                    Other Information<input type='text'></input><br>
+                   
+                   FuelCost  <input type='integer'name='fuel_cost'></input><br>
+                    Destination <input type='text' name='destination'></input> <br>
+                    Flight Departure <input type='text' name='flight_departure'></input><br>
+                    Other Information <input type='text'></input><br>
                     <input type='submit' /><br>
                 </form>
             `)
   }
 }
 
+var myCheck = false;
+$('#myInput:checked').click(function() {
+   // only if it is checked
+   isCheckedWithGlobalVariable = true;
+})
+
 Flight.prototype.flightHTML = function () {
   return (`
         <div>
+        <h4>${this.destination}</h4>
             <h4>${this.fuel_cost}</h4>
-            <h4>${this.destination}</h4>
+          
+            <h4> ${this.flight_departure}</h4>
         </div>
     `)
 }

@@ -132,3 +132,7 @@ Borrowing from the blog domain example, instead of plainly taking the JSON respo
   we want it to submit to app/assests/ javascripts/line 39.  document.querySelector('div#new-flight-form').innerHTML
 
   good Source... : https://learn.co/tracks/full-stack-web-development-v6/rails-and-javascript/building-apis/receiving-api-posts
+
+
+  Json...
+  Json--- Part at 20 -25 min contains what you need.

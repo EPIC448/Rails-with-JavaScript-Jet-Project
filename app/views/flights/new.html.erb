@@ -41,8 +41,9 @@
         <% end %>
 
         <div id="flightResult">
-        <h2 id="flightInfor"></h2>
+        <h2 id="flightInspection"></h2>
         <p id = "flightBody"></p>
+        <p id = "flightDeparture"></p>
         </div>
 
 
@@ -53,12 +54,16 @@
          alert("we hijack the key")
 
          var values = $(this).serialize();
+
          var flight_data = $.flight('/flights', values);
 
             flight_data.done(function(data){
              var flight = data;
+             console.log
                 $("#flightInspection").text(flight["inspection"]);
-                   $("#flightDestination").text(flight["destination"]);
+                   $("#flightBody").text(flight["destination"]);
+                        $("#flightDepature").text(flight["flight_departure"]);
+
            })
          })
        });
