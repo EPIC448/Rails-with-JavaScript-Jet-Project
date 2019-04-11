@@ -136,3 +136,18 @@ Borrowing from the blog domain example, instead of plainly taking the JSON respo
 
   Json...
   Json--- Part at 20 -25 min contains what you need.
+
+submit form in the same file
+  https://www.youtube.com/watch?time_continue=6&v=Yd0nH9CWWfo
+
+
+
+
+  Incase if ti needd
+
+//  myCheck is for the validation of the checkBox as it is coded in rails verfactiion to check for boolean
+// var myCheck = false;
+// $('#myInput:checked').click(function() {
+//    // only if it is checked
+//    isCheckedWithGlobalVariable = true;
+// })

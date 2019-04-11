@@ -27,14 +27,6 @@ function getPosts () {
   })
 }
 
-function listenNewFlightForm () {
-  $('button#ajax-new-flight-form').on('click', function (event) {
-    event.preventDefault()
-    let newFlightForm = Flight.newFlightForm()
-    document.querySelector('div#new-flight-form').innerHTML = newFlightForm
-  })
-}
-
 class Flight {
   constructor (obj) {
     this.id = obj.id
@@ -60,19 +52,47 @@ class Flight {
   }
 }
 
-var myCheck = false;
-$('#myInput:checked').click(function() {
-   // only if it is checked
-   isCheckedWithGlobalVariable = true;
-})
-
+//  This is for the flight data
 Flight.prototype.flightHTML = function () {
   return (`
         <div>
-        <h4>${this.destination}</h4>
-            <h4>${this.fuel_cost}</h4>
-          
-            <h4> ${this.flight_departure}</h4>
-        </div>
+        <h4> Flight_id: <br>${this.id}</h4>
+        <h4>Destination:<br>${this.destination}</h4>
+        <h4>FuelCost: <br>${this.fuel_cost}</h4>
+          </div>
     `)
 }
+
+
+function listenNewFlightForm () {
+  $('button#ajax-new-flight-form').on('click', function (event) {
+    event.preventDefault()
+    // let newFlightForm = Flight.newFlightForm()
+    // document.querySelector('div#new-flight-form').innerHTML = newFlightForm
+    let newFlightForm = Flight.newFlightForm
+
+
+    let myNewFlightHTML = newFlightForm
+
+    document.querySelector('div#new-flight-form').innerHTML = myNewFlightHTML
+  })
+}
+
+$('#newFlightForm').on('submit', function (e) {
+  e.preventDefault()
+  // const values = $(this).serialize()
+
+  // $.flight('/flights', values).done(function (data) {
+  //   $('#new-flight-form').html('<h2> hold my spot</h2>')
+  //   // const newFlight = new Flight(data)
+  //   // const htmlToAdd = myflight.flightHTML()
+
+  //   let myflight = new Flight(data[0])
+  //   let myFlightHTML = myflight.flightHTML()
+  //   $('#new-flight-form').html(myFlightHTML)
+  
+  })
+
+})
+
+
