@@ -1,8 +1,8 @@
-$(document).ready(function () {
+$(function () {
   console.log('javaScript is loading and working')
   listenForClick()
   listenNewFlightForm()
-})
+});
 
 function listenForClick () {
   $('button#flights-data').on('click', function (event) {
@@ -25,7 +25,7 @@ function getPosts () {
     let myFlightHTML = myflight.flightHTML()
     document.getElementById('ajax-flights').innerHTML = myFlightHTML
   })
-}
+ }
 
 class Flight {
   constructor (obj) {
@@ -40,12 +40,12 @@ class Flight {
     return (`
                 <strong>New Flight Form</strong>
                 <form>
-                   Inspection <input type="checkbox" id="myCheck"><br>
-                   
-                   FuelCost  <input type='integer'name='fuel_cost'></input><br>
-                    Destination <input type='text' name='destination'></input> <br>
-                    Flight Departure <input type='text' name='flight_departure'></input><br>
-                    Other Information <input type='text'></input><br>
+                   Inspection  <br><input type="checkbox" id="myCheck"><br>              
+                   FuelCost    <br><input type='integer'name='fuel_cost'></input><br>
+                    Destination  <br><input type='text' name='destination'></input> <br>
+                    Flight Departure  <br><input type='text' name='flight_departure'></input><br>
+                    Flight Sit  <br><input type='text' name= 'flight_sit'></input><br>
+                    User Id  <br><input type='text' name= 'user_id'></input><br>
                     <input type='submit' /><br>
                 </form>
             `)
@@ -67,21 +67,19 @@ Flight.prototype.flightHTML = function () {
 function listenNewFlightForm () {
   $('button#ajax-new-flight-form').on('click', function (event) {
     event.preventDefault()
-    // let newFlightForm = Flight.newFlightForm()
-    // document.querySelector('div#new-flight-form').innerHTML = newFlightForm
-    let newFlightForm = Flight.newFlightForm
-
-
-    let myNewFlightHTML = newFlightForm
-
-    document.querySelector('div#new-flight-form').innerHTML = myNewFlightHTML
+    let newFlightForm = Flight.newFlightForm()
+    // let myNewFlightHTML = newFlightForm
+    document.querySelector('div#new-flight-form').innerHTML = newFlightForm
   })
 }
 
-$('#newFlightForm').on('submit', function (e) {
+$('#new-flight-form').on('submit', function (e) {
   e.preventDefault()
-  // const values = $(this).serialize()
-
+  console.log('check me out')
+  
+  
+  const values = $(this).serialize()
+ 
   // $.flight('/flights', values).done(function (data) {
   //   $('#new-flight-form').html('<h2> hold my spot</h2>')
   //   // const newFlight = new Flight(data)
@@ -93,6 +91,6 @@ $('#newFlightForm').on('submit', function (e) {
   
   })
 
-})
+
 
 

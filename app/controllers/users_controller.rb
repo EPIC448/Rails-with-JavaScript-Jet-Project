@@ -21,7 +21,6 @@ class UsersController < ApplicationController
   end
 
    def show
-
     if !session.include?(:user_id)
       redirect_to root_path
     else

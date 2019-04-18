@@ -1,11 +1,7 @@
  
- <h3> AJAX Flight</h3>
-<button id='flights-data'> Get Flight data</button>
- <div id='ajax-flights'>[flights.....]</div>
- <br>
+
  
  <h1> All Flights</h1>
-
   <% @flights.each do |flight| %>
 
      <h3> <%= link_to "Go on flight #{flight.id}", flight_path(flight)%></ph3> <br />

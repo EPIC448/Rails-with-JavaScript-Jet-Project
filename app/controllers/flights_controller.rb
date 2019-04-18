@@ -5,7 +5,7 @@ class FlightsController < ApplicationController
     @user = User.new
     @flights = Flight.all
     respond_to do |f|
-      # binding.pry
+      
       f.html {render :index}
       f.json{render json: @flights}
       #   render json:  @flights, status: 201
@@ -13,25 +13,13 @@ class FlightsController < ApplicationController
 
   end
 
-  def show
 
-    @flight_rides = FlightRide.new
-    @user = current_user
-    @flight = Flight.find(params[:id])
-    # respond_to do |f|
-
-    f.html {render :show}
-    #   f.json {render  json: @flight}
-        render json:  @flights, status: 201
-
-    # end
-
-  end
 
 
    def new
     @flight = Flight.new
-    render 'flights/new'
+
+    # render 'flights/new'
    end
 
    def create
@@ -61,6 +49,9 @@ class FlightsController < ApplicationController
     end
 
 
+    
+
+
   def update 
     @flight = Flight.find(params[:id])
     @flight.update(flight_params)
@@ -72,6 +63,15 @@ class FlightsController < ApplicationController
    end
     
 
+   def show
+
+    @flight = Flight.find(params[:id])
+    respond_to do |f|
+         f.html {render :index}
+        f.json{render json: @flights}
+     end
+
+  end
 
  private   
    def flight_params
