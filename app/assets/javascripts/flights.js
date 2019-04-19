@@ -77,18 +77,7 @@ $('#new-flight-form').on('submit', function (e) {
   e.preventDefault()
   console.log('check me out')
   
-  
-  const values = $(this).serialize()
  
-  // $.flight('/flights', values).done(function (data) {
-  //   $('#new-flight-form').html('<h2> hold my spot</h2>')
-  //   // const newFlight = new Flight(data)
-  //   // const htmlToAdd = myflight.flightHTML()
-
-  //   let myflight = new Flight(data[0])
-  //   let myFlightHTML = myflight.flightHTML()
-  //   $('#new-flight-form').html(myFlightHTML)
-  
   })
 
 

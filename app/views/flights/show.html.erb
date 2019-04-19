@@ -22,3 +22,31 @@
  <br>
 
 <% end %>
+
+
+<h2> Ajax Presentation</h2>
+  <%= form_for(@flights) do |f| %>
+       <%= f.label :inspection %>
+       <%= f.check_box :inspection %> [Check For  pass inspection] <br />
+
+       <%= f.label :fuel_cost %>
+        <%= f.text_field :fuel_cost %><br />
+
+        <%= f.label :destination %>
+        <%= f.text_field :destination %><br />
+
+        <%= f.label :flight_departure %>
+        <%= f.text_field :flight_departure %><br />
+
+          <%= f.label :flight_sit %>
+        <%= f.text_field :flight_sit %><br />
+    
+        <br>
+        <%= f.submit%>
+        <% end %>
+
+        <div id="flightResult">
+        <h2 id="flightInspection"></h2>
+        <p id = "flightBody"></p>
+        <p id = "flightDeparture"></p>
+        </div>

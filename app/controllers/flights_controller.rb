@@ -17,9 +17,14 @@ class FlightsController < ApplicationController
 
 
    def new
-    @flight = Flight.new
+    @flights = Flight.new
 
-    # render 'flights/new'
+    if @flights
+      
+          # @flights = Flight.create(flight_params)
+            render json: @flights, status: 200
+            binding.pry
+    end
    end
 
    def create
@@ -64,18 +69,31 @@ class FlightsController < ApplicationController
     
 
    def show
+    @flights = Flight.create(flight_params)
 
-    @flight = Flight.find(params[:id])
-    respond_to do |f|
-         f.html {render :index}
-        f.json{render json: @flights}
-     end
+      if @flights
+        
+            @flights = Flight.create(flight_params)
+              render json: @flights, status: 200
+        else
+  
+         @flight = Flight.find(params[:id])
+          respond_to do |f|
+            f.html {render :index}
+       
+           end
+
+      end
 
   end
 
  private   
    def flight_params
-    params.require(:flight).permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit, :user_id)
+    params.permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit, :user_id)
   end 
+
+  # def flights_params
+  #   params.require(:flight).permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit, :user_id)
+  # end
 
 end
