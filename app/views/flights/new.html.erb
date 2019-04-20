@@ -40,33 +40,11 @@
         <%= f.submit%>
         <% end %>
 
-        <div id="flightResult">
+        <div id="flightId">
           <h2 id="flightInspection"></h2>
-          <p id = "flightBody"></p>
-          <p id = "flightDeparture"></p>
+          <p id = "flightFuel_cost"></p>
+          <p id = "flightDestination"></p>
         </div>
-
-
-        <script type="text/javascript" charset="utf-8">
-          $(function () {
-            $('form').submit(function(event) {
-              //prevent form from submitting the default way
-              event.preventDefault();
-        
-              var values = $(this).serialize();
-        
-              var flightx = $.flights('/posts', values);
-        
-              flightx.done(function(data) {
-                // TODO: handle response
-                var flights = data;
-
-                $("#flightInspection").text(post["inspection"]);
-                $("#flightBody").text(post["description"]);
-              });
-            });
-          });
-      </script>
 
 
       <h3> AJAX Flight</h3>

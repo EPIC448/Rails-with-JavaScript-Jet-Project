@@ -18,12 +18,13 @@ class FlightsController < ApplicationController
 
    def new
     @flights = Flight.new
+    @flights = Flight.create(flight_params)
 
     if @flights
       
           # @flights = Flight.create(flight_params)
             render json: @flights, status: 200
-            binding.pry
+            
     end
    end
 
@@ -89,7 +90,7 @@ class FlightsController < ApplicationController
 
  private   
    def flight_params
-    params.permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit, :user_id)
+    params.permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit)
   end 
 
   # def flights_params

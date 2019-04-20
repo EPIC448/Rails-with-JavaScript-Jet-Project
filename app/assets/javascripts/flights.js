@@ -45,7 +45,7 @@ class Flight {
                     Destination  <br><input type='text' name='destination'></input> <br>
                     Flight Departure  <br><input type='text' name='flight_departure'></input><br>
                     Flight Sit  <br><input type='text' name= 'flight_sit'></input><br>
-                    User Id  <br><input type='text' name= 'user_id'></input><br>
+                  
                     <input type='submit' /><br>
                 </form>
             `)
@@ -69,16 +69,38 @@ function listenNewFlightForm () {
     event.preventDefault()
     let newFlightForm = Flight.newFlightForm()
     // let myNewFlightHTML = newFlightForm
-    document.querySelector('div#new-flight-form').innerHTML = newFlightForm
+    // document.querySelector('div#new-flight-form').innerHTML = newFlightForm
+    document.getElementById('new-flight-form').innerHTML = newFlightForm
   })
 }
 
-$('#new-flight-form').on('submit', function (e) {
-  e.preventDefault()
-  console.log('check me out')
-  
- 
-  })
+$(function () {
+  $('#ajax-new-flight-form').submit(function(event) {
+    //prevent form from submitting the default way
+    event.preventDefault();
+
+    var values = $(this).serialize();
+
+    var flightx = $.flights('/posts', values);
+
+    flightx.done(function(data) {
+      // TODO: handle response
+      var flights = data;
+
+      
+
+      // $("#flightId").text(flights["id"]);
+      // $("#flightInspection").text(flights["inspection"]);
+      // $("#flightFuel_cost").text(flights["fuel_cost"]);
+      // $("#flightDestination").text(flights["destination"]);
+
+      const newFlight = new Flight(flights)
+      const htmlToAdd = newFlight.flightHTML
+
+      $('#new-flight-form').html(htmlToAdd)
+    });
+  });
+});
 
 
 
