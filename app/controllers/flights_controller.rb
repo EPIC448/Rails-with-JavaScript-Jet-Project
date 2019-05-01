@@ -14,31 +14,30 @@ class FlightsController < ApplicationController
   end
 
 
-
-
    def new
-    @flights = Flight.new
-    @flights = Flight.create(flight_params)
+    
+    @flight = Flight.new
 
-    if @flights
-      
-          # @flights = Flight.create(flight_params)
-            render json: @flights, status: 200
-            
+    # @flights = current_user.flight.build(flight_params)
+
+    if @flights 
+           @flights = Flight.create(flight_params)
+            render json: @flights, status: 200  
     end
+     
    end
 
    def create
-    @flight = Flight.create(flight_params)
-    
-    if @flight.save
+    # @flight = Flight.create(params[:flight_params])
+    # @flight_rides
+    if @flight.save!
         @flight = Flight.create(flight_params)       
         # f.json {render  json: @flight}
-        f.html{redirect_to flights_path}
+        # f.html{redirect_to flights_path}
         render json: @flight, status: 201
 
     else
-      render 'flights/new'
+      render 'flight/new'
     end
    
   end
@@ -76,6 +75,7 @@ class FlightsController < ApplicationController
         
             @flights = Flight.create(flight_params)
               render json: @flights, status: 200
+              # return JSON(new { ok = true, newurl = Url.Action("Create") })
         else
   
          @flight = Flight.find(params[:id])

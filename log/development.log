@@ -53409,3 +53409,2210 @@ Processing by FlightsController#new as HTML
 Completed 200 OK in 58ms (Views: 15.3ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/flights" for 127.0.0.1 at 2019-04-22 20:24:32 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (51.1ms)
+Completed 200 OK in 2070ms (Views: 1942.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-22 20:24:38 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (89.34ms)
+Completed 200 OK in 380ms (Views: 300.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-22 20:26:26 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (1.5ms)
+Completed 200 OK in 20ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/flights/30" for 127.0.0.1 at 2019-04-22 20:26:32 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (2.63ms)
+Completed 200 OK in 26ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights/30" for 127.0.0.1 at 2019-04-22 20:26:46 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (1.17ms)
+Completed 200 OK in 30ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights/30" for 127.0.0.1 at 2019-04-22 20:26:47 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 20ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-22 20:27:07 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (286.3ms)
+Completed 200 OK in 404ms (Views: 399.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-22 20:27:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9HeuKIozaRRQYIJHpaTBKyNSJlXiJNiTvOfDUP71ozEA8KXijrzabqMTm+EkMmI/sRRh5OkcwE5AdTYLrT/rtQ==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:10
+  Rendered sessions/login.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 103ms (Views: 98.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-04-22 20:27:19 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BkIwLAif+V4MHVZuOocz2vThFWtYnAUV0zWWn/V1V1jyxTvmDBBKJP9uT8i7EZDOZqdS2lOkHcgvp2PEpr8f3A==", "user"=>{"id"=>"87", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/users/87
+Completed 302 Found in 83ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/users/87" for 127.0.0.1 at 2019-04-22 20:27:19 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.6ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (121.0ms)
+Completed 200 OK in 204ms (Views: 201.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-22 20:27:21 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 63ms (Views: 59.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-22 20:27:22 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (1.24ms)
+Completed 200 OK in 19ms (Views: 2.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-22 20:27:35 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 51ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-22 20:27:40 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (1.61ms)
+Completed 200 OK in 21ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-22 20:28:20 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 113ms (Views: 107.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/flights/new?fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-04-25 13:51:12 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+Completed 500 Internal Server Error in 93ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `flight' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:23:in `new'
+Started GET "/flights/new?fuel_cost=&destination=&flight_departure=" for 127.0.0.1 at 2019-04-25 13:52:08 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>""}
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `flights' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:23:in `new'
+Started GET "/flights" for 127.0.0.1 at 2019-04-25 13:52:54 -0400
+Processing by FlightsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-25 13:52:54 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (143.4ms)
+Started GET "/" for 127.0.0.1 at 2019-04-25 13:52:55 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 1889ms (Views: 1861.6ms | ActiveRecord: 0.6ms)
+
+
+Completed 200 OK in 1135ms (Views: 1130.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-25 13:52:58 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZsEwy8aOsvQbGKcvN5ymmXYz5ukqqY2Dw2ZPLNThewvWY6CheWV/Y4pZFS8XJee9trzS4pzW+EMAoRmG+kAJgQ==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:10
+  Rendered sessions/login.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 271ms (Views: 232.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-04-25 13:53:05 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HZHKyadOzNCuGMpfBONX5obpa99LquQc/d5W6486ImCtM1qjGKUBRz9ZeF8kWhbCRmZf1P3Vkdw+GQBBoZtQ6g==", "user"=>{"id"=>"87", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/users/87
+Completed 302 Found in 90ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/87" for 127.0.0.1 at 2019-04-25 13:53:06 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.5ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (166.0ms)
+Completed 200 OK in 270ms (Views: 259.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-25 13:53:07 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 77ms (Views: 69.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/87/flight_rides/111" for 127.0.0.1 at 2019-04-25 13:53:12 -0400
+Processing by FlightRidesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FeUN4BVIaBspFFfBvGbIkuCx7t8O+99qHqXdvAF21oClR52KqqOljLhV5cGc34m2ID7a1LiEqqrdYosWL9ekCg==", "user_id"=>"87", "id"=>"111"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT  "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."id" = ? LIMIT ?[0m  [["id", 111], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:68
+  [1m[36mFlightRide Destroy (3.7ms)[0m  [1m[31mDELETE FROM "flight_rides" WHERE "flight_rides"."id" = ?[0m  [["id", 111]]
+  ↳ app/controllers/flight_rides_controller.rb:70
+Redirected to http://localhost:3000/users/87/flight_rides
+Completed 302 Found in 13ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/users/87/flight_rides" for 127.0.0.1 at 2019-04-25 13:53:12 -0400
+Processing by FlightRidesController#index as HTML
+  Parameters: {"user_id"=>"87"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/flight_rides_controller.rb:8
+  Rendering flight_rides/index.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/flight_rides/index.html.erb:3
+  Rendered flight_rides/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 112ms (Views: 97.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-25 13:53:14 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `flights' for #<User:0x007f85815ef4d0>
+Did you mean?  flight
+               flight=):
+  
+app/controllers/flights_controller.rb:23:in `new'
+Started PUT "/__web_console/repl_sessions/3d13c7bdae3c491b58fb1d96e029ae3f" for 127.0.0.1 at 2019-04-25 13:53:38 -0400
+Started PUT "/__web_console/repl_sessions/3d13c7bdae3c491b58fb1d96e029ae3f" for 127.0.0.1 at 2019-04-25 13:53:40 -0400
+Started PUT "/__web_console/repl_sessions/3d13c7bdae3c491b58fb1d96e029ae3f" for 127.0.0.1 at 2019-04-25 13:53:47 -0400
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-25 13:54:13 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (9.3ms)
+Completed 200 OK in 232ms (Views: 134.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-25 13:54:21 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (1.1ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (1.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 144ms (Views: 140.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-25 13:54:23 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (1.41ms)
+Completed 200 OK in 21ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/flights/35" for 127.0.0.1 at 2019-04-25 13:54:59 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (3.49ms)
+Completed 200 OK in 39ms (Views: 21.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-25 13:55:26 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 107ms (Views: 99.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/flights/30" for 127.0.0.1 at 2019-04-25 13:55:30 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (1.0ms)
+Completed 200 OK in 19ms (Views: 2.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-29 20:32:05 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#new as HTML
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `flight' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:23:in `new'
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-29 20:32:12 -0400
+Processing by FlightsController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `flight' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:23:in `new'
+Started GET "/flights" for 127.0.0.1 at 2019-04-29 20:32:16 -0400
+Processing by FlightsController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :require_logged_in rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-29 20:32:16 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (119.7ms)
+Completed 200 OK in 1070ms (Views: 1043.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-29 20:32:17 -0400
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 85ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-29 20:32:19 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XCP7TSwC6WyNX7644BVG2yY3qOsdGBcTGh47ei4qQJhWXIhI0A8p2KwPslwze16blKFFJLW0y68+ghJ0qkhDyw==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:10
+  Rendered sessions/login.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 151ms (Views: 77.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-04-29 20:32:24 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D7IEs0NlVIAGC21C/gqeKNL+L9KK66vXCD1AJQlCr4EFzXe2v2iUNCdbYaYtZIZoYGjCHSJHd2ssoWkrjSCs0g==", "user"=>{"id"=>"87", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/users/87
+Completed 302 Found in 82ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/87" for 127.0.0.1 at 2019-04-29 20:32:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (89.3ms)
+Completed 200 OK in 166ms (Views: 162.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-29 20:32:26 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 71ms (Views: 67.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-29 20:32:31 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 84ms (Views: 77.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-29 20:32:34 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V6rXRgLDI1u/oqD1/2cX7rweT+r7V2TXVbu/s4AXtX1d1aRD/s7j757yrBEsCQ+uDoiiJVP7uGtxJ5a9BHW2Lg==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:10
+  Rendered sessions/login.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 80ms (Views: 72.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-04-29 20:32:38 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rxUidRwXNPfwwKTGc8IBmJ51YNDnJEMOpSMQaTO7SlmlalFw4Br0Q9GQqCKgrBnYLOONH0+In7KBvzlnt9lJCg==", "user"=>{"id"=>"87", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/users/87
+Completed 302 Found in 78ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/87" for 127.0.0.1 at 2019-04-29 20:32:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 59ms (Views: 51.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-29 20:32:42 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 67ms (Views: 61.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-29 20:32:44 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:75
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (6.95ms)
+Completed 200 OK in 121ms (Views: 104.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/static/js/bundle.js" for 127.0.0.1 at 2019-04-29 21:15:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/bundle.js"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-04-30 17:19:31 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (526.7ms)
+Completed 200 OK in 1766ms (Views: 1558.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-30 17:28:50 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IfJ7cqC9CVJs9zOrxhKbtO9VzY31oGkN4KTsMBLnAB7n4YVlEjcKWkFYQiPk6+DikA9tiMz4RRtAD+FB6Q9NEQ==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:10
+  Rendered sessions/login.html.erb within layouts/application (112.7ms)
+Completed 200 OK in 308ms (Views: 214.1ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-04-30 17:29:01 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P1I2UMQ/ih2bm2NTfCog4odyR0iXf5+AnHcZR1QPL6n5QchHdrWJFbY0Ette01u0+CjnTa4ns5Y83BQ2r+dipg==", "user"=>{"id"=>"87", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/users/87
+Completed 302 Found in 77ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/87" for 127.0.0.1 at 2019-04-30 17:29:01 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (314.6ms)
+Completed 200 OK in 359ms (Views: 355.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 17:29:04 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 82ms (Views: 70.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 17:29:06 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:78
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:78
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:82
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:82
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (34.96ms)
+Completed 200 OK in 441ms (Views: 425.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 17:46:34 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (25.02ms)
+Completed 200 OK in 66ms (Views: 26.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 17:46:39 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (111.2ms)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: 
+    2: 
+    3: <% if @flight.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2>
+    6:       <%= pluralize(@flight.errors.count, "error") %>
+  
+app/views/flights/new.html.erb:3:in `_app_views_flights_new_html_erb___3366647763839281699_70310552457680'
+app/controllers/flights_controller.rb:30:in `new'
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 17:47:36 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 17:47:44 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (87900.0ms)
+Completed 500 Internal Server Error in 87906ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: 
+    2: <%binding.pry%>
+    3: <% if @flight.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2>
+    6:       <%= pluralize(@flight.errors.count, "error") %>
+  
+app/views/flights/new.html.erb:3:in `_app_views_flights_new_html_erb___3366647763839281699_70310547133180'
+app/controllers/flights_controller.rb:30:in `new'
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 17:49:25 -0400
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 17:51:23 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.8ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 1828ms (Views: 1752.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 17:51:27 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (262.39ms)
+Completed 200 OK in 373ms (Views: 315.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 17:52:58 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 20ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights/30" for 127.0.0.1 at 2019-04-30 17:53:43 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (33.02ms)
+Completed 200 OK in 114ms (Views: 35.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-30 18:00:36 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (103.6ms)
+Completed 200 OK in 1871ms (Views: 1792.8ms | ActiveRecord: 11.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-30 18:00:41 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OiEl0lUBE7c69+1wfAM0qajZdue940Tn3fHHbfdGChD8MtvF54sQvxdYnPhe+k//14PW4oS7aPF9WsocDK5HHw==", "user"=>{"name"=>"", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11
+  Rendering sessions/login.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/sessions/login.html.erb:10
+  Rendered sessions/login.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 137ms (Views: 129.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2019-04-30 18:00:53 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B6Tn/XiGAqvqPsEKJd4wz/oiJQYhV45yveFMLP+1BCTBtxnqygwBo8eRsIIHJ0uZhXiFAxgPomQdSkFdBF1JKw==", "user"=>{"id"=>"87", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:15
+Redirected to http://localhost:3000/users/87
+Completed 302 Found in 82ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/87" for 127.0.0.1 at 2019-04-30 18:00:53 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 138ms (Views: 135.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 18:00:54 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 104ms (Views: 92.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 18:00:56 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (3.92ms)
+Completed 200 OK in 89ms (Views: 71.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/flights/30" for 127.0.0.1 at 2019-04-30 18:03:34 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Started GET "/flights/30" for 127.0.0.1 at 2019-04-30 18:15:32 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (56.79ms)
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (16.04ms)
+Completed 200 OK in 2444482ms (Views: 2154.4ms | ActiveRecord: 3.5ms)
+
+
+Completed 200 OK in 1727064ms (Views: 135.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/87" for 127.0.0.1 at 2019-04-30 18:45:03 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFlightRide Load (0.7ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."user_id" = ?[0m  [["user_id", 87]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 1523ms (Views: 1412.2ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 18:45:08 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 101ms (Views: 87.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 18:45:20 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 137ms (Views: 102.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/flights/30" for 127.0.0.1 at 2019-04-30 18:45:21 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"30"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (12.06ms)
+Completed 500 Internal Server Error in 88ms (Views: 61.2ms | ActiveRecord: 1.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:30:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 18:47:12 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (2.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (34.8ms)
+Completed 200 OK in 132ms (Views: 92.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 18:47:14 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (7.78ms)
+Completed 500 Internal Server Error in 29ms (Views: 10.4ms | ActiveRecord: 1.5ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:30:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 18:48:10 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (4.25ms)
+Completed 500 Internal Server Error in 72ms (Views: 13.1ms | ActiveRecord: 3.7ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:30:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 18:48:18 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (16.93ms)
+Completed 500 Internal Server Error in 90ms (Views: 19.4ms | ActiveRecord: 4.1ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"flights", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/flights_controller.rb:31:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/29" for 127.0.0.1 at 2019-04-30 18:48:59 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (10.16ms)
+Completed 500 Internal Server Error in 66ms (Views: 11.9ms | ActiveRecord: 3.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"flights", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/flights_controller.rb:31:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 18:55:52 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:18
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (12.01ms)
+Completed 500 Internal Server Error in 64ms (Views: 13.0ms | ActiveRecord: 5.6ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"flights", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/flights_controller.rb:31:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 18:56:11 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:18
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (6.26ms)
+Completed 500 Internal Server Error in 65ms (Views: 7.6ms | ActiveRecord: 3.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"flights", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/flights_controller.rb:31:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 18:56:50 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:18
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (7.11ms)
+Completed 500 Internal Server Error in 68ms (Views: 9.8ms | ActiveRecord: 3.2ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"flights", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/flights_controller.rb:31:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 18:57:01 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:18
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (8.08ms)
+Completed 500 Internal Server Error in 66ms (Views: 11.0ms | ActiveRecord: 5.8ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"flights", :id=>nil}, missing required keys: [:id]):
+  
+app/controllers/flights_controller.rb:31:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 18:57:37 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:78
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:78
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:82
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:82
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (11.76ms)
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT  "flights".* FROM "flights" WHERE "flights"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/flights_controller.rb:31
+Redirected to 
+Completed 500 Internal Server Error in 94ms (Views: 13.9ms | ActiveRecord: 4.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:32:in `new'
+app/controllers/flights_controller.rb:84:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 18:58:40 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:78
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:78
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:82
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:82
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (14.74ms)
+Redirected to 
+Completed 500 Internal Server Error in 97ms (Views: 17.2ms | ActiveRecord: 3.6ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:32:in `new'
+app/controllers/flights_controller.rb:84:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 18:59:53 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (13.22ms)
+Completed 500 Internal Server Error in 179ms (Views: 14.8ms | ActiveRecord: 3.6ms)
+
+
+  
+NoMethodError (undefined method `Json' for #<FlightsController:0x007f93df2b4178>
+Did you mean?  JSON):
+  
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:00:45 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (14.25ms)
+Completed 500 Internal Server Error in 91ms (Views: 17.9ms | ActiveRecord: 4.8ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:01:56 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (13.05ms)
+Completed 500 Internal Server Error in 88ms (Views: 12.4ms | ActiveRecord: 6.6ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:30:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:03:51 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:25
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (8.59ms)
+Completed 500 Internal Server Error in 77ms (Views: 8.9ms | ActiveRecord: 5.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:30:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:04:15 -0400
+  
+SyntaxError (/Users/omoogun/Desktop/Flaitron_Dev/Javascripts/Rails-with-JavaScript-Jet-Project/app/controllers/flights_controller.rb:105: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/flights_controller.rb:105: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:04:24 -0400
+  
+SyntaxError (/Users/omoogun/Desktop/Flaitron_Dev/Javascripts/Rails-with-JavaScript-Jet-Project/app/controllers/flights_controller.rb:104: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/flights_controller.rb:104: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:05:12 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (10.06ms)
+Completed 500 Internal Server Error in 80ms (Views: 14.7ms | ActiveRecord: 3.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:06:13 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:79
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:83
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:83
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+Completed 406 Not Acceptable in 76ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/flights_controller.rb:26:in `new'
+app/controllers/flights_controller.rb:85:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:06:48 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:78
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:78
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:82
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:82
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 2.5ms)
+
+
+  
+NameError (undefined local variable or method `f' for #<FlightsController:0x007f93e1500c40>):
+  
+app/controllers/flights_controller.rb:26:in `new'
+app/controllers/flights_controller.rb:84:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:07:10 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:77
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:81
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (11.73ms)
+Completed 500 Internal Server Error in 73ms (Views: 14.0ms | ActiveRecord: 3.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:30:in `new'
+app/controllers/flights_controller.rb:83:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:07:48 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (7.51ms)
+Redirected to 
+Completed 500 Internal Server Error in 74ms (Views: 12.4ms | ActiveRecord: 3.8ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:08:16 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (12.85ms)
+Redirected to 
+Completed 500 Internal Server Error in 95ms (Views: 15.1ms | ActiveRecord: 4.0ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:08:47 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (9.66ms)
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+Completed 500 Internal Server Error in 96ms (Views: 10.8ms | ActiveRecord: 5.3ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:25:in `new'
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:09:11 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (16.0ms)
+Completed 500 Internal Server Error in 273ms (Views: 23.0ms | ActiveRecord: 5.0ms)
+
+
+  
+NoMethodError (undefined method `red' for #<FlightsController:0x007f93d83ad6d0>):
+  
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:09:15 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (0.9ms)
+Completed 500 Internal Server Error in 127ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `red' for #<FlightsController:0x007f93e13f9c70>):
+  
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:09:28 -0400
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (17.34ms)
+Completed 500 Internal Server Error in 152ms (Views: 23.1ms | ActiveRecord: 11.3ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/flights/33" for 127.0.0.1 at 2019-04-30 19:34:57 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:76
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:80
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/flights_controller.rb:24
+[active_model_serializers] Rendered FlightSerializer with ActiveModelSerializers::Adapter::Attributes (16.72ms)
+Completed 500 Internal Server Error in 135ms (Views: 46.4ms | ActiveRecord: 3.5ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/flights_controller.rb:29:in `new'
+app/controllers/flights_controller.rb:82:in `show'
+Started GET "/" for 127.0.0.1 at 2019-04-30 19:35:09 -0400
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 657ms (Views: 649.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 19:35:18 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights.json" for 127.0.0.1 at 2019-04-30 19:35:22 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (204.19ms)
+Completed 200 OK in 215ms (Views: 205.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 19:35:43 -0400
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (0.4ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 117ms (Views: 113.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 19:35:48 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (4.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    21:     <h1>Create a New Flight</h1>
+    22:    
+    23:    <div id="">
+    24:   <%= form_for(@flights) do |f| %>
+    25:        <%= f.label :inspection %>
+    26:        <%= f.check_box :inspection %> [Check For  pass inspection] <br />
+    27: 
+  
+app/views/flights/new.html.erb:24:in `_app_views_flights_new_html_erb___2798040913529175229_70220371697220'
+app/controllers/flights_controller.rb:29:in `new'
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 19:36:29 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (419.0ms)
+Completed 200 OK in 430ms (Views: 425.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2019-04-30 19:36:53 -0400
+Processing by FlightsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OffiYNX3XVC+OC6MvqUNi0ajhrZHmFiOV+1JJXYbEFI+VGWACDewSov1NOb0IUfKczaBu+O6Ogld0eDKf/2wrA==", "flight"=>{"inspection"=>"0", "fuel_cost"=>"", "destination"=>"", "flight_departure"=>"", "flight_sit"=>""}, "commit"=>"Create Flight"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 19:37:02 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (7.6ms)
+Completed 200 OK in 19ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Completed 500 Internal Server Error in 52498ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `save!' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:37:in `create'
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 19:37:56 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (6.5ms)
+Completed 200 OK in 66ms (Views: 15.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 19:38:06 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (3.1ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 19:39:36 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/index.html.erb within layouts/application
+  [1m[36mFlight Load (1.7ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.html.erb:5
+  [1m[36mFlight Load (0.3ms)[0m  [1m[34mSELECT "flights".* FROM "flights" WHERE "flights"."inspection" = ?[0m  [["inspection", 1]]
+  ↳ app/views/flights/index.html.erb:29
+  Rendered flights/index.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 439ms (Views: 377.9ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 19:39:40 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (13.9ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 19:41:25 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb
+  Rendered flights/new.html.erb (9.6ms)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 21:13:13 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/omoogun/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/Users/omoogun/Desktop/Flaitron_Dev/Javascripts/Rails-with-JavaScript-Jet-Project/app/controllers/flights_controller.rb:99: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/flights_controller.rb:99: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/flights/new" for 127.0.0.1 at 2019-04-30 21:13:34 -0400
+Processing by FlightsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 462ms (Views: 419.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 21:13:51 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (150.53ms)
+Completed 200 OK in 201ms (Views: 196.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/flights/new?fuel_cost=14&destination=wqd&flight_departure=joy&flight_sit=dasd" for 127.0.0.1 at 2019-04-30 21:21:41 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"wqd", "flight_departure"=>"joy", "flight_sit"=>"dasd"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 251ms (Views: 242.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/flights/new?fuel_cost=14&destination=wqd&flight_departure=joy&flight_sit=dasd" for 127.0.0.1 at 2019-04-30 21:25:13 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"wqd", "flight_departure"=>"joy", "flight_sit"=>"dasd"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 121ms (Views: 60.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/flights/new?fuel_cost=14&destination=paris&flight_departure=NewYork&flight_sit=12" for 127.0.0.1 at 2019-04-30 21:25:25 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"paris", "flight_departure"=>"NewYork", "flight_sit"=>"12"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 136ms (Views: 117.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/flights/new?fuel_cost=14&destination=paris&flight_departure=NewYork&flight_sit=12" for 127.0.0.1 at 2019-04-30 21:29:53 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"paris", "flight_departure"=>"NewYork", "flight_sit"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 114ms (Views: 108.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/flights/new?fuel_cost=df&destination=qw&flight_departure=NewYork&flight_sit=13" for 127.0.0.1 at 2019-04-30 21:30:07 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"df", "destination"=>"qw", "flight_departure"=>"NewYork", "flight_sit"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 112ms (Views: 101.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/flights" for 127.0.0.1 at 2019-04-30 21:30:27 -0400
+Processing by FlightsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rodvMfKfaZGBT9Jj3TVl2O6OUaB73X0B3JuBhmeQIF5olJEmQBVqmazgo+v/zB6OkdTxpUKFURd8MIz3nHhtUQ==", "flight"=>{"inspection"=>"0", "fuel_cost"=>"", "destination"=>"", "flight_departure"=>"", "flight_sit"=>""}, "commit"=>"Create Flight"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `save!' for nil:NilClass):
+  
+app/controllers/flights_controller.rb:33:in `create'
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 21:30:33 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.2ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.3ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (96.63ms)
+Completed 200 OK in 104ms (Views: 98.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/flights/new?fuel_cost=&destination=&flight_departure=&flight_sit=" for 127.0.0.1 at 2019-04-30 21:31:02 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"", "destination"=>"", "flight_departure"=>"", "flight_sit"=>""}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 73ms (Views: 64.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/flights" for 127.0.0.1 at 2019-04-30 21:38:29 -0400
+Processing by FlightsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  [1m[36mFlight Load (0.5ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (1.0ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 29]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 30]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 31]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 32]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 33]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 34]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 35]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 36]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.2ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 37]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers]   [1m[36mFlightRide Load (0.1ms)[0m  [1m[34mSELECT "flight_rides".* FROM "flight_rides" WHERE "flight_rides"."flight_id" = ?[0m  [["flight_id", 38]]
+[active_model_serializers]   ↳ app/controllers/flights_controller.rb:10
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 76, user_id: 79, flight_id: 29, flight_class: "First_class", created_at: "2018-12-13 21:25:54", updated_at: "2018-12-13 21:25:54">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 77, user_id: 79, flight_id: 30, flight_class: "Economy", created_at: "2018-12-13 21:27:49", updated_at: "2018-12-13 21:27:49">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 79, user_id: 79, flight_id: 31, flight_class: "Economy", created_at: "2018-12-13 21:29:59", updated_at: "2018-12-13 21:29:59">
+[active_model_serializers] No serializer found for resource: #<FlightRide id: 80, user_id: 79, flight_id: 32, flight_class: "Economy", created_at: "2018-12-13 21:35:56", updated_at: "2018-12-13 21:35:56">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (37.78ms)
+Completed 200 OK in 44ms (Views: 38.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/flights/new?fuel_cost=14&destination=paris&flight_departure=NewYork&flight_sit=12" for 127.0.0.1 at 2019-04-30 21:41:35 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"14", "destination"=>"paris", "flight_departure"=>"NewYork", "flight_sit"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 65ms (Views: 59.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/flights/new?fuel_cost=10000&destination=PARIS&flight_departure=NEWYORK&flight_sit=13" for 127.0.0.1 at 2019-04-30 21:42:25 -0400
+Processing by FlightsController#new as HTML
+  Parameters: {"fuel_cost"=>"10000", "destination"=>"PARIS", "flight_departure"=>"NEWYORK", "flight_sit"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:25
+  Rendering flights/new.html.erb within layouts/application
+  Rendered flights/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 58ms (Views: 51.7ms | ActiveRecord: 0.2ms)
+
+

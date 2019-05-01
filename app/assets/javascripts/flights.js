@@ -2,7 +2,7 @@ $(function () {
   console.log('javaScript is loading and working')
   listenForClick()
   listenNewFlightForm()
-});
+})
 
 function listenForClick () {
   $('button#flights-data').on('click', function (event) {
@@ -25,7 +25,7 @@ function getPosts () {
     let myFlightHTML = myflight.flightHTML()
     document.getElementById('ajax-flights').innerHTML = myFlightHTML
   })
- }
+}
 
 class Flight {
   constructor (obj) {
@@ -39,12 +39,12 @@ class Flight {
   static newFlightForm () {
     return (`
                 <strong>New Flight Form</strong>
-                <form>
+                <form id="form-attributes">
                    Inspection  <br><input type="checkbox" id="myCheck"><br>              
                    FuelCost    <br><input type='integer'name='fuel_cost'></input><br>
-                    Destination  <br><input type='text' name='destination'></input> <br>
-                    Flight Departure  <br><input type='text' name='flight_departure'></input><br>
-                    Flight Sit  <br><input type='text' name= 'flight_sit'></input><br>
+                   Destination  <br><input type='text' name='destination'></input> <br>
+                   Flight Departure  <br><input type='text' name='flight_departure'></input><br>
+                   Flight Sit  <br><input type='text' name= 'flight_sit'></input><br>
                   
                     <input type='submit' /><br>
                 </form>
@@ -63,32 +63,29 @@ Flight.prototype.flightHTML = function () {
     `)
 }
 
-
 function listenNewFlightForm () {
   $('button#ajax-new-flight-form').on('click', function (event) {
     event.preventDefault()
     let newFlightForm = Flight.newFlightForm()
-    // let myNewFlightHTML = newFlightForm
-    // document.querySelector('div#new-flight-form').innerHTML = newFlightForm
-    document.getElementById('new-flight-form').innerHTML = newFlightForm
+    document.querySelector('div#new-flight-form').innerHTML = newFlightForm
+     postData()
   })
 }
 
-$(function () {
-  $('#ajax-new-flight-form').submit(function(event) {
-    //prevent form from submitting the default way
-    event.preventDefault();
 
-    var values = $(this).serialize();
+function postData () {
+  $('button#ajax-new-flight-form').submit(function (event) {
+    // prevent form from submitting the default way
+    event.preventDefault()
 
-    var flightx = $.flights('/posts', values);
+    var values = $(this).serialize()
 
-    flightx.done(function(data) {
+    var flightx = $.flights('/posts', values)
+
+    flightx.done(function (data) {
       // TODO: handle response
-      var flights = data;
-
+      var flights = data
       
-
       // $("#flightId").text(flights["id"]);
       // $("#flightInspection").text(flights["inspection"]);
       // $("#flightFuel_cost").text(flights["fuel_cost"]);
@@ -96,12 +93,8 @@ $(function () {
 
       const newFlight = new Flight(flights)
       const htmlToAdd = newFlight.flightHTML
-
+    
       $('#new-flight-form').html(htmlToAdd)
-    });
-  });
-});
-
-
-
-
+    })
+  })
+}

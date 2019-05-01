@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/signin' => "sessions#create"
   get '/login'  => "sessions#new"
   post '/sessions' => "sessions#create"
+  post 'flights/new' => "flights#create"
   delete '/logout' => "sessions#destroy"
 
   patch '/login', to: 'sessions#create'

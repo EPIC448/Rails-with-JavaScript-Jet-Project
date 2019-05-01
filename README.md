@@ -151,3 +151,66 @@ submit form in the same file
 //    // only if it is checked
 //    isCheckedWithGlobalVariable = true;
 // })
+
+
+
+
+
+Sample.... for the New form by susan
+
+ Creat action
+
+Here's my create action: def create
+   @organization = Organization.create(params[:organization_id])
+   @event = current_user.events.build(event_params)
+
+   if @event.save!
+     # respond_to do |f|
+     #    f.html {redirect_to events_path }
+        render json: @event
+   else
+      render "new"
+    end
+ end
+ >>>>>>>>>>>
+
+and my new.html.erb: <div id="new-js-event"></div>
+
+<h1>Create a New Event</h1>
+<div id="js-new-event">
+    <%= form_for(@event) do |f| %>
+
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+    <p>
+
+    <%= f.label :cause %><br>
+    <%= f.text_field :cause %>
+    </p>
+    <p>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+    </p>
+    <p>
+    <%= f.label :datetime %><br>
+    <%= f.datetime_field :datetime %>
+    </p>
+    
+    <%= f.label :organization_name, "Organization Name" %><br>
+    <%= f.collection_select(:organization_id, Organization.all, :id, :name, {include_blank: "Please select name"})%>
+    <br>
+</div>
+    <button class="new-event">    
+    <%= f.submit "Create Event" %><br />
+    </button>
+<% end %>
+
+<p>
+<%= link_to "Back", events_path, class: "btn btn-primary btn-light" %></p>    
+<p><%= link_to "View Events", events_path %></p>
+<p> Don't see your organization? Create it <%=link_to "here", new_organization_path %></p>
+<br />
+
+OTher notes
+
+In my case, I had a hyphen where I needed an underscore - 'form.new_event' instead of 'form.new-event').on('submit', etc...
