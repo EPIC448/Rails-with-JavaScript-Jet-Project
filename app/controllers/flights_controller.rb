@@ -28,16 +28,18 @@ class FlightsController < ApplicationController
    end
 
    def create
-    # @flight = Flight.create(params[:flight_params])
-    # @flight_rides
-    if @flight.save!
-        @flight = Flight.create(flight_params)       
-        # f.json {render  json: @flight}
-        # f.html{redirect_to flights_path}
-        render json: @flight, status: 201
+    @flight = Flight.create(params[:flight_params])
+    @flight_rides
 
+    if @flight
+      
+         respond_to do |f|
+        f.json {render  json: @flight}
+        f.html{redirect_to flights_path}
+        # render json: @flight, status: 201
+        end
     else
-      render 'flight/new'
+      render 'flights/new'
     end
    
   end

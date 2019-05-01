@@ -68,28 +68,27 @@ function listenNewFlightForm () {
     event.preventDefault()
     let newFlightForm = Flight.newFlightForm()
     document.querySelector('div#new-flight-form').innerHTML = newFlightForm
-     postData()
+     
   })
 }
 
 
-function postData () {
-  $('button#ajax-new-flight-form').submit(function (event) {
+
+  $('#new_flight').submit(function (event) {
     // prevent form from submitting the default way
+    console.log('post data working.')
+
     event.preventDefault()
 
-    var values = $(this).serialize()
+   let values = $(this).serialize() 
 
-    var flightx = $.flights('/posts', values)
+    let flightx = $.post('/flights', values)
 
     flightx.done(function (data) {
       // TODO: handle response
       var flights = data
       
-      // $("#flightId").text(flights["id"]);
-      // $("#flightInspection").text(flights["inspection"]);
-      // $("#flightFuel_cost").text(flights["fuel_cost"]);
-      // $("#flightDestination").text(flights["destination"]);
+      
 
       const newFlight = new Flight(flights)
       const htmlToAdd = newFlight.flightHTML
@@ -97,4 +96,4 @@ function postData () {
       $('#new-flight-form').html(htmlToAdd)
     })
   })
-}
+
