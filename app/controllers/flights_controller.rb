@@ -13,7 +13,6 @@ class FlightsController < ApplicationController
 
   end
 
-
    def new
     
     @flight = Flight.new
@@ -69,6 +68,7 @@ class FlightsController < ApplicationController
     @flight = Flight.all
    end
     
+# We dont want it to return to show. Check out "Returning String Data". IN course.
 
    def show
     @flights = Flight.create(flight_params)

@@ -25,8 +25,14 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
     @user = User.find(params[:id])
-    render 'users/show'
-   # list out in the user / show template
+    # render 'users/show'
+
+     #  using Json
+     respond_to do |f|
+      f.html {render :show}
+      f.json {render json:author}
+      # render json: @user, status: 200
+     end
     end
   end
 
