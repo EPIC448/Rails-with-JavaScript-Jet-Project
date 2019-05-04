@@ -1,5 +1,6 @@
 class FlightsController < ApplicationController
 
+  before_action :set_flight, only: [:show, :edit, :update]
 
   def index
     @user = User.new
@@ -71,23 +72,37 @@ class FlightsController < ApplicationController
 # We dont want it to return to show. Check out "Returning String Data". IN course.
 
    def show
-    @flights = Flight.create(flight_params)
 
-      if @flights
-        
-            @flights = Flight.create(flight_params)
-              render json: @flights, status: 200
-              # return JSON(new { ok = true, newurl = Url.Action("Create") })
-        else
+    @flight = Flight.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @flight}
+    end
   
-         @flight = Flight.find(params[:id])
-          respond_to do |f|
-            f.html {render :index}
+
+      # if @flights
+        
+      #       @flights = Flight.create(flight_params)
+      # #         render json: @flights, status: 200
+      #         # return JSON(new { ok = true, newurl = Url.Action("Create") })
+      #   else
+  
+      #    @flight = Flight.find(params[:id])
+      #     respond_to do |f|
+      #       f.html {render :index}
        
-           end
+      #      end
 
-      end
+      # end
 
+  end
+
+
+  def flight_data
+    post = Flight.find(params[:id])
+    #render json: PostSerializer.serialize(post)
+    render json: flight.to_json(only: [:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit],
+                              include: [users: { only: [:name]}])
   end
 
  private   
@@ -95,8 +110,8 @@ class FlightsController < ApplicationController
     params.permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit)
   end 
 
-  # def flights_params
-  #   params.require(:flight).permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit, :user_id)
-  # end
+  def set_flight
+    @flight = Flight.find(params[:id])
+  end
 
 end

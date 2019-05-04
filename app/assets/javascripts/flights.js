@@ -1,16 +1,16 @@
 $(function () {
   console.log('javaScript is loading and working')
-  listenForClick()
+  // listenForClick()
   listenNewFlightForm()
 })
 
-$(document).ready(function listenForClick () {
-  $('button#flights-data').on('click', function (event) {
-    event.preventDefault()
-    getPosts()
-  })
- }
-)
+// $(document).ready(function listenForClick () {
+//   $('button#flights-data').on('click', function (event) {
+//     event.preventDefault()
+//     getPosts()
+//   })
+//  }
+// )
 
 // //show flight (for just one flight) - could also show the has_many relationship, maybe for passengers
 // //new form for either a flight or a passenger

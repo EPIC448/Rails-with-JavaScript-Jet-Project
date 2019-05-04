@@ -1,11 +1,34 @@
  
   <div>Ajax show page</div>
+ <a href="#" class="js-next" data-id="<%=@flight.id%>">Next.Flight.#</a>
 
-<div id="new-flight-form">[flight-form]</div>
+<p class="flightInspection">inspection: <%= @flight.inspection %></p>
+<p class="flightFuel_cost">fuel_cost: <%= @flight.fuel_cost %> </p>
+<p class="flightDestination">destination: <%= @flight.destination %></p>
+<p class="flightFlightDeparture">flight_departure: <%= @flight.flight_departure %></p>
+<p class="flightFlight_sit">flight_sit: <%= @flight.flight_sit %></p>
+
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".js-next").on("click", function() {
+    var nextId = parseInt($(".js-next").attr("data-id")) + 1;
+    $.get("/flights/" + nextId + ".json", function(data) {
+      // get post
+      var flight = data;
+       $(".flightInspection").text(flight["inspection"]);
+      $(".flightFuel_cost").text(flight["fuel_cost"]);
+      $(".flightDestination").text(flight["destination"]);
+       $(".flightDeparture").text(flight["flight_sit"]);
+
+      // re-set the id to current on the link
+      $(".js-next").attr("data-id", flight["id"]);
+    });
+  });
+});
+</script>
 
   <br>
-  <br>
-  
+  # >>>>>>>> Below here may not be needed
   <h3> Flight Information</h3>
 
         <h4>fuel_cost</h4>
@@ -17,12 +40,12 @@
         <h4>flight-sit</h4>
         <p><%= @flight.flight_sit %> </p> <br>
 
-<%= form_for @flight_rides, :url => user_flight_rides_path(current_user) do |f| %>
+<%= form_for @flight, :url => user_flight_rides_path(current_user) do |f| %>
  
    <%= f.hidden_field :user_id, :value => current_user.id %>
    <%= f.hidden_field :flight_id, :value => @flight.id %>
 <h4> Flight Classs </h4>
-   <%= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
+   <%#= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
  <br>
  <br>
    <%= f.submit "Go on flight Ride" %>

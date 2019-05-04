@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   patch '/login', to: 'sessions#create'
 
+  get 'flights/:id/flight_data', to: 'flights#flight_data'
 
   get '/users' => "users#new"
   get '/auth/facebook/callback' => 'sessions#create'
