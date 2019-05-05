@@ -99,7 +99,7 @@ Brad Video. Look at 49.06 mins. For Break down of the project
 Questions.
 
  Is there a CSS Boilplates code that i can copy an pastes just to make the app look a little pretty.
-
+[use the posts_controller.rb-receiving-api-posts-v-000]
  Step-by-Step. 
 1.	 Must render at least one index page (index resource - 'list of things') via JavaScript and an Active Model Serialization JSON Backend.
 
@@ -112,6 +112,8 @@ Questions.
 √ an Active Model Serialization JSON Backend.
 independent of index Request. AKA another function. in Javascipt. 
 [This is Seperate  request for the show... ] https://learn.co/tracks/full-stack-web-development-v7/rails-and-javascript/building-apis/diy-json-serializer
+
+this was helpful.. https://github.com/EPIC448/receiving-api-posts-v-000
 
 Borrowing from the previous blog domain example, you might allow a user to sift through the posts by clicking a 'Next' button on the posts show page, with the next post being fetched via AJAX and rendered through JavaScript.
 

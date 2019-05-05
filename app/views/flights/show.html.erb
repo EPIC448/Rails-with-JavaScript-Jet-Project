@@ -2,6 +2,7 @@
   <div>Ajax show page</div>
  <a href="#" class="js-next" data-id="<%=@flight.id%>">Next.Flight.#</a>
 
+<p class="userName">User's Name: <%= @flight.users.name %></p>
 <p class="flightInspection">inspection: <%= @flight.inspection %></p>
 <p class="flightFuel_cost">fuel_cost: <%= @flight.fuel_cost %> </p>
 <p class="flightDestination">destination: <%= @flight.destination %></p>
@@ -15,7 +16,8 @@ $(function () {
     $.get("/flights/" + nextId + ".json", function(data) {
       // get post
       var flight = data;
-       $(".flightInspection").text(flight["inspection"]);
+      $(".userName").text(data["users"]["name"]);
+      $(".flightInspection").text(flight["inspection"]);
       $(".flightFuel_cost").text(flight["fuel_cost"]);
       $(".flightDestination").text(flight["destination"]);
        $(".flightDeparture").text(flight["flight_sit"]);
