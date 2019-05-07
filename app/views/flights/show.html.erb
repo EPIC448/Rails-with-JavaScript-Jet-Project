@@ -16,13 +16,20 @@ $(function () {
     $.get("/flights/" + nextId + ".json", function(data) {
       // get post
       var flight = data;
-      $(".userName").text(data["users"]["name"]);
+      
+    
+          let justName = flight.users.forEach(function(user){
+            console.log(user.name);
+
+            $(".userName").text(user.name);
+          });
+
+   
       $(".flightInspection").text(flight["inspection"]);
       $(".flightFuel_cost").text(flight["fuel_cost"]);
       $(".flightDestination").text(flight["destination"]);
        $(".flightDeparture").text(flight["flight_sit"]);
 
-      // re-set the id to current on the link
       $(".js-next").attr("data-id", flight["id"]);
     });
   });

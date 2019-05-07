@@ -3,14 +3,8 @@ class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update]
 
   def index
-    @user = User.new
     @flights = Flight.all
-    respond_to do |f|
-      
-      f.html {render :index}
-      f.json{render json: @flights}
-      #   render json:  @flights, status: 201
-    end
+    
 
   end
 

@@ -101,7 +101,7 @@ Questions.
  Is there a CSS Boilplates code that i can copy an pastes just to make the app look a little pretty.
 [use the posts_controller.rb-receiving-api-posts-v-000]
  Step-by-Step. 
-1.	 Must render at least one index page (index resource - 'list of things') via JavaScript and an Active Model Serialization JSON Backend.
+1. Done	 Must render at least one index page (index resource - 'list of things') via JavaScript and an Active Model Serialization JSON Backend.
 
  For example: in a blog domain with users and posts, you might display the index of the user's posts on the users show page, fetching the posts via a AJAX GET request, with the backend rendering the posts in JSON format, and then appending the posts to the page.
 

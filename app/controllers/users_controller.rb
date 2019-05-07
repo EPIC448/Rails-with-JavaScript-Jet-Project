@@ -30,7 +30,7 @@ class UsersController < ApplicationController
      #  using Json
      respond_to do |f|
       f.html {render :show}
-      f.json {render json:author}
+      f.json {render json:@user}
       # render json: @user, status: 200
      end
     end
