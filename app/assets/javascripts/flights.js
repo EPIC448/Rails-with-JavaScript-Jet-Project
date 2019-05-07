@@ -75,27 +75,4 @@ function listenNewFlightForm () {
   })
 }
 
-$(document).ready(function () {
-  $('#new_flight').submit(function (event) {
-    // prevent form from submitting the default way
-    console.log('post data working.')
 
-    event.preventDefault()
-
-    let values = $(this).serialize()
-
-    let flightx = $.post('/flights', values)
-
-    flightx.done(function (data) {
-      // TODO: handle response
-      var flights = data
-
-
-
-      const newFlight = new Flight(flights)
-      const htmlToAdd = newFlight.flightHTML
-
-      $('#new-flight-form').html(htmlToAdd)
-    })
-  })
-})

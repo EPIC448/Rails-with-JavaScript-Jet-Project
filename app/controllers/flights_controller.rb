@@ -26,7 +26,6 @@ class FlightsController < ApplicationController
     @flight_rides
 
     if @flight
-      
          respond_to do |f|
         f.json {render  json: @flight}
         f.html{redirect_to flights_path}

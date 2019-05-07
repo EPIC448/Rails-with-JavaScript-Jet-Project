@@ -20,7 +20,7 @@
     <h1>Create a New Flight</h1>
    
    <div id="">
-  <%= form_for @flight, :html => {:id => "new_flight"} do |f| %>
+  <%= form_for(@flight)do |f| %>
        <%= f.label :inspection %>
        <%= f.check_box :inspection %> [Check For  pass inspection] <br />
 
@@ -35,16 +35,51 @@
 
           <%= f.label :flight_sit %>
         <%= f.text_field :flight_sit %><br />
+
     </div>
         <br>
         <%= f.submit "Create Flight"%>
         <% end %>
 
         <div id="flightId">
-          <h2 id="flightInspection"></h2>
+          <p id="flightInspection"></p>
           <p id = "flightFuel_cost"></p>
           <p id = "flightDestination"></p>
+          <p id = "flightDeparture"></p>
         </div>
+
+
+# >>>>>>>
+<script type="text/javascript" charset="utf-8">
+
+$(function () { 
+     $('form').submit(function (event) {
+    // prevent form from submitting the default way
+    console.log('New page in the new HTML  data  is working.')
+
+    event.preventDefault()
+
+    var values = $(this).serialize()
+
+    let flying = $.post('/flights', values)
+
+    flying.done(function (data) {
+      // TODO: handle response
+      var flying = data;
+
+
+
+       
+      $(".flightInspection").text(flying["inspection"]);
+      $(".flightFuel_cost").text(flying["fuel_cost"]);
+      $(".flightDestination").text(flying["destination"]);
+       $(".flightDeparture").text(flying["flight_sit"]);
+    });
+   });
+
+  });
+  </script>
+# <<<<<<<>>>>>>>
 
 
       <h3> AJAX Flight</h3>
@@ -52,9 +87,6 @@
       <div id='ajax-flights'>[flights.....]</div>
  <br>
     
-   <button id='ajax-new-flight-form'>New Flight</button>
-    <div id="new-flight-form">[flight-form]</div>
-  <br>
 
   </form>
 
