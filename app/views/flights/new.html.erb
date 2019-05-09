@@ -1,4 +1,4 @@
-
+<%#binding.pry%>
 <% if @flight.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -15,6 +15,7 @@
 <% end %>
 
 
+#  it all must have check.. for inspection to return true
 <section class="jet">
   <header class="header">
     <h1>Create a New Flight</h1>
@@ -35,10 +36,10 @@
 
           <%= f.label :flight_sit %>
         <%= f.text_field :flight_sit %><br />
-
-    </div>
-        <br>
-        <%= f.submit "Create Flight"%>
+      </div>
+     <div class="actions">        
+     <%= f.submit "Create Flight"%>
+        </div>
         <% end %>
 
         <div id="flightId">
@@ -66,10 +67,8 @@ $(function () {
     flying.done(function (data) {
       // TODO: handle response
       var flying = data;
-
-
-
-       
+debugger
+      $(".flightId").text(flying["id"]);
       $(".flightInspection").text(flying["inspection"]);
       $(".flightFuel_cost").text(flying["fuel_cost"]);
       $(".flightDestination").text(flying["destination"]);
