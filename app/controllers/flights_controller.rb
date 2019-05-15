@@ -33,12 +33,12 @@ class FlightsController < ApplicationController
          respond_to do |f|
         f.json {render  json: @flight}
         f.html{redirect_to flight_path}
+        # f.html { render :edit }
+
         # render json: @flight, status: 201
         end
     else
       render 'flights/new'
-      binding.pry
-
     end
    
   end
@@ -48,7 +48,7 @@ class FlightsController < ApplicationController
 
       if  @current_user 
       
-         redirect_to flight_path
+         redirect_to flight_path(@flight)
       else
        render 'flights/index'
       end
@@ -74,6 +74,7 @@ class FlightsController < ApplicationController
 
     @flight = Flight.find(params[:id])
     respond_to do |format|
+
       format.html { render :show }
       format.json { render json: @flight}
     end

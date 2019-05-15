@@ -1,6 +1,6 @@
  
   <div>Ajax show page</div>
- <a href="#" class="js-next" data-id="<%=@flight.id%>">Next.Flight.#</a>
+ <a href="#" class="js-next" data-id="<%=@flight.id%>">Click here to See Flight</a>
 
 <p class="userName">User's Name: <%= @flight.users.name %></p>
 <p class="flightInspection">inspection: <%= @flight.inspection %></p>
@@ -38,27 +38,4 @@ $(function () {
 
   <br>
   # >>>>>>>> Below here may not be needed
-  <h3> Flight Information</h3>
-
-        <h4>fuel_cost</h4>
-        <p> <%= @flight.fuel_cost %></p> <br>
-        <h4>destination</h4>
-        <p><%= @flight.destination %> </p> <br>
-        <h4>flight_departure</h4>
-        <p><%= @flight.flight_departure %> </p> <br>
-        <h4>flight-sit</h4>
-        <p><%= @flight.flight_sit %> </p> <br>
-
-<%= form_for @flight, :url => user_flight_rides_path(current_user) do |f| %>
  
-   <%= f.hidden_field :user_id, :value => current_user.id %>
-   <%= f.hidden_field :flight_id, :value => @flight.id %>
-<h4> Flight Classs </h4>
-   <%#= f.select :flight_class, ['Economy', 'Coach', 'First_class']%> 
- <br>
- <br>
-   <%= f.submit "Go on flight Ride" %>
- <br>
-
-<% end %>
-
