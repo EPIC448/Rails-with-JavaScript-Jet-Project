@@ -32,7 +32,7 @@ class FlightsController < ApplicationController
     if @flight
          respond_to do |f|
         f.json {render  json: @flight}
-        f.html{redirect_to flight_path}
+        f.html{redirect_to flight_path(@flight)}
         # f.html { render :edit }
 
         # render json: @flight, status: 201

@@ -30,10 +30,12 @@
 
 <script type="text/javascript" charset="utf-8">
 $(function () {
+  
   $('.js-more').on('click', function() {
     var id = $(this).data("id");
     $.get("/flights/" + id + "/flight_data", function(data) {
-      // Replace text of body-id div
+      // from JSON data ... create a new Javascript model object
+       // The attach to the dom 
       $("#body-" + id).html(data["destination"]);
     });
   });
