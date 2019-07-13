@@ -4,7 +4,11 @@ class FlightsController < ApplicationController
 
   def index
     @flights = Flight.all
-    
+     respond_to do |f|
+              f.html
+              f.json{render json: @flights}
+      
+     end
 
   end
 
@@ -22,20 +26,17 @@ class FlightsController < ApplicationController
    end
 
    def create
-    # @flight = Flight.create(params[:flight_params])
     @flight = Flight.create(flight_params)
-    # @flight_rides
-    @flight.valid?
+    @flight.valid? 
            puts @flight.errors.full_messages    
 
 
     if @flight
          respond_to do |f|
+        
         f.json {render  json: @flight}
         f.html{redirect_to flight_path(@flight)}
-        # f.html { render :edit }
-
-        # render json: @flight, status: 201
+        
         end
     else
       render 'flights/new'
@@ -53,9 +54,6 @@ class FlightsController < ApplicationController
        render 'flights/index'
       end
     end
-
-
-    
 
 
   def update 

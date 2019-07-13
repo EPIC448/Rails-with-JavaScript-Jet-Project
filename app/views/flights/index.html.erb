@@ -31,7 +31,7 @@
 <script type="text/javascript" charset="utf-8">
 $(function () {
   
-  $('.js-more').on('click', function() {
+  $('.#js-more').on('click', function() {
     var id = $(this).data("id");
     $.get("/flights/" + id + "/flight_data", function(data) {
       // from JSON data ... create a new Javascript model object
@@ -44,37 +44,37 @@ $(function () {
 
 <br>
 
-<% Flight.pass_inspection.each do |p|%>
+<//% Flight.pass_inspection.each do |p|%>
 
-    <h4><strong>Flight that passed inspection</strong></h4>
-    <br>
+    //<//h4><//strong>Flight that passed inspection<//strong><///h4>
+    <//br>
      
-   <h5> flight id</h5>
-     <%= p.id%>
-     <br>
+   <//h5> flight id<//h5>
+     <//%= p.id%>
+     <//br>
 
-   <h5> flight Inspection</h5>
-     <%= p.inspection%>
-    <br>
+   <//h5> flight Inspection<//h5>
+     <//%= p.inspection%>
+    <//br>
 
-   <h5> flight Fuel_cost</h5>
-     <%= p.fuel_cost%>
-     <br>
+   <//h5> flight Fuel_cost<//h5//>
+     <//%= p.fuel_cost%>
+     <//br>
 
-   <h5> flight Destination</h5>
-     <%= p.destination%>
-     <br>
+   <//h5> flight Destination<//h5>
+     <//%= p.destination%>
+     <//br>
 
-   <h5> flight departure</h5>
-     <%= p.flight_departure%>
-     <br>
+   <//h5> flight departure<//h5>
+     <//%= p.flight_departure%>
+     <//br>
 
-   <h5> flight Sit</h5>
-     <%= p.flight_sit%>
- <br>
- <%end%>
+   <//h5> flight Sit<//h5>
+     <//%= p.flight_sit%>
+ <//br>
+ <//%end%>
 
-<br>
+<//br>
 
 <br>
  <h4> <strong>Create a Flight</strong></h4>

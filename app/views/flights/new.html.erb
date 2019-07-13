@@ -1,4 +1,4 @@
-<%#binding.pry%>
+
 <% if @flight.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -15,13 +15,12 @@
 <% end %>
 
 
-#  it all must have check.. for inspection to return true
 <section class="jet">
   <header class="header">
     <h1>Create a New Flight</h1>
    
-   <div id="action">
-  <%= form_for(@flight)do |f| %>
+      <div id="action">
+    <%= form_for(@flight)do |f| %>
        <%= f.label :inspection %>
        <%= f.check_box :inspection %> [Check For  pass inspection] <br />
 
@@ -37,59 +36,11 @@
           <%= f.label :flight_sit %>
         <%= f.text_field :flight_sit %><br />
             
-     <%= f.submit "Create Flight"%>
-        </div>
-        <% end %>
+        <%= f.submit "Create Flight", data: { disable_with: false } %>
+     </div>
+      <% end %>
 
-        <div id="flightId">
-          <p id="flightInspection"></p>
-          <p id ="flightFuel_cost"></p>
-          <p id ="flightDestination"></p>
-          <p id ="flightDeparture"></p>
-        </div>
-
-
-# >>>>>>>
-<script type="text/javascript" charset="utf-8">
-
-//$(function () { 
-    // $('form').submit(function (event) {
-    // prevent form from submitting the default way
-    //console.log('New page in the new HTML  data  is working.')
-
-    //event.preventDefault()
-    //var values = $(this).serialize()
-
-    //let flying = $.post('/flights', values)
-    //flying.done  function data 
-      // TODO: handle response
-      //var flying = data;
-
-      //$(".flightId").text(flying["id"]);
-     // $(".flightInspection").text(flying["inspection"]);
-     // $(".flightFuel_cost").text(flying["fuel_cost"]);
-     // $(".flightDestination").text(flying["destination"]);
-    //   $(".flightDeparture").text(flying["flight_sit"]);
-    //;
-
-    
-   // });
-  //});
-
-  const bindClickHandlers = () => {
-    $('#action').on('click', (e) ={
-      e.preventDefault()
-      
-    fetch(`/`)
-      .then(res => res.json())
-      .then()
-       })
-  }
-  </script>
-# <<<<<<<>>>>>>>
-    
-
-  </form>
+     </form>
 
   </header>
   
