@@ -3,6 +3,7 @@ class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update]
 
   def index
+  
     @flights = Flight.all
      respond_to do |f|
               f.html
@@ -22,23 +23,21 @@ class FlightsController < ApplicationController
            @flights = Flight.create(flight_params)
             render json: @flights, status: 200  
     end
-     
+         
    end
 
    def create
     @flight = Flight.create(flight_params)
-    @flight.valid? 
-           puts @flight.errors.full_messages    
+       
 
-
-    if @flight
+    if @flight.save
          respond_to do |f|
         
         f.json {render  json: @flight}
         f.html{redirect_to flight_path(@flight)}
         
         end
-    else
+     else
       render 'flights/new'
     end
    
@@ -90,6 +89,7 @@ class FlightsController < ApplicationController
 
  private   
    def flight_params
+    
     params.require(:flight).permit(:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit)
   end 
 

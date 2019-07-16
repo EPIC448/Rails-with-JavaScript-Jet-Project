@@ -2,7 +2,7 @@
 
 
 $(function () { 
-     $('form').submit(function (event) {
+     $('#new_flight').submit(function (event) {
     // prevent form from submitting the default way
     //console.log('New page in the new HTML  data  is working.')
 
@@ -10,15 +10,15 @@ $(function () {
   
     var values = $(this).serialize()
 
-    let flying = $.post('/flights', values);
+   let flying = $.post('/flights', values);
     // ..... JSON is in play here. 
-          flying.done(function(data){ 
+         flying.done(function(data){ 
       
           let fly_data = new Flight(data);
           
-          // let fly_dataHTML = fly_data.formatFlight()
+          let fly_dataHTML = fly_data.formatFlight()
           //  debugger
-          $('#new-flight').append(fly_data.formatFlight())
+          $('#new_flight').append(fly_dataHTML)
        });
     });
   });
@@ -26,22 +26,22 @@ $(function () {
   
 
   class Flight{
-    constructor(id){
+    constructor(flight){
       
-      this.id = id.id;
-      this.inspection = id.inspection;
-      this.fuel_cost = id.fuel_cost;
-      this.destination = id.destination
+      this.id = flight.id;
+      this.inspection = flight.inspection;
+      this.fuel_cost = flight.fuel_cost;
+      this.destination = flight.destination
     }
       
     formatFlight (){
-           `
+           return  `
       <h1>${this.id}</h1>;
       <h2>${this.inspection}</h2>;
       <h2>${this.fuel_cost}</h2>;
       <h2>${this.destination}</h2>;
       `
-      return formatFlight
+       
     }
 
   }
