@@ -37,9 +37,9 @@ $(function () {
     formatFlight (){
            return  `
       <h1>flight ID : ${this.id}</h1>;
-      <h2>flight pass inspection :${this.inspection}</h2>;
-      <h2>flight Fuel_cost :${this.fuel_cost}</h2>;
-      <h2>flight Destination :${this.destination}</h2>;
+      <h3>flight pass inspection :${this.inspection}</h3>;
+      <h3>flight Fuel_cost :${this.fuel_cost}</h3>;
+      <h3>flight Destination :${this.destination}</h3>;
       `
        
     }

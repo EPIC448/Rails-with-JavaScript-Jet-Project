@@ -91,15 +91,8 @@ end
 This project is free
 
 
+Requirements. 
 
-
-Log in. ><Frank 1234>
-Brad Video. Look at 49.06 mins. For Break down of the project
-
-Questions.
-
- Is there a CSS Boilplates code that i can copy an pastes just to make the app look a little pretty.
-[use the posts_controller.rb-receiving-api-posts-v-000]
  Step-by-Step. 
 1. Done	 Must render at least one index page (index resource - 'list of things') via JavaScript and an Active Model Serialization JSON Backend.
 
@@ -136,91 +129,10 @@ Template Engineers. Might be resources
 
 Borrowing from the blog domain example, instead of plainly taking the JSON response of the newly created comment and appending it to the DOM, you would create a Comment prototype object and add a function to that prototype to perhaps concatenate (format) the comments authors first and last name. You would then use the object to append the comment information to the DOM.
 
- NOte Of where the app is.
-  When we hit submit for Ajax, the Form is submiting to flight_controller index.
-
-  we want it to submit to app/assests/ javascripts/line 39.  document.querySelector('div#new-flight-form').innerHTML
-
-  good Source... : https://learn.co/tracks/full-stack-web-development-v6/rails-and-javascript/building-apis/receiving-api-posts
-
-
-  Json...
-  Json--- Part at 20 -25 min contains what you need.
-
-submit form in the same file
-  https://www.youtube.com/watch?time_continue=6&v=Yd0nH9CWWfo
-
-
-
-
-  Incase if ti needd
-
-//  myCheck is for the validation of the checkBox as it is coded in rails verfactiion to check for boolean
-// var myCheck = false;
-// $('#myInput:checked').click(function() {
-//    // only if it is checked
-//    isCheckedWithGlobalVariable = true;
-// })
 
 
 
 
 
-Sample.... for the New form by susan
 
- Creat action
 
-Here's my create action: def create
-   @organization = Organization.create(params[:organization_id])
-   @event = current_user.events.build(event_params)
-
-   if @event.save!
-     # respond_to do |f|
-     #    f.html {redirect_to events_path }
-        render json: @event
-   else
-      render "new"
-    end
- end
- >>>>>>>>>>>
-
-and my new.html.erb: <div id="new-js-event"></div>
-
-<h1>Create a New Event</h1>
-<div id="js-new-event">
-    <%= form_for(@event) do |f| %>
-
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-    <p>
-
-    <%= f.label :cause %><br>
-    <%= f.text_field :cause %>
-    </p>
-    <p>
-    <%= f.label :location %><br>
-    <%= f.text_field :location %>
-    </p>
-    <p>
-    <%= f.label :datetime %><br>
-    <%= f.datetime_field :datetime %>
-    </p>
-    
-    <%= f.label :organization_name, "Organization Name" %><br>
-    <%= f.collection_select(:organization_id, Organization.all, :id, :name, {include_blank: "Please select name"})%>
-    <br>
-</div>
-    <button class="new-event">    
-    <%= f.submit "Create Event" %><br />
-    </button>
-<% end %>
-
-<p>
-<%= link_to "Back", events_path, class: "btn btn-primary btn-light" %></p>    
-<p><%= link_to "View Events", events_path %></p>
-<p> Don't see your organization? Create it <%=link_to "here", new_organization_path %></p>
-<br />
-
-OTher notes
-
-In my case, I had a hyphen where I needed an underscore - 'form.new_event' instead of 'form.new-event').on('submit', etc...

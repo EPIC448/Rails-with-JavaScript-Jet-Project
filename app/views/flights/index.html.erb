@@ -6,7 +6,7 @@
 
      <h3> <%= link_to "Go on flight #{flight.id}", flight_path(flight)%></h3> <br />
 
-<button class="js-more" data-id="<%= flight.id %>">More...</button>
+<//button class="js-more" data-id="<//%= flight.id %>">More...<//button>
 <div id="body-<%= flight.id %>"><%= truncate flight.destination %></div>
 
      <h5> flight inspection </h5>
@@ -28,53 +28,11 @@
 
 <br>
 
-<script type="text/javascript" charset="utf-8">
-$(function () {
-  
-  $('.#js-more').on('click', function() {
-    var id = $(this).data("id");
-    $.get("/flights/" + id + "/flight_data", function(data) {
-      // from JSON data ... create a new Javascript model object
-       // The attach to the dom 
-      $("#body-" + id).html(data["destination"]);
-    });
-  });
-});
-</script>
+
 
 <br>
 
-<% Flight.pass_inspection.each do |p|%>
-
-    <h4><//strong>Flight that passed inspection<strong><h4>
-    <br>
-     
-   <h5> flight id<h5>
-     <%= p.id%>
-     <br>
-
-   <h5> flight Inspection<h5>
-     <%= p.inspection%>
-    <br>
-
-   <h5> flight Fuel_cost<h5>
-     <%= p.fuel_cost%>
-     <br>
-
-   <h5> flight Destination<h5>
-     <%= p.destination%>
-     <br>
-
-   <h5> flight departure<h5>
-     <%= p.flight_departure%>
-     <br>
-
-   <h5> flight Sit<h5>
-     <%= p.flight_sit%>
- <br>
- <%end%>
-
-<br>
+   
 
 <br>
  <h4> <strong>Create a Flight</strong></h4>
