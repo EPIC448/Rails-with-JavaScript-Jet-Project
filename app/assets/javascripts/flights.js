@@ -26,8 +26,10 @@ $(function () {
   
 
   class Flight{
-    constructor(flight){
-      
+    constructor(flight) {
+      // Study the Class in JavaScript in currilum
+      // i seperate the arrguments.
+      // this refer to the object that is passed to it.
       this.id = flight.id;
       this.inspection = flight.inspection;
       this.fuel_cost = flight.fuel_cost;
@@ -36,16 +38,47 @@ $(function () {
       
     formatFlight (){
            return  `
-      <h1>flight ID : ${this.id}</h1>;
-      <h3>flight pass inspection :${this.inspection}</h3>;
-      <h3>flight Fuel_cost :${this.fuel_cost}</h3>;
-      <h3>flight Destination :${this.destination}</h3>;
+      <h3>flight ID : ${this.id}</h3>;
+      <p>flight pass inspection :${this.inspection}</p>;
+      <p>flight Fuel_cost :${this.fuel_cost}</p>;
+      <p>flight Destination :${this.destination}</p>;
       `
        
     }
 
   }
 
+  //  click button for the to display information on javaScript
+  $(function() {
+    $("#js-next").on("click", function() {
+      var nextId = parseInt($("#js-next").attr("data-id")) + 1;
+  
+      $.get("/flights/" + nextId + ".json", function(data){
+        // get post
+        var flight = data;
+        
+           $('#js-next').html('')
+             flight.users.forEach(function(user){
+              console.log(user);
+              let newFlight = new Flight_const(user)
+              let flightHTML = newFlight.formatIndex()
+              $('#js-next').append(flightHTML)
+      
+        let justName = flight.users.forEach(function(user){
+              console.log(user.name);
+  
+        $(".userName").text(user.name); });
+     
+        $(".flightInspection").text(flight["inspection"]);
+        $(".flightFuel_cost").text(flight["fuel_cost"]);
+        $(".flightDestination").text(flight["destination"]);
+        $(".flightDeparture").text(flight["flight_sit"]);
+        $("#js-next").attr("data-id", flight["id"]);
+      });
+     });
+    });
+  })
+  
   
 
   

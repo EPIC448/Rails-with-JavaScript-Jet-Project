@@ -1,8 +1,8 @@
  
   <div>Ajax show page</div>
+ 
  <a href id="js-next" data-id="<%=@flight.id%>">Click here to see other Flights</a>
 
-    <p class="userName">User's Name: <%= @flight.users.name %></p>
     <p class="flightId">id: <%= @flight.id %></p>
     <p class="flightInspection">inspection: <%= @flight.inspection %></p>
     <p class="flightFuel_cost">fuel_cost: <%= @flight.fuel_cost %> </p>
@@ -12,41 +12,9 @@
     <br>
     <div id= "new-flight">
      
-
     </div>
 
 <script type="text/javascript" charset="utf-8">
-
-$(function() {
-  $("#js-next").on("click", function() {
-    var nextId = parseInt($("#js-next").attr("data-id")) + 1;
-    debugger
-
-    $.get("/flights/" + nextId + ".json", function(data){
-      // get post
-      var flight = data;
-      
-         $('#js-next').html('')
-           flight.users.forEach(function(user){
-            console.log(user);
-            let newFlight = new Flight_const(user)
-            let flightHTML = newFlight.formatIndex()
-            $('#js-next').append(flightHTML)
-    
-      let justName = flight.users.forEach(function(user){
-            console.log(user.name);
-
-      $(".userName").text(user.name); });
-   
-      $(".flightInspection").text(flight["inspection"]);
-      $(".flightFuel_cost").text(flight["fuel_cost"]);
-      $(".flightDestination").text(flight["destination"]);
-      $(".flightDeparture").text(flight["flight_sit"]);
-      $("#js-next").attr("data-id", flight["id"]);
-    });
-   });
-  });
-})
 
 
 </script>

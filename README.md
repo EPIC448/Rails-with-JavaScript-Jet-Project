@@ -1,7 +1,10 @@
 # README
 
 <<<< Start the Server 
- rails server 
+ rails server  (ruby on rails)
+ python -m SimpleHTTPServer   (JavaScript)
+
+ <<<<<<<<>>>>>>>>
 
 Project Title
  RAils_with_JavaScript_Jets_Project.
