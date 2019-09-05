@@ -71,6 +71,7 @@
        # you Want this to route back to the Flight Show page, With the updated version after the already went on a Flight_ride....
 
 ---------------------
+ This is where we get the code to execursion.  
   Open the app...
 thin start --ssl
 --------------------------

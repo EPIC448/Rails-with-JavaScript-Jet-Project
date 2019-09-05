@@ -1,5 +1,7 @@
 # README
 
+<<<< Start the Server 
+ rails server 
 
 Project Title
  RAils_with_JavaScript_Jets_Project.
