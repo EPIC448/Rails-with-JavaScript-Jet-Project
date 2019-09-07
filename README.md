@@ -3,6 +3,10 @@
 <<<< Start the Server 
  rails server  (ruby on rails)
  python -m SimpleHTTPServer   (JavaScript)
+>>>>>>>>>>
+youtube to use. 
+https://www.youtube.com/watch?time_continue=4&v=oHPM0ekV7zQ
+https://www.youtube.com/watch?v=Yd0nH9CWWfo
 
  <<<<<<<<>>>>>>>>
 

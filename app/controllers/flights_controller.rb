@@ -1,7 +1,7 @@
 class FlightsController < ApplicationController
 
   before_action :set_flight, only: [:show, :edit, :update]
-
+  #  gripping all the post using active record
   def index
   
     @flights = Flight.all

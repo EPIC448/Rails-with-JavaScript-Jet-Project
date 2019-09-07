@@ -1,6 +1,6 @@
 
 
-
+//   For Submitted Form
 $(function () { 
      $('#new_flight').submit(function (event) {
     // prevent form from submitting the default way
@@ -48,18 +48,36 @@ $(function () {
 
   }
 
+      // >>> INDEX PAGE JAVASCRIPT<<<
+  $(() => {
+     bindClickHandlers()
+   })
+
+const bindClickHandlers = () => {
+  $('.all_flights').on('click', (e) => {
+    e.preventDefault()
+    fetch(`/flights.json`)
+    .then((res) => console.log(res))
+
+  })
+}
+
+  /*
   //  click button for the to display information on javaScript
+    >>> This is working already <<
   $(function() {
-    $("#js-next").on("click", function() {
+    $("#js-next").on("click", function (event) {
+      event.preventDefault()
       var nextId = parseInt($("#js-next").attr("data-id")) + 1;
   
       $.get("/flights/" + nextId + ".json", function(data){
         // get post
         var flight = data;
-        
-           $('#js-next').html('')
+debugger
+           //$('#js-next').html('')
              flight.users.forEach(function(user){
-              console.log(user);
+               console.log(user);
+               //debugger
               let newFlight = new Flight_const(user)
               let flightHTML = newFlight.formatIndex()
               $('#js-next').append(flightHTML)
@@ -74,10 +92,20 @@ $(function () {
         $(".flightDestination").text(flight["destination"]);
         $(".flightDeparture").text(flight["flight_sit"]);
         $("#js-next").attr("data-id", flight["id"]);
+             }); 
+        
       });
-     });
+      
     });
   })
+  >>> This is working already ^^^ <<
+    
+    */
+
+  //  May need it ot note. 
+// function Flight_const(user) {
+//      this.id = user.
+//    }
   
   
 
