@@ -48,7 +48,7 @@ $(function () {
 
   }
 
-      // >>> Show PAGE JAVASCRIPT<<<
+      // >>> Index PAGE JAVASCRIPT<<<
       $(() => {
         bindClickHandlers()
       })
@@ -56,6 +56,8 @@ $(function () {
 const bindClickHandlers = () => {
   $('#flightData').on('click', (e) => {
     e.preventDefault()
+    // we want url to include flight at the end, thus we attach a History
+     history.pushState(null, "null", "flights")
     fetch(`/flights.json`)
       .then((res) => res.json())
       .then(flights => {
@@ -64,39 +66,53 @@ const bindClickHandlers = () => {
          // flight is an object here.
           // declare new varible
           let newFlight = new Flightindex(flight)
-          let flightHtml = newFlight.formatFlight()
+          let flightHtml = newFlight.formatIndex()
           $('#flightData').append(flightHtml)
            console.log(newFlight)
           
         })
       })
   })
+
+  // Adding click event to go to show page from line 96
+  // add a click event here. 
+  $(document).on('click',".show_link", function(e) {
+    e.preventDefault()
+    let id = $(this).attr('data-id')
+    fetch(`/posts/${id}.json`)
+      .then(res => res.json())
+      .then(flight => {
+      console.log(flight)
+    })
+  })
 }
 
-  // Using a JS model Object. I use a conttroctor funciton.s
-class Flightindex{
+  // Using a JS model Object. I use a conttroctor class
+// class Flightindex{
+  function Flightindex(flight){
    // id,inspection, destination, fuel_cost, user
-     // note: User is an objec of [id and name].
-  constructor(flight){
+     // note: User is an objec of [id and name].{
     this.id = flight.id
     this.inspection = flight.inspection
     this.fuel_cost = flight.fuel_cost
     this.destination = flight.destination
     this.user = flight.users
   }
-formatFlight(){
-    return  `
-      <h3>flight ID : ${this.id}</h3>
+
+
+
+  Flightindex.prototype.formatIndex = function(){
+    let flightHtml =  `
+      <a href="/flights/${this.id}" data-id="${this.id}" class="show_link"> <h3>flight : ${this.id}</h3></a>
+      
       <p>flight pass inspection :${this.inspection}</p>
       <p>flight Fuel_cost :${this.fuel_cost}</p>
       <p>flight Destination :${this.destination}</p>
       <br>
       `
-  
-
+    return flightHtml
+ // All working.
   }
-
-}
    
 // Declare prototype methdos on the posts
 
