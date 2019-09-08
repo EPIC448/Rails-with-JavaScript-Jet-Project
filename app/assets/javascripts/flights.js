@@ -48,19 +48,58 @@ $(function () {
 
   }
 
-      // >>> INDEX PAGE JAVASCRIPT<<<
-  $(() => {
-     bindClickHandlers()
-   })
-
+      // >>> Show PAGE JAVASCRIPT<<<
+      $(() => {
+        bindClickHandlers()
+      })
+   
 const bindClickHandlers = () => {
-  $('.all_flights').on('click', (e) => {
+  $('#flightData').on('click', (e) => {
     e.preventDefault()
     fetch(`/flights.json`)
-    .then((res) => console.log(res))
-
+      .then((res) => res.json())
+      .then(flights => {
+        $('#flightData').html('')
+        flights.forEach(flight => {
+         // flight is an object here.
+          // declare new varible
+          let newFlight = new Flightindex(flight)
+          let flightHtml = newFlight.formatFlight()
+          $('#flightData').append(flightHtml)
+           console.log(newFlight)
+          
+        })
+      })
   })
 }
+
+  // Using a JS model Object. I use a conttroctor funciton.s
+class Flightindex{
+   // id,inspection, destination, fuel_cost, user
+     // note: User is an objec of [id and name].
+  constructor(flight){
+    this.id = flight.id
+    this.inspection = flight.inspection
+    this.fuel_cost = flight.fuel_cost
+    this.destination = flight.destination
+    this.user = flight.users
+  }
+formatFlight(){
+    return  `
+      <h3>flight ID : ${this.id}</h3>
+      <p>flight pass inspection :${this.inspection}</p>
+      <p>flight Fuel_cost :${this.fuel_cost}</p>
+      <p>flight Destination :${this.destination}</p>
+      <br>
+      `
+  
+
+  }
+
+}
+   
+// Declare prototype methdos on the posts
+
 
   /*
   //  click button for the to display information on javaScript
