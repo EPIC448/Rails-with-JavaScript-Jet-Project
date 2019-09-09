@@ -3,36 +3,13 @@
  
  <h1> All Flights</h1>
 
+ <h3 id="flightData"> <%= link_to " Click to See All Flights", ''%></h3> <br />
+
   
-  <% @flights.each do |flight| %>
-  <h3 id="flightData"> <%= link_to " Json Flights", flight_path(flight)%></h3> <br />
-<br>
-
-    <h5> flight id </h5>
-     <p> <%= flight.id%></p>
-
-     <h5> flight inspection </h5>
-     <p> <%= flight.inspection%></p>
-
-     <h5> flight fuel_cost</h5>
-     <p> <%= flight.fuel_cost%></p>
-
-     <h5> flight destination</h5>
-     <p> <%= flight.destination%></p>
-
-     <h5> flight flight_departure</h5>
-     <p> <%= flight.flight_departure%></p>
-
-     <h5> flight flight_sit</h5>
-     <p> <%= flight.flight_sit%></p>
-
-<% end %>
 
 <br>
 
-<div id = "app-container"></div>
 
-<br>
 
    
 

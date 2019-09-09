@@ -49,7 +49,7 @@ $(function () {
   }
 
       // >>> Index PAGE JAVASCRIPT<<<
-      $(() => {
+   $(() => {
         bindClickHandlers()
       })
    
@@ -61,14 +61,16 @@ const bindClickHandlers = () => {
     fetch(`/flights.json`)
       .then((res) => res.json())
       .then(flights => {
-        $('#flightData').html('')
+        $('#flightData').html('') 
+        //  flight Data has HTML in it and we need line 64 to make it emptty. s
+        // so we can use it later on in the code. 
         flights.forEach(flight => {
          // flight is an object here.
           // declare new varible
           let newFlight = new Flightindex(flight)
           let flightHtml = newFlight.formatIndex()
           $('#flightData').append(flightHtml)
-           console.log(newFlight)
+           //console.log(newFlight)
           
         })
       })
@@ -78,6 +80,7 @@ const bindClickHandlers = () => {
   // add a click event here. 
   $(document).on('click',".show_link", function(e) {
     e.preventDefault()
+    console.log('hello from show link')
     $('#flightData').html('')
     let id = parseInt($(this).attr('data-id'))
      
@@ -107,10 +110,11 @@ const bindClickHandlers = () => {
   }
 
 
-
+  //we want to be able to use formatINdex on any new created instance object of Flightindex. 
+  // FormatIndex is like a method. And returns flightHTML.
   Flightindex.prototype.formatIndex = function(){
     let flightHtml =  `
-      <a href="/flights/${this.id}" data-id="${this.id}" class="show_link"> <h3>flight : ${this.id}</h3></a>
+  <a href="/flights/${this.id}" data-id="${this.id}" class="show_link"> <h3>flight : ${this.id}</h3></a>
       
       <p>flight pass inspection :${this.inspection}</p>
       <p>flight Fuel_cost :${this.fuel_cost}</p>
@@ -125,9 +129,9 @@ const bindClickHandlers = () => {
     let flightHtml =  `
       <h3>flight: ${this.id}</h3>
       
-      <p>flight pass inspection :${this.inspection}</p>
-      <p>flight Fuel_cost :${this.fuel_cost}</p>
-      <p>flight Destination :${this.destination}</p>
+      <p>flight pass inspection:${this.inspection}</p>
+      <p>flight Fuel_cost:${this.fuel_cost}</p>
+      <p>flight Destination:${this.destination}</p>
       <br>
       `
     return flightHtml

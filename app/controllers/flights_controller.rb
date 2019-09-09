@@ -3,8 +3,9 @@ class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update]
   #  gripping all the post using active record
   def index
-  
+  #  // responf too micro and passing it a block.
     @flights = Flight.all
+     
      respond_to do |f|
               f.html
               f.json{render json: @flights}
@@ -72,7 +73,7 @@ class FlightsController < ApplicationController
     @flight = Flight.find(params[:id])
     respond_to do |format|
 
-      format.html { render :show }
+      format.html 
       format.json { render json: @flight}
     end
   
