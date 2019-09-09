@@ -78,11 +78,18 @@ const bindClickHandlers = () => {
   // add a click event here. 
   $(document).on('click',".show_link", function(e) {
     e.preventDefault()
-    let id = $(this).attr('data-id')
-    fetch(`/posts/${id}.json`)
+    $('#flightData').html('')
+    let id = parseInt($(this).attr('data-id'))
+     
+   // var nextId = parseInt($("#js-next").attr("data-id")) + 1;
+
+    fetch(`/flights/${id}.json`)
       .then(res => res.json())
       .then(flight => {
-      console.log(flight)
+        let newFlight = new Flightindex(flight)
+        let flightHtml = newFlight.formatShow()
+        $('#flightData').append(flightHtml)
+         
     })
   })
 }
@@ -113,8 +120,21 @@ const bindClickHandlers = () => {
     return flightHtml
  // All working.
   }
+     /// For the show page.
+  Flightindex.prototype.formatShow = function(){
+    let flightHtml =  `
+      <h3>flight: ${this.id}</h3>
+      
+      <p>flight pass inspection :${this.inspection}</p>
+      <p>flight Fuel_cost :${this.fuel_cost}</p>
+      <p>flight Destination :${this.destination}</p>
+      <br>
+      `
+    return flightHtml
+ // All working.
+  }
    
-// Declare prototype methdos on the posts
+// Declare prototype methdos on the flight
 
 
   /*

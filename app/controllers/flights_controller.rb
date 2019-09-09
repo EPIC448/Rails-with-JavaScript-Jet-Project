@@ -82,7 +82,7 @@ class FlightsController < ApplicationController
 
   def flight_data
     post = Flight.find(params[:id])
-    #render json: PostSerializer.serialize(post)
+    
     render json: flight.to_json(only: [:inspection, :fuel_cost, :destination, :flight_departure, :flight_sit],
                               include: [users: { only: [:name]}])
   end
