@@ -1,53 +1,5 @@
 
 
-//   For Submitted Form
-$(function () { 
-     $('#new_flight').submit(function (event) {
-    // prevent form from submitting the default way
-    //console.log('New page in the new HTML  data  is working.')
-
-  event.preventDefault()
-  
-    var values = $(this).serialize()
-
-   let flying = $.post('/flights', values);
-    // ..... JSON is in play here. 
-         flying.done(function(data){ 
-      
-          let fly_data = new Flight(data);
-          
-          let fly_dataHTML = fly_data.formatFlight()
-          //  debugger
-          $('#new_flight').append(fly_dataHTML)
-       });
-    });
-  });
-
-  
-
-  class Flight{
-    constructor(flight) {
-      // Study the Class in JavaScript in currilum
-      // i seperate the arrguments.
-      // this refer to the object that is passed to it.
-      this.id = flight.id;
-      this.inspection = flight.inspection;
-      this.fuel_cost = flight.fuel_cost;
-      this.destination = flight.destination
-    }
-      
-    formatFlight (){
-           return  `
-      <h3>flight ID : ${this.id}</h3>;
-      <p>flight pass inspection :${this.inspection}</p>;
-      <p>flight Fuel_cost :${this.fuel_cost}</p>;
-      <p>flight Destination :${this.destination}</p>;
-      `
-       
-    }
-
-  }
-
       // >>> Index PAGE JAVASCRIPT<<<
    $(() => {
         bindClickHandlers()
@@ -62,12 +14,13 @@ const bindClickHandlers = () => {
       .then((res) => res.json())
       .then(flights => {
         $('#flightData').html('') 
-        //  flight Data has HTML in it and we need line 64 to make it emptty. s
+        //  flight Data has HTML in it and we need line 64 to make it emptty, 
         // so we can use it later on in the code. 
         flights.forEach(flight => {
-         // flight is an object here.
-          // declare new varible
+         // flight is an object here. and we iterate over it.
+          
           let newFlight = new Flightindex(flight)
+          // declare new varible Line 70
           let flightHtml = newFlight.formatIndex()
           $('#flightData').append(flightHtml)
            //console.log(newFlight)
@@ -84,7 +37,6 @@ const bindClickHandlers = () => {
     $('#flightData').html('')
     let id = parseInt($(this).attr('data-id'))
      
-   // var nextId = parseInt($("#js-next").attr("data-id")) + 1;
 
     fetch(`/flights/${id}.json`)
       .then(res => res.json())
@@ -110,7 +62,7 @@ const bindClickHandlers = () => {
   }
 
 
-  //we want to be able to use formatINdex on any new created instance object of Flightindex. 
+  //we want to be able to use formatIndex on any newly created instance object of Flightindex. 
   // FormatIndex is like a method. And returns flightHTML.
   Flightindex.prototype.formatIndex = function(){
     let flightHtml =  `
@@ -124,6 +76,7 @@ const bindClickHandlers = () => {
     return flightHtml
  // All working.
   }
+
      /// For the show page.
   Flightindex.prototype.formatShow = function(){
     let flightHtml =  `
@@ -138,49 +91,38 @@ const bindClickHandlers = () => {
  // All working.
   }
    
-// Declare prototype methdos on the flight
 
 
-  /*
-  //  click button for the to display information on javaScript
-    >>> This is working already <<
-  $(function() {
-    $("#js-next").on("click", function (event) {
-      event.preventDefault()
-      var nextId = parseInt($("#js-next").attr("data-id")) + 1;
-  
-      $.get("/flights/" + nextId + ".json", function(data){
-        // get post
-        var flight = data;
-debugger
-           //$('#js-next').html('')
-             flight.users.forEach(function(user){
-               console.log(user);
-               //debugger
-              let newFlight = new Flight_const(user)
-              let flightHTML = newFlight.formatIndex()
-              $('#js-next').append(flightHTML)
-      
-        let justName = flight.users.forEach(function(user){
-              console.log(user.name);
-  
-        $(".userName").text(user.name); });
+   
+//   For Submitted Form
+
+$(document).on('submit',"#new_flight", function (event) {
+  // prevent form from submitting the default way
+  //console.log('New page in the new HTML  data  is working.')
+
+event.preventDefault()
+
+     var values = $(this).serialize() // Grab the Values input in this form.
+       // . this is the form itself, thus we can serialize it.
+       console.log(values)
+
+ let flying = $.post('/flights', values);
+  // we make a post requires to application to create a new flight and 
+     // pass in how data which is values.
+     flying.done(function (data) { 
+        //   use  the .done method to extra out the infromation we 
+       // have in out varible (flying) and set up to 
+       // Pasts it to the dom.
+       $('#new_flight').html('') 
      
-        $(".flightInspection").text(flight["inspection"]);
-        $(".flightFuel_cost").text(flight["fuel_cost"]);
-        $(".flightDestination").text(flight["destination"]);
-        $(".flightDeparture").text(flight["flight_sit"]);
-        $("#js-next").attr("data-id", flight["id"]);
-             }); 
-        
-      });
-      
-    });
-  })
-  >>> This is working already ^^^ <<
-    
-    */
+       let newFlight = new Flightindex(data)
+       let flightHtml = newFlight.formatShow()
+            // $('#flightData').append(flightHtml)
+       $('#new_flight').html(flightHtml)
+     });
+  });
 
+  
   //  May need it ot note. 
 // function Flight_const(user) {
 //      this.id = user.
