@@ -1,9 +1,9 @@
 class FlightsController < ApplicationController
 
   before_action :set_flight, only: [:show, :edit, :update]
-  #  gripping all the post using active record
+  
   def index
-  #  // responf too micro and passing it a block.
+  #  // respond too micro and passing it a block.
     @flights = Flight.all
      
      respond_to do |f|

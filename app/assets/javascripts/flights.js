@@ -14,7 +14,7 @@ const bindClickHandlers = () => {
       .then((res) => res.json())
       .then(flights => {
         $('#flightData').html('') 
-        //  flight Data has HTML in it and we need line 64 to make it emptty, 
+        //  flight Data has HTML in it and we need line 9 to make it emptty, 
         // so we can use it later on in the code. 
         flights.forEach(flight => {
          // flight is an object here. and we iterate over it.
@@ -49,7 +49,7 @@ const bindClickHandlers = () => {
   })
 }
 
-  // Using a JS model Object. I use a conttroctor class
+  // Using a JS model Object. I use a controctor class
 // class Flightindex{
   function Flightindex(flight){
    // id,inspection, destination, fuel_cost, user
@@ -109,6 +109,7 @@ event.preventDefault()
  let flying = $.post('/flights', values);
   // we make a post requires to application to create a new flight and 
      // pass in how data which is values.
+
      flying.done(function (data) { 
         //   use  the .done method to extra out the infromation we 
        // have in out varible (flying) and set up to 
