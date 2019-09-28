@@ -6,13 +6,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application'%>
+ <link rel="stylesheet" href="/assets/stylesheets/custom.css" /> 
   </head>
 
   <body>
   
-
-    <%= yield %>
+  <div class= "container">
+ <img src="https://cdn.hipwallpaper.com/i/91/72/F2qer4.jpg" class="img-fluid" alt="Responsive image">
+ 
+ <%= yield %>
+         <%= javascript_include_tag 'application'%>
+        
+  </div>
+   
 
     <br>
 

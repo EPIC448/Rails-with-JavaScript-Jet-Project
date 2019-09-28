@@ -124,10 +124,8 @@ event.preventDefault()
   });
 
   
-  //  May need it ot note. 
-// function Flight_const(user) {
-//      this.id = user.
-//    }
+  //May Use event
+  //event.stopPropagation
   
   
 

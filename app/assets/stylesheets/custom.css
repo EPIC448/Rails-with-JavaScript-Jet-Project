@@ -1,0 +1,47 @@
+
+
+.container {
+    margin-bottom: 2px;
+    width: 100px;
+    
+         
+  }
+  /* body {
+  
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image:
+      url("https://wallpaperbro.com/img/246288.jpg");
+    
+    }; */
+    
+    .img-fluid {
+      position: relative;
+    width: 100px;
+    height: 50px;
+    padding: 8px;
+    border: 1px solid rgba(187, 178, 178, 0.527);
+     
+    top: -50px;
+    left: 50px;
+    z-index: 2;
+    }
+  
+       #flightData {
+         font-style: italic;
+         top: -50px;
+          left: 50px;
+          z-index: 1;
+          background: rgba(0,0,255,0.75);
+       }
+  
+  h1,
+  h2 {
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #cdcdcd;
+  }
+  
