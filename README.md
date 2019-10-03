@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2018_11_09_230939) do
 end
 
 * Database initialization
+checked.
 
 
 * Services (job queues, cache servers, search engines, etc.)
