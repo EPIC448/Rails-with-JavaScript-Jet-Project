@@ -108,7 +108,7 @@ event.preventDefault()
 
  let flying = $.post('/flights', values);
   // we make a post requires to application to create a new flight and 
-     // pass in how data which is values.
+     // pass in serlize  data which is values.
 
      flying.done(function (data) { 
         //   use  the .done method to extra out the infromation we 
@@ -121,6 +121,8 @@ event.preventDefault()
             // $('#flightData').append(flightHtml)
        $('#new_flight').html(flightHtml)
      });
+  
+     event.target.reset()
   });
 
   
