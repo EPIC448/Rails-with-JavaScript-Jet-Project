@@ -45,7 +45,8 @@ const bindClickHandlers = () => {
         let flightHtml = newFlight.formatShow()
         $('#flightData').append(flightHtml)
          
-    })
+      })
+    
   })
 }
 
