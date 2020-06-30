@@ -2,23 +2,60 @@
 
 ... Refactor First commit
 
-PROJECT TITLE
- RAils_with_JavaScript_Jets_Project.
+**Project Title**
 
+**Motivation**
 
-  MOTIVATION
-    I have always enjoyed flying and living in different places. It was always amazes me what goes into building a plan and how there function. However,  seens I am not a pilote, I can pretend to be a flight manfacture and Create my own plan when i want. Thus, i created the project of 
-  This Project simulate owning a private Jets. In which the User would be able to see what Jets are available, go on a flight-ride, make sure the Jets pasted inspections, and even able to delete a created jets RAils_with_JavaScript_Jets_Project.
+**Rail/ JavaScript Jet Project**
+
+  *MOTIVATION*
+ ![](https://media.giphy.com/media/NSEXOrnVgRVZ4eZdlE/giphy.gif)
+    I have always enjoyed flying and living in different places. It  always amazes me what goes into building a Aeroplan and it functionality. However,  seens I am not a Pilot, I can pretend to be a Plan mainfacture through coding and Creating my own plan when I want. Thus, i created this project. 
+    
+
+    This Project simulate owning a private Jets. In which the User would be able to see what Jets are available, go on a flight-ride making sure the Jets pass inspections, and even able to delete a created jets .
+   
+   *Feature the User can add to there plan*
+
+    Creating a Plan comes with a ton of Responsiblity, So to make sure the user is safe,  They can choose features such as :
+    >Destination
+    >Number of Set in the "created Jets"
+    > If jet passes inspections
+    > And Cost of Fuel to run the jet
   
-   This is a dupilcated project of the orginal Ruby on Rails Jet Project. However, the front-end section was added to this project built with JavaScript. 
+**Summary**
+
+  Using Active Record Mechanics(CRUD), we are able to create data and retrive the data as needed. Also, we created a table using SQL. Also, has_many, belongs_to, has_many :through relationship models were used for the project.
+
+  Also, using the Omniauth gem authenitication, a user can login the app with there *Facebook Account* or use the Normal Login method by creating an account on the app. 
+
+  **Code_Sample**
+
+   ``` 
+   def require_logged_in
+        redirect_to root_path unless logged_in?
+
+    end
+
+    def authentication_required
+        if !logged_in?
+            redirect_to login_path
+        end
+    end
+     
+
+    def logged_in?
+        !!current_user   #only produces false
+
+    end
+  ```
 
 
-  In the Process of creating what type of flight they want, the User can choose:
-   Destination
-   Number of Set in the "created Jets"
-   Select option of the Jet passing inspections
-   And Cost of Fuel to run the jet
-  
+**Tech/Framework used**
+![](https://media.giphy.com/media/MarRSACy8q3MPtXKQq/giphy.gif)
+  *Ruby version*
+   *System dependencies*
+   Link for all Ruby related project.s
 
  Prerequisites
   gem 'rails', '~> 5.2.1'
@@ -30,8 +67,11 @@ PROJECT TITLE
    gem 'bcrypt', '~> 3.1.7'
 
 
-* Database creation (Scheme)
-ActiveRecord::Schema.define(version: 2018_11_09_230939) do
+
+  *Database creation (Scheme)*
+  
+  
+   ActiveRecord::Schema.define(version: 2018_11_09_230939) do
 
   create_table "flight_rides", force: :cascade do |t|
     t.integer "user_id"
@@ -59,35 +99,52 @@ ActiveRecord::Schema.define(version: 2018_11_09_230939) do
     t.datetime "updated_at", null: false
   end
 
-end
-
-* Database initialization
-checked.
+end 
 
 
-* Services (job queues, cache servers, search engines, etc.)
-   Google Chromo
 
-* Deployment instructions
+**Installation**
 
-  In the Jet-Rails-Project Diretory,  you are going on type in the terminal
 
-* Thin start --ssl 
-   this will ensure that your Url Address in the browser most be prefixed with HTTPS://
+ Using Google Chrome may be your best bet.
 
-   In the Browser address bar, you Type
+*Deployment instructions*
+
+1. In the Jet-Rails-Project  Diretory,  you are going  on type in the terminal
+
+        Thin start --ssl 
+   this will ensure that your Url Address in the browser most be prefixed with "HTTPS://"
+
+2. In the Browser address bar, you Type
 
    https://0.0.0.0:3000/ Or
 
    BootStrip was added to the Project this project to Booth it,
     follow the instructions below.
 
- 1. Open up the Terminal to the     Jet-Rails-Project-Directory
- 2.Type in "Rails Server"
- 3. make sure you link to http://localhost:3000/
- 4. And there you have it.
+3. Open up the Terminal to the      Jet-Rails-Project-Directory
+ 
+4.  Type in "Rails Server"
+
+5. make sure you link to http://localhost:3000/
+
+6. And there you have it.
 
    This will open up the project for you
+
+
+
+ **Commiting to Git hub**
+
+[ ]Open the terminal.
+
+[ ]Change the current working directory to your local repository.
+
+[ ]Commit the file that you've staged in your local repository.
+
+[ ] $ git commit -m "Add existing file" Push the changes in your local repository to GitHub.
+
+[ ]$ git push origin branch-name.
 
  * Author
  Samuel Ogundiran
